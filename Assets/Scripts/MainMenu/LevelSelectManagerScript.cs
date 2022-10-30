@@ -13,6 +13,8 @@ public class LevelSelectManagerScript : MonoBehaviour
     public List<Sprite> starIconSprite; // 0 = 0 stars, 1 = 1 star, etc.
     public List<Sprite> levelIconSprite; // 0 = locked level, 1 = level 1, etc.
 
+    public MenuManagerScript menuManagerScript;
+
     int selectedZone; // 0 = euphotic, 1 = dysphotic, 2 = aphotic
     int selectedLevel;
 
@@ -38,6 +40,7 @@ public class LevelSelectManagerScript : MonoBehaviour
 
     public void ZonePlayClicked()
     {
+        menuManagerScript.SwapToLevelOverlay();
         InitializeLevelButtons();
     }
 
@@ -45,15 +48,10 @@ public class LevelSelectManagerScript : MonoBehaviour
 
     public void InitializeLevelButtons()
     {
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 5; i++)
         { // clear all
             levelIconButton[i].GetComponent<Image>().sprite = levelIconSprite[0];
             levelIconButton[i].transform.Find("LevelStars").GetComponent<Image>().sprite = starIconSprite[0];
-        }
-
-        for (int i = 0; i < 6; i++)
-        {
-
         }
     }
 }

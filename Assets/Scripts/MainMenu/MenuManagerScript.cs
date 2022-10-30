@@ -90,7 +90,13 @@ public class MenuManagerScript : MonoBehaviour
         selectZoneOverlay.SetActive(false);
     }
 
-    // =========== SELECT ZONE OVERLAY =========== //
+    public void SwapToLevelOverlay()
+    {
+        selectZoneOverlay.SetActive(false);
+        selectLevelOverlay.SetActive(true);
+    }
+
+    // =========== SELECT LEVEL OVERLAY =========== //
     public void CloseLevelOverlay()
     {
         selectLevelOverlay.SetActive(false);
