@@ -12,8 +12,11 @@ public class MenuManagerScript : MonoBehaviour
     public GameObject selectProfileOverlay;
     public GameObject settingsOverlay;
     public GameObject helpOverlay;
+    public GameObject selectZoneOverlay;
+    public GameObject selectLevelOverlay;
 
     public GameObject helpManager;
+    public GameObject levelSelectManager;
 
     public GameObject profileCardName;
     public GameObject profileCardIcon;
@@ -35,7 +38,7 @@ public class MenuManagerScript : MonoBehaviour
         UpdateSettingsOverlay();
     }
 
-    // =========== MAINBUTTONGROUP =========== //
+    // =========== MAIN BUTTON GROUP =========== //
 
     public void MainPlay()
     {
@@ -49,6 +52,12 @@ public class MenuManagerScript : MonoBehaviour
     {
         mainButtonGroup.SetActive(true);
         gamemodeButtonGroup.SetActive(false);
+    }
+
+    public void OpenZoneOverlay()
+    {
+        selectZoneOverlay.SetActive(true);
+        levelSelectManager.GetComponent<LevelSelectManagerScript>().InitializeZoneButtons();
     }
 
     // =========== SIDE BUTTON GROUP =========== //
@@ -73,6 +82,20 @@ public class MenuManagerScript : MonoBehaviour
     public void CloseSelectProfileOverlay()
     {
         selectProfileOverlay.SetActive(false);
+    }
+
+    // =========== SELECT ZONE OVERLAY =========== //
+    public void CloseZoneOverlay()
+    {
+        selectZoneOverlay.SetActive(false);
+    }
+
+    // =========== SELECT ZONE OVERLAY =========== //
+    public void CloseLevelOverlay()
+    {
+        selectLevelOverlay.SetActive(false);
+        selectLevelOverlay.SetActive(true);
+        levelSelectManager.GetComponent<LevelSelectManagerScript>().InitializeZoneButtons();
     }
 
     // =========== SETTINGS OVERLAY =========== //

@@ -19,4 +19,8 @@ public class UserData
     public int currentZone = 0; // 0 = euphotic zone
     public int currentLevel = 0; // 0 = level 1
 
+    // USER STATS
+    public int[] zone1Stars = new int[6];
+    public int[] zone2Stars = new int[6];
+    public int[] zone3Stars = new int[6];
 }
