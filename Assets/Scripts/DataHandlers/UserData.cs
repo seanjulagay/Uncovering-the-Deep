@@ -20,7 +20,5 @@ public class UserData
     public int currentLevel = 0; // 0 = level 1
 
     // USER STATS
-    public int[] zone1Stars = new int[6];
-    public int[] zone2Stars = new int[6];
-    public int[] zone3Stars = new int[6];
+    public int[] levelStars = new int[15];
 }
