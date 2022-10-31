@@ -62,6 +62,7 @@ public class ProfileManagerScript : MonoBehaviour
             userData[i].userID = i;
         }
 
+        activeUser = userData[0];
         userData[0].userExists = true;
         PlayerPrefs.DeleteAll();
 
