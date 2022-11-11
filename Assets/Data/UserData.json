@@ -1,220 +1,82 @@
 {
-    "Items": [
-        {
-            "userID": 0,
-            "userExists": true,
-            "username": "Irwin",
-            "iconID": 3,
-            "musicOn": false,
-            "soundOn": true,
-            "isTutorialFinished": false,
-            "isFirstRun": true,
-            "currentZone": 0,
-            "currentLevel": 0,
-            "zone1Stars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "zone2Stars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "zone3Stars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        },
-        {
-            "userID": 1,
-            "userExists": true,
-            "username": "hghfghg",
-            "iconID": 0,
-            "musicOn": true,
-            "soundOn": true,
-            "isTutorialFinished": false,
-            "isFirstRun": true,
-            "currentZone": 0,
-            "currentLevel": 0,
-            "zone1Stars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "zone2Stars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "zone3Stars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        },
-        {
-            "userID": 2,
-            "userExists": true,
-            "username": "",
-            "iconID": 4,
-            "musicOn": true,
-            "soundOn": true,
-            "isTutorialFinished": false,
-            "isFirstRun": true,
-            "currentZone": 0,
-            "currentLevel": 0,
-            "zone1Stars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "zone2Stars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "zone3Stars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        },
-        {
-            "userID": 3,
-            "userExists": false,
-            "username": "Empty",
-            "iconID": 0,
-            "musicOn": true,
-            "soundOn": true,
-            "isTutorialFinished": false,
-            "isFirstRun": true,
-            "currentZone": 0,
-            "currentLevel": 0,
-            "zone1Stars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "zone2Stars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "zone3Stars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        },
-        {
-            "userID": 4,
-            "userExists": false,
-            "username": "Empty",
-            "iconID": 0,
-            "musicOn": true,
-            "soundOn": true,
-            "isTutorialFinished": false,
-            "isFirstRun": true,
-            "currentZone": 0,
-            "currentLevel": 0,
-            "zone1Stars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "zone2Stars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "zone3Stars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        },
-        {
-            "userID": 5,
-            "userExists": false,
-            "username": "Empty",
-            "iconID": 0,
-            "musicOn": true,
-            "soundOn": true,
-            "isTutorialFinished": false,
-            "isFirstRun": true,
-            "currentZone": 0,
-            "currentLevel": 0,
-            "zone1Stars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "zone2Stars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "zone3Stars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ]
-        }
-    ]
+  "Items": [
+    {
+      "userID": 0,
+      "userExists": true,
+      "username": "Empty",
+      "iconID": 0,
+      "musicOn": true,
+      "soundOn": true,
+      "isTutorialFinished": false,
+      "isFirstRun": true,
+      "currentZone": 0,
+      "currentLevel": 0,
+      "levelStars": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+    {
+      "userID": 1,
+      "userExists": true,
+      "username": "hghfghg",
+      "iconID": 0,
+      "musicOn": true,
+      "soundOn": true,
+      "isTutorialFinished": false,
+      "isFirstRun": true,
+      "currentZone": 0,
+      "currentLevel": 0,
+      "levelStars": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+    {
+      "userID": 2,
+      "userExists": true,
+      "username": "",
+      "iconID": 4,
+      "musicOn": true,
+      "soundOn": true,
+      "isTutorialFinished": false,
+      "isFirstRun": true,
+      "currentZone": 0,
+      "currentLevel": 0,
+      "levelStars": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+    {
+      "userID": 3,
+      "userExists": false,
+      "username": "Empty",
+      "iconID": 0,
+      "musicOn": true,
+      "soundOn": true,
+      "isTutorialFinished": false,
+      "isFirstRun": true,
+      "currentZone": 0,
+      "currentLevel": 0,
+      "levelStars": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+    {
+      "userID": 4,
+      "userExists": false,
+      "username": "Empty",
+      "iconID": 0,
+      "musicOn": true,
+      "soundOn": true,
+      "isTutorialFinished": false,
+      "isFirstRun": true,
+      "currentZone": 0,
+      "currentLevel": 0,
+      "levelStars": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    },
+    {
+      "userID": 5,
+      "userExists": false,
+      "username": "Empty",
+      "iconID": 0,
+      "musicOn": true,
+      "soundOn": true,
+      "isTutorialFinished": false,
+      "isFirstRun": true,
+      "currentZone": 0,
+      "currentLevel": 0,
+      "levelStars": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    }
+  ]
 }

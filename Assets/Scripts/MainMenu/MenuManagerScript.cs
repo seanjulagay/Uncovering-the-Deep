@@ -100,7 +100,7 @@ public class MenuManagerScript : MonoBehaviour
     public void CloseLevelOverlay()
     {
         selectLevelOverlay.SetActive(false);
-        selectLevelOverlay.SetActive(true);
+        selectZoneOverlay.SetActive(true);
         levelSelectManager.GetComponent<LevelSelectManagerScript>().InitializeZoneButtons();
     }
 
