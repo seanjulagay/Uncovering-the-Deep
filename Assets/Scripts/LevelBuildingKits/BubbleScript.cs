@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class BubbleScript : MonoBehaviour
 {
-    
-    void Start()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        
-    }
+        PlayerPropertiesScript.oxygenCount += 20f;
+        if (PlayerPropertiesScript.oxygenCount > 100)
+        {
+            PlayerPropertiesScript.oxygenCount = 99f;
+        }
 
-    void Update()
-    {
-        
+        gameObject.SetActive(false);
     }
 }

@@ -6,7 +6,7 @@ public class PlayerPropertiesScript : MonoBehaviour
 {
     Rigidbody2D rb;
 
-    public float oxygenCount = 99f;
+    public static float oxygenCount = 99f;
     public float playerScore;
     public bool underwater = false;
 
