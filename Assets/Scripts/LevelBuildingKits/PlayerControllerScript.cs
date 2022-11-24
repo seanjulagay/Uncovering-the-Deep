@@ -26,6 +26,7 @@ public class PlayerControllerScript : MonoBehaviour
 
     void Update()
     {
+        rb.AddForce(Vector2.zero);
         InputListener();
     }
 
@@ -44,23 +45,32 @@ public class PlayerControllerScript : MonoBehaviour
     {
         if (moveX != 0 || moveY != 0)
         {
-            if (moveX > 0 && (rb.velocity.x <= moveVelocityLimit)) // PLAYER GOES RIGHT
+            if (moveX > 0) // PLAYER GOES RIGHT
             {
-                Debug.Log("Going Right");
-                rb.AddForce(transform.right * moveSideSpd);
+                if (rb.velocity.x <= moveVelocityLimit)
+                {
+                    Debug.Log("Going Right");
+                    rb.AddForce(transform.right * moveSideSpd);
+                }
                 gameObject.GetComponent<SpriteRenderer>().sprite = oliveRight;
             }
-            else if (moveX < 0 && (rb.velocity.x >= -moveVelocityLimit)) // PLAYER GOES LEFT
+            else if (moveX < 0) // PLAYER GOES LEFT
             {
-                Debug.Log("Going Left");
-                rb.AddForce(-transform.right * moveSideSpd);
+                if (rb.velocity.x >= -moveVelocityLimit)
+                {
+                    Debug.Log("Going Left");
+                    rb.AddForce(-transform.right * moveSideSpd);
+                }
                 gameObject.GetComponent<SpriteRenderer>().sprite = oliveLeft;
             }
 
-            if (moveY > 0 && (rb.velocity.y <= moveVelocityLimit)) // PLAYER GOES UP
+            if (moveY > 0) // PLAYER GOES UP
             {
-                Debug.Log("Goin' up!");
-                rb.AddForce(transform.up * moveUpSpd);
+                if (rb.velocity.y <= moveVelocityLimit)
+                {
+                    Debug.Log("Goin' up!");
+                    rb.AddForce(transform.up * moveUpSpd);
+                }
                 gameObject.GetComponent<SpriteRenderer>().sprite = oliveUp;
             }
             else if (moveY < 0) // PLAYER GOES DOWN
