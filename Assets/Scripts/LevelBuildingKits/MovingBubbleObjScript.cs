@@ -2,8 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BubbleScript : MonoBehaviour
+public class MovingBubbleObjScript : MonoBehaviour
 {
+    MovingBubbleScript movingBubbleScript;
+
+    void Start()
+    {
+        movingBubbleScript = gameObject.transform.parent.gameObject.GetComponent<MovingBubbleScript>();
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
@@ -13,7 +20,8 @@ public class BubbleScript : MonoBehaviour
             {
                 PlayerPropertiesScript.oxygenCount = 99f;
             }
-            gameObject.SetActive(false);
+
+            movingBubbleScript.BubbleDestroyed();
         }
     }
 }
