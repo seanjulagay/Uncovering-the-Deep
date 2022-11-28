@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PlayerCameraScript : MonoBehaviour
 {
-    public GameObject cameraObj;
+    public GameObject mainCamera;
 
     void Start()
     {
-        cameraObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, cameraObj.transform.position.z);
+        mainCamera.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, mainCamera.transform.position.z);
     }
 
     void Update()
     {
-        cameraObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, cameraObj.transform.position.z);
+        mainCamera.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, mainCamera.transform.position.z);
     }
 }
