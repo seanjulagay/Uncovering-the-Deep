@@ -49,7 +49,6 @@ public class PlayerControllerScript : MonoBehaviour
             {
                 if (rb.velocity.x <= moveVelocityLimit)
                 {
-                    Debug.Log("Going Right");
                     rb.AddForce(transform.right * moveSideSpd);
                 }
                 gameObject.GetComponent<SpriteRenderer>().sprite = oliveRight;
@@ -58,7 +57,6 @@ public class PlayerControllerScript : MonoBehaviour
             {
                 if (rb.velocity.x >= -moveVelocityLimit)
                 {
-                    Debug.Log("Going Left");
                     rb.AddForce(-transform.right * moveSideSpd);
                 }
                 gameObject.GetComponent<SpriteRenderer>().sprite = oliveLeft;
@@ -68,7 +66,6 @@ public class PlayerControllerScript : MonoBehaviour
             {
                 if (rb.velocity.y <= moveVelocityLimit)
                 {
-                    Debug.Log("Goin' up!");
                     rb.AddForce(transform.up * moveUpSpd);
                 }
                 gameObject.GetComponent<SpriteRenderer>().sprite = oliveUp;
@@ -77,7 +74,6 @@ public class PlayerControllerScript : MonoBehaviour
             {
                 if (rb.velocity.y >= -moveVelocityLimit)
                 {
-                    Debug.Log("Going down");
                     rb.AddForce(-transform.up * moveDownSpd);
                 }
                 gameObject.GetComponent<SpriteRenderer>().sprite = oliveDown;

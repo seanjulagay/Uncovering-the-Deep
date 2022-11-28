@@ -15,7 +15,7 @@ public class CheckpointPadScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Checkpoint passed");
+        // Debug.Log("Checkpoint passed");
         checkpointManagerScript.CheckpointPassed();
         checkpointManagerScript.SpawnTrashbag(gameObject.transform.position);
         checkpointParentObj.SetActive(false);

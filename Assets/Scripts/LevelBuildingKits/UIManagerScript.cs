@@ -6,14 +6,27 @@ using TMPro;
 
 public class UIManagerScript : MonoBehaviour
 {
+    public static GameObject activeTrappedAnimalTrigger = null;
+
     public TMP_Text trashCountText;
     public TMP_Text oxygenCountText;
     public TMP_Text dialogueText;
+    public TMP_Text freeingProgressText;
+    public TMP_Text animalsFreedText;
 
     void Update()
     {
         oxygenCountText.text = "Oxygen: " + PlayerPropertiesScript.oxygenCount;
         trashCountText.text = "Trash collected: " + GameManagerScript.trashCount;
         dialogueText.text = "Dialogue goes here - link to JSON file";
+        if (activeTrappedAnimalTrigger != null)
+        {
+            freeingProgressText.text = "Freeing progress: " + activeTrappedAnimalTrigger.GetComponent<TrappedAnimalTriggerScript>().freeingProgress;
+        }
+        else
+        {
+            freeingProgressText.text = "No animal trapped";
+        }
+        animalsFreedText.text = "Animals freed: " + GameManagerScript.animalsFreed;
     }
 }
