@@ -24,11 +24,11 @@ public class MovingBubbleScript : MonoBehaviour
     {
         float randomTime = Random.Range(minWaitTime, maxWaitTime);
 
-        Debug.Log("randomTime: " + randomTime);
+        // Debug.Log("randomTime: " + randomTime);
 
         yield return new WaitForSeconds(randomTime);
 
-        Debug.Log("Waited for " + randomTime);
+        // Debug.Log("Waited for " + randomTime);
 
         bubbleObj.transform.position = new Vector2(bubbleObj.transform.position.x, startPoint.transform.position.y);
         bubbleObj.SetActive(true);
@@ -45,7 +45,7 @@ public class MovingBubbleScript : MonoBehaviour
 
     public void BubbleDestroyed()
     {
-        Debug.Log("Bubble has been destroyed!");
+        // Debug.Log("Bubble has been destroyed!");
         bubbleObj.SetActive(false);
         StartCoroutine(SpawnBubble());
     }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CheckpointManagerScript : MonoBehaviour
 {
+    public GameObject trashbagsParent;
     public GameObject trashbagPF;
 
     public GameObject startPoint, finishPoint;
@@ -30,6 +31,16 @@ public class CheckpointManagerScript : MonoBehaviour
 
     public void SpawnTrashbag(Vector3 checkpointPadPos)
     {
-        Instantiate(trashbagPF, checkpointPadPos, transform.rotation);
+        Instantiate(trashbagPF, checkpointPadPos, transform.rotation, trashbagsParent.transform);
+    }
+
+    public void TurnAllTrashbagsStackable()
+    {
+        GameObject[] trashbags = GameObject.FindGameObjectsWithTag("Trashbag");
+
+        foreach (GameObject trashbag in trashbags)
+        {
+            trashbag.GetComponent<BoxCollider2D>().isTrigger = false;
+        }
     }
 }
