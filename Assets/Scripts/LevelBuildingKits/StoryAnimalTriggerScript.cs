@@ -5,7 +5,6 @@ using UnityEngine;
 public class StoryAnimalTriggerScript : MonoBehaviour
 {
     public string animalDialogue;
-    public int animalDialgoueDecay;
     UIManagerScript uiManagerScript;
 
     void Start()
@@ -13,8 +12,13 @@ public class StoryAnimalTriggerScript : MonoBehaviour
         uiManagerScript = GameObject.Find("UIManager").GetComponent<UIManagerScript>();
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    // void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     uiManagerScript.UpdateDialogueUI(animalDialogue);
+    // }
+
+    void OnTriggerStay2D(Collider2D other)
     {
-        uiManagerScript.UpdateDialogueUI(animalDialogue, animalDialgoueDecay);
+        uiManagerScript.UpdateDialogueUI(animalDialogue);
     }
 }

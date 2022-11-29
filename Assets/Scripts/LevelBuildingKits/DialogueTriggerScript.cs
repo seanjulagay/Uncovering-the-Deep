@@ -23,7 +23,7 @@ public class DialogueTriggerScript : MonoBehaviour
     void OnValidate() // FOR EDITOR PURPOSES ONLY !!!!!!
     {
         string dialogueJsonPath = "/Data/LevelDialogueData/" + "DemoLevel" + "/LevelDialogueData.json";
-        string jsonString = File.ReadAllText(Application.dataPath + dialogueJsonPath);
+        string jsonString = File.ReadAllText(Application.streamingAssetsPath + dialogueJsonPath);
 
         LevelDialogueClass levelDialogueClass = JsonUtility.FromJson<LevelDialogueClass>(jsonString);
 

@@ -15,9 +15,13 @@ public class UIManagerScript : MonoBehaviour
     public TMP_Text freeingProgressText;
     public TMP_Text animalsFreedText;
 
+    string currentDialogue;
+    public int dialogueDecaySecs;
+
     void Start()
     {
         dialogueText.text = "Placeholder dialogue text";
+        dialogueText.enabled = false;
     }
 
     void Update()
@@ -35,24 +39,19 @@ public class UIManagerScript : MonoBehaviour
         animalsFreedText.text = "Animals freed: " + GameManagerScript.animalsFreed;
     }
 
-    public void UpdateDialogueUI(string dialogue, int dialogueDecaySecs = Int32.MaxValue)
+    public void UpdateDialogueUI(string dialogue)
     {
-        if (dialogueDecaySecs != Int32.MaxValue)
-        {
-            dialogueText.text = dialogue;
-            Debug.Log("User inputted number");
-            StartCoroutine(DecayDialogue(dialogueDecaySecs));
-        }
-        else
-        {
-            dialogueText.text = dialogue;
-            Debug.Log("Changed dialogue, no inputted number");
-        }
+        dialogueText.enabled = true;
+        Debug.Log(dialogue);
+        dialogueText.text = dialogue;
+        StopCoroutine("DialogueTextDecay");
+        StartCoroutine("DialogueTextDecay");
     }
 
-    IEnumerator DecayDialogue(int dialogueDecaySecs)
+    IEnumerator DialogueTextDecay()
     {
+        Debug.Log("Waiting for " + dialogueDecaySecs);
         yield return new WaitForSeconds(dialogueDecaySecs);
-        dialogueText.text = "Cleared text";
+        dialogueText.enabled = false;
     }
 }

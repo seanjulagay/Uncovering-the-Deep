@@ -37,14 +37,14 @@ public class ProfileManagerScript : MonoBehaviour
 
         Debug.Log("SERIALIZING JSON " + arrToJson);
 
-        File.WriteAllText(Application.dataPath + "/Data/UserData.json", arrToJson);
+        File.WriteAllText(Application.streamingAssetsPath + "/Data/UserData.json", arrToJson);
     }
 
     public static void DeserializeJson() // turn json to class values
     {
         Debug.Log("DESERIALIZING JSON");
 
-        string jsonToArr = File.ReadAllText(Application.dataPath + "/Data/UserData.json");
+        string jsonToArr = File.ReadAllText(Application.streamingAssetsPath + "/Data/UserData.json");
 
         userData = JsonHelper.FromJson<UserData>(jsonToArr);
     }

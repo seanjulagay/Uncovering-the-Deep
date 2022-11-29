@@ -27,7 +27,7 @@ public class DialogueTriggerManagerScript : MonoBehaviour
 
     void DeserializeJson()
     {
-        string jsonString = File.ReadAllText(Application.dataPath + dialogueJsonPath);
+        string jsonString = File.ReadAllText(Application.streamingAssetsPath + dialogueJsonPath);
 
         levelDialogueClass = JsonUtility.FromJson<LevelDialogueClass>(jsonString);
     }
