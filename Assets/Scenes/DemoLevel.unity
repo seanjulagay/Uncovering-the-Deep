@@ -2632,7 +2632,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalDialogue: Hello there!
-  animalDialgoueDecay: 3
 --- !u!61 &657629774
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10151,6 +10150,10 @@ PrefabInstance:
       propertyPath: animalsFreedText
       value: 
       objectReference: {fileID: 1585741610}
+    - target: {fileID: 621733419548077247, guid: 6daae7f4ed6719d478555b44114ef670, type: 3}
+      propertyPath: dialogueDecaySecs
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 621733419548077247, guid: 6daae7f4ed6719d478555b44114ef670, type: 3}
       propertyPath: freeingProgressText
       value: 
