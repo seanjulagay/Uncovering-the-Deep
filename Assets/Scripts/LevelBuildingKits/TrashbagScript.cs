@@ -24,17 +24,5 @@ public class TrashbagScript : MonoBehaviour
             isStacked = true;
             trashbagStackManager.AddToStack(gameObject);
         }
-
-        if ((other.gameObject.tag == "Terrain" || other.gameObject.tag == "Trashbag") && rb.velocity == new Vector2(0, 0))
-        {
-            gameObject.tag = "Trashbag";
-            isStacked = false;
-            trashbagStackManager.stackCount--;
-        }
-    }
-
-    void OnCollisionStay2D(Collision2D other)
-    {
-
     }
 }
