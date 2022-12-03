@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class TrappedAnimalTriggerScript : MonoBehaviour
 {
+    public GameObject storyAnimalPrefab;
     GameObject parentObj;
+
+    public string postRescueDialogue;
     public bool tappingMinigameOngoing = false;
     public float freeingProgress = 0;
 
@@ -45,8 +48,15 @@ public class TrappedAnimalTriggerScript : MonoBehaviour
         if (freeingProgress >= 10)
         {
             parentObj.SetActive(false);
+            InstantiateStoryAnimal();
             GameManagerScript.animalsFreed++;
         }
+    }
+
+    void InstantiateStoryAnimal()
+    {
+        GameObject storyAnimal = Instantiate(storyAnimalPrefab, parentObj.transform.position, transform.rotation, GameObject.Find("StoryAnimal").transform);
+        storyAnimal.transform.Find("StoryAnimalTrigger").GetComponent<StoryAnimalTriggerScript>().animalDialogue = postRescueDialogue;
     }
 
     void OnTriggerStay2D(Collider2D other)
