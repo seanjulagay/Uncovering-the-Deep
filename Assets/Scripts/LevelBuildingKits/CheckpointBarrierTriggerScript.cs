@@ -14,7 +14,8 @@ public class CheckpointBarrierTriggerScript : MonoBehaviour
     UIManagerScript uiManagerScript;
 
     bool redirectPlayer = false;
-    float redirectorForce = 0.5f;
+    float redirectorForceX = 0.5f;
+    float redirectorForceY = 0.25f;
 
     void Start()
     {
@@ -71,20 +72,20 @@ public class CheckpointBarrierTriggerScript : MonoBehaviour
 
             if (directionX < 0) // redirector is at left of player
             {
-                playerRb.AddForce(transform.right * -redirectorForce, 0);
+                playerRb.AddForce(transform.right * -redirectorForceX, 0);
             }
             else if (directionX > 0) // redirector is at right of player
             {
-                playerRb.AddForce(transform.right * redirectorForce, 0);
+                playerRb.AddForce(transform.right * redirectorForceX, 0);
             }
 
             if (directionY < 0) // redirector is at bottom of player
             {
-                playerRb.AddForce(transform.up * -redirectorForce, 0);
+                playerRb.AddForce(transform.up * -redirectorForceY, 0);
             }
             else if (directionY > 0) // redirector is at top of player
             {
-                playerRb.AddForce(transform.up * redirectorForce, 0);
+                playerRb.AddForce(transform.up * redirectorForceY, 0);
             }
         }
     }
