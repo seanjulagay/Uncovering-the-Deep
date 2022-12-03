@@ -12,11 +12,6 @@ public class StoryAnimalTriggerScript : MonoBehaviour
         uiManagerScript = GameObject.Find("UIManager").GetComponent<UIManagerScript>();
     }
 
-    // void OnTriggerEnter2D(Collider2D other)
-    // {
-    //     uiManagerScript.UpdateDialogueUI(animalDialogue);
-    // }
-
     void OnTriggerStay2D(Collider2D other)
     {
         uiManagerScript.UpdateDialogueUI(animalDialogue);

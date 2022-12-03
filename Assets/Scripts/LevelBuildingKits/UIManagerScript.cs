@@ -39,6 +39,13 @@ public class UIManagerScript : MonoBehaviour
         animalsFreedText.text = "Animals freed: " + GameManagerScript.animalsFreed;
     }
 
+    public void OliveDialogue(string dialogue)
+    {
+        // dialogueText.fontStyle = FontStyles.Italic;
+        UpdateDialogueUI("<i>" + dialogue + "</i>");
+        // dialogueText.fontStyle ^= FontStyles.Italic;
+    }
+
     public void UpdateDialogueUI(string dialogue)
     {
         dialogueText.enabled = true;

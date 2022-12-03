@@ -19,6 +19,8 @@ public class PlayerControllerScript : MonoBehaviour
     float moveVelocityLimit = 3f;
     float sinkVelocityLimit = 1f;
 
+    public bool canPlayerMove = true;
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -43,46 +45,49 @@ public class PlayerControllerScript : MonoBehaviour
 
     void PlayerControls()
     {
-        if (moveX != 0 || moveY != 0)
+        if (canPlayerMove == true)
         {
-            if (moveX > 0) // PLAYER GOES RIGHT
+            if (moveX != 0 || moveY != 0)
             {
-                if (rb.velocity.x <= moveVelocityLimit)
+                if (moveX > 0) // PLAYER GOES RIGHT
                 {
-                    rb.AddForce(transform.right * moveSideSpd);
+                    if (rb.velocity.x <= moveVelocityLimit)
+                    {
+                        rb.AddForce(transform.right * moveSideSpd);
+                    }
+                    gameObject.GetComponent<SpriteRenderer>().sprite = oliveRight;
                 }
-                gameObject.GetComponent<SpriteRenderer>().sprite = oliveRight;
-            }
-            else if (moveX < 0) // PLAYER GOES LEFT
-            {
-                if (rb.velocity.x >= -moveVelocityLimit)
+                else if (moveX < 0) // PLAYER GOES LEFT
                 {
-                    rb.AddForce(-transform.right * moveSideSpd);
+                    if (rb.velocity.x >= -moveVelocityLimit)
+                    {
+                        rb.AddForce(-transform.right * moveSideSpd);
+                    }
+                    gameObject.GetComponent<SpriteRenderer>().sprite = oliveLeft;
                 }
-                gameObject.GetComponent<SpriteRenderer>().sprite = oliveLeft;
-            }
 
-            if (moveY > 0) // PLAYER GOES UP
-            {
-                if (rb.velocity.y <= moveVelocityLimit)
+                if (moveY > 0) // PLAYER GOES UP
                 {
-                    rb.AddForce(transform.up * moveUpSpd);
+                    if (rb.velocity.y <= moveVelocityLimit)
+                    {
+                        rb.AddForce(transform.up * moveUpSpd);
+                    }
+                    gameObject.GetComponent<SpriteRenderer>().sprite = oliveUp;
                 }
+                else if (moveY < 0) // PLAYER GOES DOWN
+                {
+                    if (rb.velocity.y >= -moveVelocityLimit)
+                    {
+                        rb.AddForce(-transform.up * moveDownSpd);
+                    }
+                    gameObject.GetComponent<SpriteRenderer>().sprite = oliveDown;
+                }
+            }
+            else
+            {
+                // if (gameObject.GetComponent<Rigidbody2D>().velocity.y. =>
                 gameObject.GetComponent<SpriteRenderer>().sprite = oliveUp;
             }
-            else if (moveY < 0) // PLAYER GOES DOWN
-            {
-                if (rb.velocity.y >= -moveVelocityLimit)
-                {
-                    rb.AddForce(-transform.up * moveDownSpd);
-                }
-                gameObject.GetComponent<SpriteRenderer>().sprite = oliveDown;
-            }
-        }
-        else
-        {
-            // if (gameObject.GetComponent<Rigidbody2D>().velocity.y. =>
-            gameObject.GetComponent<SpriteRenderer>().sprite = oliveUp;
         }
     }
 
