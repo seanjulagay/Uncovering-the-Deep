@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CheckpointBarrierTriggerScript : MonoBehaviour
 {
-    public string oliveDialogue;
-
     GameObject playerObj;
     GameObject barrierRedirector;
     Rigidbody2D playerRb;
@@ -13,6 +11,7 @@ public class CheckpointBarrierTriggerScript : MonoBehaviour
     PlayerControllerScript playerControllerScript;
     UIManagerScript uiManagerScript;
 
+    string oliveDialogue;
     bool redirectPlayer = false;
     float redirectorForceX = 0.5f;
     float redirectorForceY = 0.25f;

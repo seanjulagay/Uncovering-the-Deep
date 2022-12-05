@@ -13,8 +13,11 @@ public class TrashObjScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("Triggered from " + gameObject.name);
-        gameObject.SetActive(false);
-        GameManagerScript.trashCount++;
+        if (other.name == "PlayerTrigger")
+        {
+            Debug.Log("Triggered from " + gameObject.name);
+            gameObject.SetActive(false);
+            GameManagerScript.trashCount++;
+        }
     }
 }
