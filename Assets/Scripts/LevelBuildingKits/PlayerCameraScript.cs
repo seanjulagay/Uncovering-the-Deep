@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlayerCameraScript : MonoBehaviour
 {
-    public GameObject mainCamera;
+    GameObject mainCamera;
 
     void Start()
     {
+        mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         mainCamera.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, mainCamera.transform.position.z);
     }
 

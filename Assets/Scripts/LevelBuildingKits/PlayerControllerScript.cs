@@ -108,7 +108,14 @@ public class PlayerControllerScript : MonoBehaviour
             }
             else
             {
-                playerSpriteManagerScript.ChangePlayerSprite("oliveNeutral");
+                if (rb.velocity.y >= 0)
+                {
+                    playerSpriteManagerScript.ChangePlayerSprite("oliveNeutral");
+                }
+                else
+                {
+                    playerSpriteManagerScript.ChangePlayerSprite("oliveDownCarrying");
+                }
             }
         }
     }
