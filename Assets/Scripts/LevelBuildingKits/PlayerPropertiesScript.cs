@@ -14,6 +14,7 @@ public class PlayerPropertiesScript : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("Loaded PlayeRProps");
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
@@ -49,7 +50,7 @@ public class PlayerPropertiesScript : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("WaterBlock"))
+        if (other.tag == "WaterBlock")
         {
             underwater = true;
         }

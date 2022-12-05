@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class PlayerControllerScript : MonoBehaviour
 {
-    public Sprite oliveUp;
-    public Sprite oliveDown;
-    public Sprite oliveLeft;
-    public Sprite oliveRight;
-
-    SpriteRenderer mySprite;
+    PlayerSpriteManagerScript playerSpriteManagerScript;
+    TrashbagStackManager trashbagStackManager;
 
     Rigidbody2D rb;
     float moveX, moveY;
@@ -23,12 +19,14 @@ public class PlayerControllerScript : MonoBehaviour
 
     void Start()
     {
+        playerSpriteManagerScript = gameObject.GetComponent<PlayerSpriteManagerScript>();
+        trashbagStackManager = GameObject.Find("TrashbagStackManager").GetComponent<TrashbagStackManager>();
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        rb.AddForce(Vector2.zero);
+        // rb.AddForce(Vector2.zero);
         InputListener();
     }
 
@@ -55,7 +53,15 @@ public class PlayerControllerScript : MonoBehaviour
                     {
                         rb.AddForce(transform.right * moveSideSpd);
                     }
-                    gameObject.GetComponent<SpriteRenderer>().sprite = oliveRight;
+
+                    if (trashbagStackManager.stackCount > 0) // PLAYER CARRYING
+                    {
+                        playerSpriteManagerScript.ChangePlayerSprite("oliveRightCarrying");
+                    }
+                    else
+                    {
+                        playerSpriteManagerScript.ChangePlayerSprite("oliveRightEmpty");
+                    }
                 }
                 else if (moveX < 0) // PLAYER GOES LEFT
                 {
@@ -63,7 +69,15 @@ public class PlayerControllerScript : MonoBehaviour
                     {
                         rb.AddForce(-transform.right * moveSideSpd);
                     }
-                    gameObject.GetComponent<SpriteRenderer>().sprite = oliveLeft;
+
+                    if (trashbagStackManager.stackCount > 0) // PLAYER CARRYING
+                    {
+                        playerSpriteManagerScript.ChangePlayerSprite("oliveLeftCarrying");
+                    }
+                    else
+                    {
+                        playerSpriteManagerScript.ChangePlayerSprite("oliveLeftEmpty");
+                    }
                 }
 
                 if (moveY > 0) // PLAYER GOES UP
@@ -72,7 +86,8 @@ public class PlayerControllerScript : MonoBehaviour
                     {
                         rb.AddForce(transform.up * moveUpSpd);
                     }
-                    gameObject.GetComponent<SpriteRenderer>().sprite = oliveUp;
+
+                    playerSpriteManagerScript.ChangePlayerSprite("oliveUp");
                 }
                 else if (moveY < 0) // PLAYER GOES DOWN
                 {
@@ -80,13 +95,20 @@ public class PlayerControllerScript : MonoBehaviour
                     {
                         rb.AddForce(-transform.up * moveDownSpd);
                     }
-                    gameObject.GetComponent<SpriteRenderer>().sprite = oliveDown;
+
+                    if (trashbagStackManager.stackCount > 0) // PLAYER CARRYING
+                    {
+                        playerSpriteManagerScript.ChangePlayerSprite("oliveDownCarrying");
+                    }
+                    else
+                    {
+                        playerSpriteManagerScript.ChangePlayerSprite("oliveDownEmpty");
+                    }
                 }
             }
             else
             {
-                // if (gameObject.GetComponent<Rigidbody2D>().velocity.y. =>
-                gameObject.GetComponent<SpriteRenderer>().sprite = oliveUp;
+                playerSpriteManagerScript.ChangePlayerSprite("oliveNeutral");
             }
         }
     }
