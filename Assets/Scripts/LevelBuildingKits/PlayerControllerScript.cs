@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerControllerScript : MonoBehaviour
 {
+    public GameObject arrowKeysUI;
+    UIArrowKeysScript uiArrowKeysScript;
+
     PlayerSpriteManagerScript playerSpriteManagerScript;
     TrashbagStackManager trashbagStackManager;
 
@@ -19,6 +22,8 @@ public class PlayerControllerScript : MonoBehaviour
 
     void Start()
     {
+        uiArrowKeysScript = arrowKeysUI.GetComponent<UIArrowKeysScript>();
+
         playerSpriteManagerScript = gameObject.GetComponent<PlayerSpriteManagerScript>();
         trashbagStackManager = GameObject.Find("TrashbagStackManager").GetComponent<TrashbagStackManager>();
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -49,6 +54,9 @@ public class PlayerControllerScript : MonoBehaviour
             {
                 if (moveX > 0) // PLAYER GOES RIGHT
                 {
+                    uiArrowKeysScript.ActivateArrow("right");
+                    uiArrowKeysScript.DeactivateArrow("left");
+
                     if (rb.velocity.x <= moveVelocityLimit)
                     {
                         rb.AddForce(transform.right * moveSideSpd);
@@ -65,6 +73,9 @@ public class PlayerControllerScript : MonoBehaviour
                 }
                 else if (moveX < 0) // PLAYER GOES LEFT
                 {
+                    uiArrowKeysScript.ActivateArrow("left");
+                    uiArrowKeysScript.DeactivateArrow("right");
+
                     if (rb.velocity.x >= -moveVelocityLimit)
                     {
                         rb.AddForce(-transform.right * moveSideSpd);
@@ -79,9 +90,17 @@ public class PlayerControllerScript : MonoBehaviour
                         playerSpriteManagerScript.ChangePlayerSprite("oliveLeftEmpty");
                     }
                 }
+                else
+                {
+                    uiArrowKeysScript.DeactivateArrow("left");
+                    uiArrowKeysScript.DeactivateArrow("right");
+                }
 
                 if (moveY > 0) // PLAYER GOES UP
                 {
+                    uiArrowKeysScript.ActivateArrow("up");
+                    uiArrowKeysScript.DeactivateArrow("down");
+
                     if (rb.velocity.y <= moveVelocityLimit)
                     {
                         rb.AddForce(transform.up * moveUpSpd);
@@ -91,6 +110,9 @@ public class PlayerControllerScript : MonoBehaviour
                 }
                 else if (moveY < 0) // PLAYER GOES DOWN
                 {
+                    uiArrowKeysScript.ActivateArrow("down");
+                    uiArrowKeysScript.DeactivateArrow("up");
+
                     if (rb.velocity.y >= -moveVelocityLimit)
                     {
                         rb.AddForce(-transform.up * moveDownSpd);
@@ -105,9 +127,18 @@ public class PlayerControllerScript : MonoBehaviour
                         playerSpriteManagerScript.ChangePlayerSprite("oliveDownEmpty");
                     }
                 }
+                else
+                {
+                    uiArrowKeysScript.DeactivateArrow("up");
+                    uiArrowKeysScript.DeactivateArrow("down");
+                }
             }
             else
             {
+                uiArrowKeysScript.DeactivateArrow("left");
+                uiArrowKeysScript.DeactivateArrow("up");
+                uiArrowKeysScript.DeactivateArrow("right");
+                uiArrowKeysScript.DeactivateArrow("down");
                 if (rb.velocity.y >= 0)
                 {
                     playerSpriteManagerScript.ChangePlayerSprite("oliveNeutral");

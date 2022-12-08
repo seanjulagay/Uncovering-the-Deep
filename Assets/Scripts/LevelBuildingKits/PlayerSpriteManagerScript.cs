@@ -26,7 +26,7 @@ public class PlayerSpriteManagerScript : MonoBehaviour
 
     public void ChangePlayerSprite(string oliveStatus)
     {
-        Debug.Log("ChangePlayerSprite called");
+        // Debug.Log("ChangePlayerSprite called");
         switch (oliveStatus)
         {
             case "oliveDownCarrying":
