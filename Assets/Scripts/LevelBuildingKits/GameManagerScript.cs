@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour
 {
+    public static string gameMode; // values: "exploration", "restoration"
     public static int trashCount = 0;
     public static int animalsFreed = 0;
     public static int currentCheckpoint = 0;
