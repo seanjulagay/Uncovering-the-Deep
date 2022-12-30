@@ -15,8 +15,12 @@ public class UIManagerScript : MonoBehaviour
     public TMP_Text freeingProgressText;
     public TMP_Text animalsFreedText;
 
+    public TMP_Text timeSpentText;
+
     string currentDialogue;
     public int dialogueDecaySecs;
+
+    int timeSpent;
 
     void Start()
     {
@@ -26,6 +30,8 @@ public class UIManagerScript : MonoBehaviour
 
     void Update()
     {
+        TimeSpentTextHandler();
+
         oxygenCountText.text = "Oxygen: " + PlayerPropertiesScript.oxygenCount;
         trashCountText.text = "Trash collected: " + GameManagerScript.trashCount;
         if (activeTrappedAnimalTrigger != null)
@@ -60,5 +66,15 @@ public class UIManagerScript : MonoBehaviour
         Debug.Log("Waiting for " + dialogueDecaySecs);
         yield return new WaitForSeconds(dialogueDecaySecs);
         dialogueText.enabled = false;
+    }
+
+    public void TimeSpentTextHandler()
+    {
+        Debug.Log(TimeSpan.FromSeconds(GameManagerScript.timeSpentSecs).Minutes + ":" + TimeSpan.FromSeconds(GameManagerScript.timeSpentSecs).Seconds);
+
+        if (timeSpentText != null)
+        {
+            timeSpentText.text = "Time Spent: " + TimeSpan.FromSeconds(GameManagerScript.timeSpentSecs).Minutes.ToString("00") + ":" + TimeSpan.FromSeconds(GameManagerScript.timeSpentSecs).Seconds.ToString("00");
+        }
     }
 }
