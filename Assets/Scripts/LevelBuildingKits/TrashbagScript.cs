@@ -12,6 +12,7 @@ public class TrashbagScript : MonoBehaviour
 
     void Start()
     {
+        int randomNum = Random.Range(0, 2);
         trashbagStackManager = GameObject.Find("TrashbagStackManager").GetComponent<TrashbagStackManager>();
         rb = gameObject.GetComponent<Rigidbody2D>();
     }

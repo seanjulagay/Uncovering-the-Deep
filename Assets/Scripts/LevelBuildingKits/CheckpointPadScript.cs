@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CheckpointPadScript : MonoBehaviour
 {
-    public GameObject nextCheckpointBarrier;
+    GameObject nextCheckpointBarrier;
     UIManagerScript uiManagerScript;
     CheckpointManagerScript checkpointManagerScript;
     GameObject checkpointParentObj;
@@ -12,11 +12,12 @@ public class CheckpointPadScript : MonoBehaviour
 
     void Start()
     {
+        nextCheckpointBarrier = gameObject.transform.parent.Find("CheckpointBarrier").gameObject;
         uiManagerScript = GameObject.Find("UIManager").GetComponent<UIManagerScript>();
         checkpointManagerScript = GameObject.Find("CheckpointManager").GetComponent<CheckpointManagerScript>();
         checkpointParentObj = gameObject.transform.parent.gameObject;
 
-        trashObjs = GameObject.FindGameObjectsWithTag("FloatingTrash");
+        trashObjs = GameObject.FindGameObjectsWithTag("TrashObj");
     }
 
     bool AllTrashObjsCleared()

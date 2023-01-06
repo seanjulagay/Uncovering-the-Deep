@@ -12,10 +12,10 @@ public class PlayerControllerScript : MonoBehaviour
 
     Rigidbody2D rb;
     float moveX, moveY;
-    public float moveUpSpd = 2f;
+    public float moveUpSpd = 5f; // original value: 2f
     public float moveDownSpd = 1f;
-    public float moveSideSpd = 2f;
-    float moveVelocityLimit = 3f;
+    public float moveSideSpd = 5f;
+    float moveVelocityLimit = 5f; // original value: 3f
     float sinkVelocityLimit = 1f;
 
     public bool canPlayerMove = true;
