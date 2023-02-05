@@ -36,7 +36,6 @@ public class UIArrowKeysScript : MonoBehaviour
                 downArrow.color = Color.gray;
                 break;
         }
-        Debug.Log("Activating arrow: " + direction);
     }
 
     public void DeactivateArrow(string direction)
@@ -56,7 +55,5 @@ public class UIArrowKeysScript : MonoBehaviour
                 downArrow.color = Color.white;
                 break;
         }
-
-        Debug.Log("Deactivating arrow: " + direction);
     }
 }

@@ -13,7 +13,6 @@ public class TrashObjScript : MonoBehaviour
         trashObjRandomizerScript = GameObject.Find("TrashObjRandomizer").GetComponent<TrashObjRandomizerScript>();
         if (gameObject.tag == "TrashObjDefault")
         {
-            Debug.Log("Prechange random obj");
             trashObjRandomizerScript.InstantiatRandomTrashObj(gameObject);
         }
     }
@@ -22,7 +21,6 @@ public class TrashObjScript : MonoBehaviour
     {
         if (other.name == "PlayerTrigger")
         {
-            Debug.Log("Triggered from " + gameObject.name);
             gameObject.SetActive(false);
             GameManagerScript.trashCount++;
         }

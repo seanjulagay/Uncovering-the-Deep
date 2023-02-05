@@ -16,7 +16,7 @@ public class PlayerPropertiesScript : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Loaded PlayeRProps");
+        // Debug.Log("Loaded PlayeRProps");
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 

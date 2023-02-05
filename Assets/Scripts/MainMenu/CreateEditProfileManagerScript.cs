@@ -80,7 +80,7 @@ public class CreateEditProfileManagerScript : MonoBehaviour
 
     public void ClearFieldsCreate()
     {
-        Debug.Log("CLEAR FIELDS CREATE");
+        // Debug.Log("CLEAR FIELDS CREATE");
         foreach (GameObject iconObject in iconObjectsCreate)
         {
             iconObject.GetComponent<Image>().sprite = iconSprites[Array.IndexOf(iconObjectsCreate, iconObject)];

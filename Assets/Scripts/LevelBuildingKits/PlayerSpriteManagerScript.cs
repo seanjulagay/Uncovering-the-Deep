@@ -62,7 +62,7 @@ public class PlayerSpriteManagerScript : MonoBehaviour
                 spriteUpright.sprite = oliveUp;
                 break;
             default:
-                Debug.Log("Error on ChangePlayerSprite");
+                // Debug.Log("Error on ChangePlayerSprite");
                 break;
         }
     }

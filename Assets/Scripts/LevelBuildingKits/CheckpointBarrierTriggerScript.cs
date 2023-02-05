@@ -58,7 +58,7 @@ public class CheckpointBarrierTriggerScript : MonoBehaviour
     {
         if (redirectPlayer == true)
         {
-            Debug.Log("Player movement temporarily disabled");
+            // Debug.Log("Player movement temporarily disabled");
         }
     }
 

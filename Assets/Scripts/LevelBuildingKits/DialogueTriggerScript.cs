@@ -16,7 +16,7 @@ public class DialogueTriggerScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("DialogueTriggered");
+        // Debug.Log("DialogueTriggered");
         dialogueTriggerManagerScript.ChangeDialogue(dialogueIndex);
     }
 

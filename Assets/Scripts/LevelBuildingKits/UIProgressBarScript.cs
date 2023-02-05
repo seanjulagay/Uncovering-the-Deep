@@ -28,7 +28,7 @@ public class UIProgressBarScript : MonoBehaviour
         float fillAmount = currentOffset / maximumOffset;
         mask.fillAmount = fillAmount;
 
-        Debug.Log("fillAmount: " + fillAmount);
+        // Debug.Log("fillAmount: " + fillAmount);
 
         if (fillAmount > .66f)
         {

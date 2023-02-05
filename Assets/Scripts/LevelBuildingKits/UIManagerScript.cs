@@ -55,7 +55,6 @@ public class UIManagerScript : MonoBehaviour
     public void UpdateDialogueUI(string dialogue)
     {
         dialogueText.enabled = true;
-        Debug.Log(dialogue);
         dialogueText.text = dialogue;
         StopCoroutine("DialogueTextDecay");
         StartCoroutine("DialogueTextDecay");
@@ -63,14 +62,13 @@ public class UIManagerScript : MonoBehaviour
 
     IEnumerator DialogueTextDecay()
     {
-        Debug.Log("Waiting for " + dialogueDecaySecs);
         yield return new WaitForSeconds(dialogueDecaySecs);
         dialogueText.enabled = false;
     }
 
     public void TimeSpentTextHandler()
     {
-        Debug.Log(TimeSpan.FromSeconds(GameManagerScript.timeSpentSecs).Minutes + ":" + TimeSpan.FromSeconds(GameManagerScript.timeSpentSecs).Seconds);
+        // Debug.Log(TimeSpan.FromSeconds(GameManagerScript.timeSpentSecs).Minutes + ":" + TimeSpan.FromSeconds(GameManagerScript.timeSpentSecs).Seconds);
 
         if (timeSpentText != null)
         {
