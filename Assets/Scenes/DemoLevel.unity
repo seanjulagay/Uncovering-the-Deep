@@ -1353,12 +1353,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 353a1bc625a77fd478f37fc09944bdde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 3
+  maxAcceleration: 5
   directorPf: {fileID: 6220323925223288324, guid: 47015a67508201847a7f8129514581d2, type: 3}
   playerObj: {fileID: 0}
   isChasing: 0
   inBounds: 0
-  xVelRand: 0
-  yVelRand: 0
 --- !u!212 &216852561
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1882,6 +1882,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 402407957}
+  - component: {fileID: 402407958}
   m_Layer: 0
   m_Name: QuizManager
   m_TagString: Untagged
@@ -1904,6 +1905,19 @@ Transform:
   m_Father: {fileID: 1060540229}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &402407958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402407956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9dc838f1475fb2498b669656da8481a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quizPanelPf: {fileID: 8975066873363693427, guid: 604dbed5d337ac24bbecbfb8093b730e, type: 3}
 --- !u!1 &423183779 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3043829646072705780, guid: 3debd49e79350c94f9a98929fb641912, type: 3}
@@ -2892,11 +2906,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 660911997}
+  - component: {fileID: 660912000}
   - component: {fileID: 660911998}
   - component: {fileID: 660911999}
-  - component: {fileID: 660912000}
   m_Layer: 0
-  m_Name: QuizAnimalTrigger
+  m_Name: QuizAnimal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3007,6 +3021,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e508a154d8a9b12468842a32d49456d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  q1: question1
+  q1options:
+  - option1
+  - option2
+  - option3
+  q1answer: 0
+  q2: question2
+  q2options:
+  - option1
+  - option2
+  - option3
+  q2answer: 0
+  q3: question3
+  q3options:
+  - option1
+  - option2
+  - option3
+  q3answer: 0
 --- !u!1 &671558456
 GameObject:
   m_ObjectHideFlags: 0
@@ -3833,6 +3865,7 @@ RectTransform:
   - {fileID: 1485494566}
   - {fileID: 1299235968}
   - {fileID: 2017858161}
+  - {fileID: 1483776394}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4350,6 +4383,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
+--- !u!1 &1023129526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1023129527}
+  m_Layer: 5
+  m_Name: QuizPanels
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1023129527
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023129526}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1483776394}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1026371453
 GameObject:
   m_ObjectHideFlags: 0
@@ -6616,6 +6685,43 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1483776393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1483776394}
+  m_Layer: 5
+  m_Name: MechanicsPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1483776394
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1483776393}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1023129527}
+  m_Father: {fileID: 909513911}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1485494565
 GameObject:
   m_ObjectHideFlags: 0

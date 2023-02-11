@@ -4,13 +4,5 @@ using UnityEngine;
 
 public class QuizManagerScript : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+    public GameObject quizPanelPf;
 }
