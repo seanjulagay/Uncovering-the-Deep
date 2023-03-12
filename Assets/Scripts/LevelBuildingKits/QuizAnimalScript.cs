@@ -19,13 +19,14 @@ public class QuizAnimalScript : MonoBehaviour
     public string[] q3options = new string[3] { "option1", "option2", "option3" };
     public int q3answer = 0;
 
+    public List<int> userAnswers = new List<int>(new int[] { 0, 0, 0 });
     List<string> compiledQuestions;
     List<string[]> compiledOptions;
     List<int> compiledAnswers;
-    List<int> userAnswers = new List<int>();
 
-    int activeQuestion = -1;
+    public int activeQuestion;
 
+    GameManagerScript gameManagerScript;
     QuizManagerScript quizManagerScript;
 
     GameObject connectedQuizPanel;
@@ -34,20 +35,25 @@ public class QuizAnimalScript : MonoBehaviour
     Button leaveButton;
 
     ToggleGroup toggleGroup;
-
-    bool firstOpen = true;
+    List<Toggle> toggle = new List<Toggle>(new Toggle[3]);
 
     // ================ TODO: ADD LISTENER TO NEXT AND BACK BUTTONS PROGRAMMATICALLY
 
     void Start()
     {
+        gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
         quizManagerScript = GameObject.Find("QuizManager").GetComponent<QuizManagerScript>();
         connectedQuizPanel = Instantiate(quizManagerScript.quizPanelPf, new Vector3(0, 0, 0), transform.rotation, GameObject.Find("QuizPanels").transform);
         connectedQuizPanel.GetComponent<RectTransform>().localPosition = Vector3.zero;
         connectedQuizPanel.SetActive(false);
         toggleGroup = connectedQuizPanel.transform.Find("QuestionRadioButtons").GetComponent<ToggleGroup>();
+        toggle[0] = toggleGroup.transform.Find("Option1").gameObject.GetComponent<Toggle>();
+        toggle[1] = toggleGroup.transform.Find("Option2").gameObject.GetComponent<Toggle>();
+        toggle[2] = toggleGroup.transform.Find("Option3").gameObject.GetComponent<Toggle>();
         nextButton = connectedQuizPanel.transform.Find("QuizNextButton").gameObject.GetComponent<Button>();
         nextButton.onClick.AddListener(NextQuestion);
+        backButton = connectedQuizPanel.transform.Find("QuizBackButton").gameObject.GetComponent<Button>();
+        backButton.onClick.AddListener(PreviousQuestion);
         leaveButton = connectedQuizPanel.transform.Find("QuizLeaveButton").gameObject.GetComponent<Button>();
         leaveButton.onClick.AddListener(CloseQuizPanel);
 
@@ -62,21 +68,14 @@ public class QuizAnimalScript : MonoBehaviour
         {
             Debug.Log("HELLO PLAYER");
             OpenQuizPanel();
-            if (firstOpen == true)
-            {
-                firstOpen = false;
-                activeQuestion++;
-                UpdateQuizPanel();
-            }
-            else
-            {
-                UpdateQuizPanel();
-            }
+            activeQuestion = 0;
+            UpdateQuizPanel();
         }
     }
 
     void UpdateQuizPanel()
     {
+        Debug.Log($"CALLED FROM UPDATEQUIZPANEL, activeQuestion is {activeQuestion}");
         GameObject questionPrompt = connectedQuizPanel.transform.Find("QuestionPromptText").gameObject;
 
         GameObject option1 = connectedQuizPanel.transform.Find("QuestionRadioButtons/Option1/Label").gameObject;
@@ -87,6 +86,25 @@ public class QuizAnimalScript : MonoBehaviour
         option1.GetComponent<Text>().text = compiledOptions[activeQuestion][0];
         option2.GetComponent<Text>().text = compiledOptions[activeQuestion][1];
         option3.GetComponent<Text>().text = compiledOptions[activeQuestion][2];
+
+        for (int i = 0; i < 3; i++)
+        {
+            toggle[i].isOn = false;
+        }
+
+        for (int i = 0; i < 3; i++)
+        {
+            if (userAnswers[activeQuestion] == i)
+            {
+                toggle[i].isOn = true;
+                break;
+            }
+        }
+    }
+
+    void Update()
+    {
+
     }
 
     void OpenQuizPanel()
@@ -97,30 +115,60 @@ public class QuizAnimalScript : MonoBehaviour
 
     void CloseQuizPanel()
     {
-        Time.timeScale = 1;
-        connectedQuizPanel.SetActive(false);
-    }
-
-    void NextQuestion()
-    {
-        Debug.Log("Hello World!");
         GameObject activeToggle = toggleGroup.ActiveToggles().FirstOrDefault().gameObject;
 
         for (int i = 0; i < 3; i++)
         {
             if (activeToggle.name == "Option" + (i + 1))
             {
-                userAnswers.Add(i);
-                activeQuestion++;
-                if (activeQuestion < 3)
+                userAnswers[activeQuestion] = i;
+            }
+        }
+        Debug.Log("Clicked CloseQuizPanel");
+        Time.timeScale = 1;
+        connectedQuizPanel.SetActive(false);
+    }
+
+    void NextQuestion()
+    {
+        GameObject activeToggle = toggleGroup.ActiveToggles().FirstOrDefault().gameObject;
+
+        for (int i = 0; i < 3; i++)
+        {
+            if (activeToggle.name == "Option" + (i + 1))
+            {
+                if (activeQuestion < 2)
                 {
+                    userAnswers[activeQuestion] = i;
+                    activeQuestion++;
                     UpdateQuizPanel();
                 }
                 else
                 {
+                    userAnswers[activeQuestion] = i;
                     ShowQuizResults();
                 }
+                Debug.Log($"WENT FORWARD, active question is {activeQuestion}");
                 // Debug.Log($"User selected option {i + 1}, adding {i} into userAnswers");
+                break;
+            }
+        }
+    }
+
+    void PreviousQuestion()
+    {
+        GameObject activeToggle = toggleGroup.ActiveToggles().FirstOrDefault().gameObject;
+
+        for (int i = 0; i < 3; i++)
+        {
+            if (activeToggle.name == "Option" + (i + 1))
+            {
+                if (activeQuestion > 0)
+                {
+                    userAnswers[activeQuestion] = i;
+                    activeQuestion--;
+                    UpdateQuizPanel();
+                }
                 break;
             }
         }
@@ -138,6 +186,7 @@ public class QuizAnimalScript : MonoBehaviour
             }
         }
 
-        Debug.Log($"User scored {userScore}");
+        connectedQuizPanel.SetActive(false);
+        gameManagerScript.LevelCompleted(userScore);
     }
 }

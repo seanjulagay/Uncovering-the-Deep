@@ -7,6 +7,14 @@ using TMPro;
 
 public class UIManagerScript : MonoBehaviour
 {
+    public GameObject levelCompletePanel;
+    Image levelCompleteStars;
+    public Sprite levelCompleteStars0;
+    public Sprite levelCompleteStars1;
+    public Sprite levelCompleteStars2;
+    public Sprite levelCompleteStars3;
+    TMP_Text levelCompleteScoreText;
+
     public static GameObject activeTrappedAnimalTrigger = null;
 
     public TMP_Text trashCountText;
@@ -24,6 +32,9 @@ public class UIManagerScript : MonoBehaviour
 
     void Start()
     {
+        levelCompleteStars = levelCompletePanel.transform.Find("LevelCompleteStars").gameObject.GetComponent<Image>();
+        levelCompleteScoreText = levelCompletePanel.transform.Find("ScoreText").gameObject.GetComponent<TMP_Text>();
+
         dialogueText.text = "Placeholder dialogue text";
         dialogueText.enabled = false;
     }
@@ -73,6 +84,30 @@ public class UIManagerScript : MonoBehaviour
         if (timeSpentText != null)
         {
             timeSpentText.text = "Time Spent: " + TimeSpan.FromSeconds(GameManagerScript.timeSpentSecs).Minutes.ToString("00") + ":" + TimeSpan.FromSeconds(GameManagerScript.timeSpentSecs).Seconds.ToString("00");
+        }
+    }
+
+    public void displayLevelCompletePanel(int userScore)
+    {
+        levelCompletePanel.SetActive(true);
+        levelCompleteScoreText.text = "Score: " + userScore.ToString() + "/3";
+
+        // Quiz system scoring
+        if (userScore == 0)
+        {
+            levelCompleteStars.sprite = levelCompleteStars0;
+        }
+        else if (userScore == 1)
+        {
+            levelCompleteStars.sprite = levelCompleteStars1;
+        }
+        else if (userScore == 2)
+        {
+            levelCompleteStars.sprite = levelCompleteStars2;
+        }
+        else if (userScore == 3)
+        {
+            levelCompleteStars.sprite = levelCompleteStars3;
         }
     }
 }

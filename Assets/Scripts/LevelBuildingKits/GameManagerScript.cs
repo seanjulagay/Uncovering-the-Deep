@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour
 {
+    public UIManagerScript uiManagerScript;
+
     public static string gameMode; // values: "exploration", "restoration"
     public static int trashCount = 0;
     public static int animalsFreed = 0;
@@ -15,11 +17,13 @@ public class GameManagerScript : MonoBehaviour
     public static bool inStackingState = false;
     public static bool isGameActive = true;
 
+    public int userScore = 0;
+
     float timeSpent = 0;
 
     void Start()
     {
-
+        uiManagerScript = GameObject.Find("UIManager").GetComponent<UIManagerScript>();
     }
 
     void Update()
@@ -43,5 +47,12 @@ public class GameManagerScript : MonoBehaviour
             Time.timeScale = 1;
             isGameActive = true;
         }
+    }
+
+    public void LevelCompleted(int quizScore = 0)
+    {
+        Time.timeScale = 0;
+        userScore = quizScore;
+        uiManagerScript.displayLevelCompletePanel(userScore);
     }
 }

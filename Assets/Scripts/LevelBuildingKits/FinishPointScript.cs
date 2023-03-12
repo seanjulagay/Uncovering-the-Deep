@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class FinishPointScript : MonoBehaviour
 {
+    GameManagerScript gameManagerScript;
     CheckpointManagerScript checkpointManagerScript;
 
     void Start()
     {
+        gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
         checkpointManagerScript = GameObject.Find("CheckpointManager").GetComponent<CheckpointManagerScript>();
     }
 
@@ -23,6 +25,7 @@ public class FinishPointScript : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             TouchedFinishPoint();
+            gameManagerScript.LevelCompleted(3);
         }
     }
 }
