@@ -26,7 +26,7 @@ public class PlayerSpriteManagerScript : MonoBehaviour
 
     public void ChangePlayerSprite(string oliveStatus)
     {
-        Debug.Log("ChangePlayerSprite called");
+        // Debug.Log("ChangePlayerSprite called");
         switch (oliveStatus)
         {
             case "oliveDownCarrying":
@@ -62,7 +62,7 @@ public class PlayerSpriteManagerScript : MonoBehaviour
                 spriteUpright.sprite = oliveUp;
                 break;
             default:
-                Debug.Log("Error on ChangePlayerSprite");
+                // Debug.Log("Error on ChangePlayerSprite");
                 break;
         }
     }

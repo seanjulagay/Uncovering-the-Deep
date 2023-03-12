@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerPropertiesScript : MonoBehaviour
 {
+    public GameObject uiOxygenBar;
+
     Rigidbody2D rb;
 
     public static float oxygenCount = 99f;
@@ -14,7 +16,7 @@ public class PlayerPropertiesScript : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Loaded PlayeRProps");
+        // Debug.Log("Loaded PlayeRProps");
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
@@ -34,6 +36,8 @@ public class PlayerPropertiesScript : MonoBehaviour
         {
             oxygenCount += Time.deltaTime * oxygenReplenishRate;
         }
+
+        uiOxygenBar.GetComponent<UIProgressBarScript>().current = (int)oxygenCount;
     }
 
     void PlayerPhysicsHandler()

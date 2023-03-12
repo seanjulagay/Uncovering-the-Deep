@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class FinishPointScript : MonoBehaviour
 {
+    GameManagerScript gameManagerScript;
     CheckpointManagerScript checkpointManagerScript;
 
     void Start()
     {
+        gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
         checkpointManagerScript = GameObject.Find("CheckpointManager").GetComponent<CheckpointManagerScript>();
     }
 
@@ -15,6 +17,7 @@ public class FinishPointScript : MonoBehaviour
     {
         checkpointManagerScript.TurnAllTrashbagsStackable();
         GameManagerScript.inStackingState = true;
+        // Debug.Log("AAAA");
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -22,6 +25,7 @@ public class FinishPointScript : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             TouchedFinishPoint();
+            gameManagerScript.LevelCompleted(3);
         }
     }
 }

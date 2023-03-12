@@ -21,7 +21,6 @@ public class TrashbagTriggerScript : MonoBehaviour
         {
             trashbag.tag = "Trashbag";
             trashbagScript.isStacked = false;
-            Debug.Log("Removing trashbag from stack");
             trashbagStackManager.stackCount--;
         }
     }

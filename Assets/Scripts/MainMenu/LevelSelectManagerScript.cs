@@ -32,7 +32,7 @@ public class LevelSelectManagerScript : MonoBehaviour
     public void UpdateZonePanel(int index)
     {
         selectedZone = index;
-        Debug.Log("Pressed button: " + selectedZone);
+        // Debug.Log("Pressed button: " + selectedZone);
         UpdateZoneIcons();
 
         zoneIconButton[index].GetComponent<Image>().sprite = zoneIconSpriteSel[index];
@@ -75,7 +75,7 @@ public class LevelSelectManagerScript : MonoBehaviour
         {
             for (int i = 0; i <= ProfileManagerScript.activeUser.currentLevel; i++)
             { // load working buttons until user's current level
-                Debug.Log("User selected current zone");
+                // Debug.Log("User selected current zone");
                 levelIconButton[i].GetComponent<Image>().sprite = levelIconSprite[i];
                 levelIconButton[i].transform.Find("LevelStars").GetComponent<Image>().sprite = starIconSprite[ProfileManagerScript.activeUser.levelStars[(5 * selectedZone) + i]];
             }
@@ -89,7 +89,7 @@ public class LevelSelectManagerScript : MonoBehaviour
         { // if user selects previous zone, load everything
             for (int i = 0; i < 5; i++)
             {
-                Debug.Log("User selected finished zone");
+                // Debug.Log("User selected finished zone");
                 levelIconButton[i].GetComponent<Image>().sprite = levelIconSprite[i];
                 levelIconButton[i].transform.Find("LevelStars").GetComponent<Image>().sprite = starIconSprite[ProfileManagerScript.activeUser.levelStars[(5 * selectedZone) + i]];
             }

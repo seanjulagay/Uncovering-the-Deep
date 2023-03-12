@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TrappedAnimalTriggerScript : MonoBehaviour
 {
@@ -42,7 +43,6 @@ public class TrappedAnimalTriggerScript : MonoBehaviour
         if (Input.GetKeyDown("space"))
         {
             freeingProgress += 1;
-            Debug.Log("Pressed Space");
         }
 
         if (freeingProgress >= 10)
@@ -56,6 +56,9 @@ public class TrappedAnimalTriggerScript : MonoBehaviour
     void InstantiateStoryAnimal()
     {
         GameObject storyAnimal = Instantiate(storyAnimalPrefab, parentObj.transform.position, transform.rotation, GameObject.Find("StoryAnimal").transform);
+        storyAnimal.transform.localScale = parentObj.transform.localScale;
+        storyAnimal.GetComponent<SpriteRenderer>().sprite = parentObj.GetComponent<SpriteRenderer>().sprite;
+        storyAnimal.GetComponent<SpriteRenderer>().drawMode = parentObj.GetComponent<SpriteRenderer>().drawMode;
         storyAnimal.transform.Find("StoryAnimalTrigger").GetComponent<StoryAnimalTriggerScript>().animalDialogue = postRescueDialogue;
     }
 
