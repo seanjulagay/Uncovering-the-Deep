@@ -7,6 +7,8 @@ using TMPro;
 
 public class UIManagerScript : MonoBehaviour
 {
+    GameManagerScript gameManagerScript;
+
     public GameObject levelCompletePanel;
     Image levelCompleteStars;
     public Sprite levelCompleteStars0;
@@ -22,6 +24,7 @@ public class UIManagerScript : MonoBehaviour
     public TMP_Text dialogueText;
     public TMP_Text freeingProgressText;
     public TMP_Text animalsFreedText;
+    public TMP_Text helperText;
 
     public TMP_Text timeSpentText;
 
@@ -32,8 +35,10 @@ public class UIManagerScript : MonoBehaviour
 
     void Start()
     {
+        gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
         levelCompleteStars = levelCompletePanel.transform.Find("LevelCompleteStars").gameObject.GetComponent<Image>();
         levelCompleteScoreText = levelCompletePanel.transform.Find("ScoreText").gameObject.GetComponent<TMP_Text>();
+        helperText = GameObject.Find("HelperText").GetComponent<TMP_Text>();
 
         dialogueText.text = "Placeholder dialogue text";
         dialogueText.enabled = false;
@@ -44,7 +49,7 @@ public class UIManagerScript : MonoBehaviour
         TimeSpentTextHandler();
 
         oxygenCountText.text = "Oxygen: " + PlayerPropertiesScript.oxygenCount;
-        trashCountText.text = "Trash collected: " + GameManagerScript.trashCount;
+        trashCountText.text = "Trash collected: " + gameManagerScript.trashCount;
         if (activeTrappedAnimalTrigger != null)
         {
             freeingProgressText.text = "Freeing progress: " + activeTrappedAnimalTrigger.GetComponent<TrappedAnimalTriggerScript>().freeingProgress;
@@ -53,29 +58,29 @@ public class UIManagerScript : MonoBehaviour
         {
             freeingProgressText.text = "No animal trapped";
         }
-        animalsFreedText.text = "Animals freed: " + GameManagerScript.animalsFreed;
+        animalsFreedText.text = "Animals freed: " + gameManagerScript.animalsFreed;
     }
 
-    public void OliveDialogue(string dialogue)
-    {
-        // dialogueText.fontStyle = FontStyles.Italic;
-        UpdateDialogueUI("<i>" + dialogue + "</i>");
-        // dialogueText.fontStyle ^= FontStyles.Italic;
-    }
+    // public void OliveDialogue(string dialogue)
+    // {
+    //     // dialogueText.fontStyle = FontStyles.Italic;
+    //     UpdateDialogueUI("<i>" + dialogue + "</i>");
+    //     // dialogueText.fontStyle ^= FontStyles.Italic;
+    // }
 
-    public void UpdateDialogueUI(string dialogue)
-    {
-        dialogueText.enabled = true;
-        dialogueText.text = dialogue;
-        StopCoroutine("DialogueTextDecay");
-        StartCoroutine("DialogueTextDecay");
-    }
+    // public void UpdateDialogueUI(string dialogue)
+    // {
+    //     dialogueText.enabled = true;
+    //     dialogueText.text = dialogue;
+    //     StopCoroutine("DialogueTextDecay");
+    //     StartCoroutine("DialogueTextDecay");
+    // }
 
-    IEnumerator DialogueTextDecay()
-    {
-        yield return new WaitForSeconds(dialogueDecaySecs);
-        dialogueText.enabled = false;
-    }
+    // IEnumerator DialogueTextDecay()
+    // {
+    //     yield return new WaitForSeconds(dialogueDecaySecs);
+    //     dialogueText.enabled = false;
+    // }
 
     public void TimeSpentTextHandler()
     {
@@ -83,7 +88,7 @@ public class UIManagerScript : MonoBehaviour
 
         if (timeSpentText != null)
         {
-            timeSpentText.text = "Time Spent: " + TimeSpan.FromSeconds(GameManagerScript.timeSpentSecs).Minutes.ToString("00") + ":" + TimeSpan.FromSeconds(GameManagerScript.timeSpentSecs).Seconds.ToString("00");
+            timeSpentText.text = "Time Spent: " + TimeSpan.FromSeconds(gameManagerScript.timeSpentSecs).Minutes.ToString("00") + ":" + TimeSpan.FromSeconds(gameManagerScript.timeSpentSecs).Seconds.ToString("00");
         }
     }
 
@@ -110,4 +115,6 @@ public class UIManagerScript : MonoBehaviour
             levelCompleteStars.sprite = levelCompleteStars3;
         }
     }
+
+
 }

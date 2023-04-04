@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class TrappedAnimalTriggerScript : MonoBehaviour
 {
+    GameManagerScript gameManagerScript;
     public GameObject storyAnimalPrefab;
     GameObject parentObj;
 
@@ -14,6 +15,7 @@ public class TrappedAnimalTriggerScript : MonoBehaviour
 
     void Start()
     {
+        gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
         parentObj = gameObject.transform.parent.gameObject;
     }
 
@@ -49,7 +51,7 @@ public class TrappedAnimalTriggerScript : MonoBehaviour
         {
             parentObj.SetActive(false);
             InstantiateStoryAnimal();
-            GameManagerScript.animalsFreed++;
+            gameManagerScript.animalsFreed++;
         }
     }
 

@@ -16,8 +16,7 @@ public class FinishPointScript : MonoBehaviour
     void TouchedFinishPoint()
     {
         checkpointManagerScript.TurnAllTrashbagsStackable();
-        GameManagerScript.inStackingState = true;
-        // Debug.Log("AAAA");
+        gameManagerScript.inStackingState = true;
     }
 
     void OnTriggerEnter2D(Collider2D other)

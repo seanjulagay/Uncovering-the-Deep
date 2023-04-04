@@ -36,12 +36,11 @@ public class CheckpointBarrierTriggerScript : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        Debug.Log("Something's in the trigger!");
         if (other.gameObject.tag == "Player")
         {
             redirectPlayer = true;
             playerControllerScript.canPlayerMove = false;
-            uiManagerScript.OliveDialogue(oliveDialogue);
+            // uiManagerScript.OliveDialogue(oliveDialogue);
         }
     }
 

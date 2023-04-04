@@ -22,7 +22,7 @@ public class TrashObjScript : MonoBehaviour
         if (other.name == "PlayerTrigger")
         {
             gameObject.SetActive(false);
-            GameManagerScript.trashCount++;
+            gameManagerScript.trashCount++;
         }
     }
 }

@@ -36,6 +36,6 @@ public class DialogueTriggerManagerScript : MonoBehaviour
     {
         // Debug.Log("Changing dialogue internally");
         currentDialogue = levelDialogueClass.dialogue[dialogueIndex];
-        uiManagerScript.UpdateDialogueUI(currentDialogue);
+        // uiManagerScript.UpdateDialogueUI(currentDialogue);
     }
 }

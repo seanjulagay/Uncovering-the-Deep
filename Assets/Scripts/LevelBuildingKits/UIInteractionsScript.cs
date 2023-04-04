@@ -13,6 +13,6 @@ public class UIInteractionsScript : MonoBehaviour
 
     public void ToggleGamePause()
     {
-        gameManagerScript.ToggleGamePause();
+        gameManagerScript.ToggleGamePause(true);
     }
 }

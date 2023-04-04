@@ -14,6 +14,6 @@ public class StoryAnimalTriggerScript : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        uiManagerScript.UpdateDialogueUI(animalDialogue);
+        // uiManagerScript.UpdateDialogueUI(animalDialogue);
     }
 }

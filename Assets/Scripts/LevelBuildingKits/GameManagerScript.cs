@@ -6,16 +6,20 @@ using UnityEngine;
 public class GameManagerScript : MonoBehaviour
 {
     public UIManagerScript uiManagerScript;
+    CheckpointManagerScript checkpointManagerScript;
+    GameObject playerObj;
 
-    public static string gameMode; // values: "exploration", "restoration"
-    public static int trashCount = 0;
-    public static int animalsFreed = 0;
-    public static int currentCheckpoint = 0;
+    public bool inTestingMode = true;
 
-    public static int timeSpentSecs = 0;
+    public string gameMode; // values: "exploration", "restoration"
+    public int trashCount = 0;
+    public int animalsFreed = 0;
+    public int currentCheckpoint = 0;
 
-    public static bool inStackingState = false;
-    public static bool isGameActive = true;
+    public int timeSpentSecs = 0;
+
+    public bool inStackingState = false;
+    public bool isGameActive = true;
 
     public int userScore = 0;
 
@@ -24,6 +28,10 @@ public class GameManagerScript : MonoBehaviour
     void Start()
     {
         uiManagerScript = GameObject.Find("UIManager").GetComponent<UIManagerScript>();
+        checkpointManagerScript = GameObject.Find("CheckpointManager").GetComponent<CheckpointManagerScript>();
+        playerObj = GameObject.Find("Player");
+
+        StartGame();
     }
 
     void Update()
@@ -35,9 +43,17 @@ public class GameManagerScript : MonoBehaviour
         }
     }
 
-    public void ToggleGamePause()
+    void StartGame()
     {
-        if (isGameActive == true)
+        if (inTestingMode == false)
+        {
+            playerObj.transform.position = checkpointManagerScript.startPoint.transform.position;
+        }
+    }
+
+    public void ToggleGamePause(bool isPaused)
+    {
+        if (isPaused == true)
         {
             Time.timeScale = 0;
             isGameActive = false;
