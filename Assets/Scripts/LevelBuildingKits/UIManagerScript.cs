@@ -31,6 +31,8 @@ public class UIManagerScript : MonoBehaviour
     string currentDialogue;
     public int dialogueDecaySecs;
 
+    public bool listenForInteraction = false;
+
     int timeSpent;
 
     void Start()
@@ -59,6 +61,11 @@ public class UIManagerScript : MonoBehaviour
             freeingProgressText.text = "No animal trapped";
         }
         animalsFreedText.text = "Animals freed: " + gameManagerScript.animalsFreed;
+    }
+
+    public void UpdateHelperText(string text = "")
+    {
+        helperText.text = text;
     }
 
     // public void OliveDialogue(string dialogue)

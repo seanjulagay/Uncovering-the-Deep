@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5125677009779600300}
-  - component: {fileID: 3320852152884581466}
+  - component: {fileID: 8801215689348547486}
   - component: {fileID: 5125677009779600301}
   - component: {fileID: 5125677009779600298}
   m_Layer: 0
@@ -34,7 +34,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3320852152884581466
+--- !u!114 &8801215689348547486
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,10 +43,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5125677009779600303}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ed68d5b933943d4f895bc308c18c287, type: 3}
+  m_Script: {fileID: 11500000, guid: 113a56007e4a9c64d85057d4fb48739c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueIndex: 0
+  dialogueText: []
+  dialogueActors: []
+  assignedDialogueSpeaker: 
+  dialogueSprites: []
 --- !u!212 &5125677009779600301
 SpriteRenderer:
   m_ObjectHideFlags: 0

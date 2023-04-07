@@ -10,7 +10,11 @@ public class CheckpointPadScript : MonoBehaviour
     CheckpointManagerScript checkpointManagerScript;
     GameObject checkpointParentObj;
     GameObject[] trashObjs;
-    public List<string> incompleteTrashDialogue = new List<string>();
+
+    public float timer = 0;
+    public bool timerRunning = false;
+    public bool dialogueShown = false;
+    float interactionCooldown = 3f;
 
     void Start()
     {
@@ -19,7 +23,6 @@ public class CheckpointPadScript : MonoBehaviour
         uiManagerScript = GameObject.Find("UIManager").GetComponent<UIManagerScript>();
         checkpointManagerScript = GameObject.Find("CheckpointManager").GetComponent<CheckpointManagerScript>();
         checkpointParentObj = gameObject.transform.parent.gameObject;
-        incompleteTrashDialogue.Add("I should collect all the trash in this area first!");
 
         trashObjs = GameObject.FindGameObjectsWithTag("TrashObj");
     }
@@ -49,8 +52,41 @@ public class CheckpointPadScript : MonoBehaviour
             }
             else
             {
-                dialoguePanelManagerScript.OliveDialogue(incompleteTrashDialogue);
+                if (timer == 0)
+                {
+                    dialogueShown = true;
+                    dialoguePanelManagerScript.OliveSingleDialogue("I should collect all the trash in this area first!");
+                    timerRunning = true;
+                }
             }
+        }
+    }
+
+    void Update()
+    {
+        InteractionCooldownTimer();
+        InteractionButtonListener();
+    }
+
+    void InteractionCooldownTimer()
+    {
+        if (timerRunning == true)
+        {
+            timer += Time.deltaTime;
+            if (timer >= interactionCooldown)
+            {
+                timerRunning = false;
+                timer = 0;
+            }
+        }
+    }
+
+    void InteractionButtonListener()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && dialogueShown == true)
+        {
+            dialoguePanelManagerScript.HideDialogue();
+            dialogueShown = false;
         }
     }
 

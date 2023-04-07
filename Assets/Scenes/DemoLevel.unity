@@ -4532,6 +4532,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 981234390280882797, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
   m_PrefabInstance: {fileID: 1010053388}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &878512221 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6038232132988762049, guid: 5354c9bb47ca3a9478c9c2986baae520, type: 3}
+  m_PrefabInstance: {fileID: 6038232133440787851}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &878512226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878512221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113a56007e4a9c64d85057d4fb48739c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueText:
+  - Hello, there! I am a story animal.
+  dialogueActors: []
+  assignedDialogueSpeaker: 
+  dialogueSprites: []
+  index: 0
+  firstOpen: 1
+  listenForRepeat: 0
+  listenForNext: 0
 --- !u!1 &886538335
 GameObject:
   m_ObjectHideFlags: 0
@@ -5871,6 +5897,7 @@ Transform:
   - {fileID: 132578209}
   - {fileID: 402407957}
   - {fileID: 1716886885}
+  - {fileID: 1260633199}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6588,6 +6615,37 @@ Transform:
   - {fileID: 1995732336}
   m_Father: {fileID: 679053347}
   m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1260633198
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1260633199}
+  m_Layer: 0
+  m_Name: SpriteManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1260633199
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1260633198}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1060540229}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1278377090 stripped
 Transform:
@@ -9924,15 +9982,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1716886884}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76f296d97e7753a41a2f3741b697091c, type: 3}
+  m_Script: {fileID: 11500000, guid: ab07d432bf44ef94d9f8bf805e174141, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialoguePanel: {fileID: 0}
-  dialoguePanelHolder: {fileID: 0}
-  dialogueText: {fileID: 0}
-  dialogueActorText: {fileID: 0}
-  dialogueActorImage: {fileID: 0}
-  oliveSprite: {fileID: 0}
 --- !u!1 &1743194491
 GameObject:
   m_ObjectHideFlags: 0
@@ -13679,6 +13732,54 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 954360480}
     m_Modifications:
+    - target: {fileID: 3320852152884581466, guid: 030a9ccaf9c121549b59f66afc91ff9c, type: 3}
+      propertyPath: dialogueText.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320852152884581466, guid: 030a9ccaf9c121549b59f66afc91ff9c, type: 3}
+      propertyPath: dialogueActors.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320852152884581466, guid: 030a9ccaf9c121549b59f66afc91ff9c, type: 3}
+      propertyPath: dialogueSprites.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320852152884581466, guid: 030a9ccaf9c121549b59f66afc91ff9c, type: 3}
+      propertyPath: dialogueText.Array.data[0]
+      value: This is a test of the dialogue system.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320852152884581466, guid: 030a9ccaf9c121549b59f66afc91ff9c, type: 3}
+      propertyPath: dialogueText.Array.data[1]
+      value: I am trying to check if it works.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320852152884581466, guid: 030a9ccaf9c121549b59f66afc91ff9c, type: 3}
+      propertyPath: dialogueText.Array.data[2]
+      value: I hope it works!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320852152884581466, guid: 030a9ccaf9c121549b59f66afc91ff9c, type: 3}
+      propertyPath: dialogueActors.Array.data[0]
+      value: Olive
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320852152884581466, guid: 030a9ccaf9c121549b59f66afc91ff9c, type: 3}
+      propertyPath: dialogueActors.Array.data[1]
+      value: Nemo
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320852152884581466, guid: 030a9ccaf9c121549b59f66afc91ff9c, type: 3}
+      propertyPath: dialogueSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 61adfc487169e2c4db2ec0bedb1dd237, type: 3}
+    - target: {fileID: 3320852152884581466, guid: 030a9ccaf9c121549b59f66afc91ff9c, type: 3}
+      propertyPath: dialogueSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9b653ae91dd6fcd4b821b0460c52137d, type: 3}
+    - target: {fileID: 3320852152884581466, guid: 030a9ccaf9c121549b59f66afc91ff9c, type: 3}
+      propertyPath: assignedDialogueSpeaker.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3320852152884581466, guid: 030a9ccaf9c121549b59f66afc91ff9c, type: 3}
+      propertyPath: assignedDialogueSpeaker.Array.data[2]
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5125677009779600300, guid: 030a9ccaf9c121549b59f66afc91ff9c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -13841,7 +13942,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoryAnimal
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6038232132988762054, guid: 5354c9bb47ca3a9478c9c2986baae520, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5354c9bb47ca3a9478c9c2986baae520, type: 3}
 --- !u!1001 &6258424098209776070
 PrefabInstance:
