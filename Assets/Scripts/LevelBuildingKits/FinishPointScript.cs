@@ -24,7 +24,6 @@ public class FinishPointScript : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             TouchedFinishPoint();
-            gameManagerScript.LevelCompleted(3);
         }
     }
 }

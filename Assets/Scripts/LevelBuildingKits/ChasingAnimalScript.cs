@@ -56,11 +56,11 @@ public class ChasingAnimalScript : MonoBehaviour
 
     void OrientationHandler()
     {
-        if (aiPath.desiredVelocity.x >= 0.01f)
+        if (aiPath.desiredVelocity.x <= 0.01f)
         {
             transform.localScale = new Vector3(xScale, transform.localScale.y, transform.localScale.z);
         }
-        else if (aiPath.desiredVelocity.x <= 0.01f)
+        else if (aiPath.desiredVelocity.x >= 0.01f)
         {
             transform.localScale = new Vector3(-xScale, transform.localScale.y, transform.localScale.z);
         }

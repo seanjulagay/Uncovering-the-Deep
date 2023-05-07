@@ -8,11 +8,6 @@ public class ChaseBoundsScript : MonoBehaviour
     ChasingAnimalScript chasingAnimalScript;
     string msg = "Before the change";
 
-    void Start()
-    {
-        gameObject.GetComponent<SpriteRenderer>().enabled = false;
-    }
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "ChasingAnimal")

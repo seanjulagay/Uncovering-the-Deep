@@ -5,26 +5,48 @@ using UnityEngine.UI;
 
 public class TrappedAnimalTriggerScript : MonoBehaviour
 {
+    AnimalRescueProgressBarScript animalRescueProgressBarScript;
     GameManagerScript gameManagerScript;
-    public GameObject storyAnimalPrefab;
-    GameObject parentObj;
+    GameObject animalRescuePanel;
+    GameObject myDialogueTrigger;
+    GameObject trappedAnimalProps;
 
-    public string postRescueDialogue;
     public bool tappingMinigameOngoing = false;
     public float freeingProgress = 0;
+    public float freeingMaximum = 10f;
+
+    bool firstStartFlags = false;
+
+    void Awake()
+    {
+        animalRescuePanel = GameObject.Find("AnimalRescuePanel");
+    }
 
     void Start()
     {
+        animalRescueProgressBarScript = GameObject.Find("RescueBar").GetComponent<AnimalRescueProgressBarScript>();
         gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
-        parentObj = gameObject.transform.parent.gameObject;
+        myDialogueTrigger = gameObject.transform.parent.Find("DialogueTrigger").gameObject;
+        trappedAnimalProps = transform.parent.Find("TrappedAnimalProps").gameObject;
+    }
+
+    void FirstStart()
+    {
+        if (firstStartFlags == false)
+        {
+            myDialogueTrigger.SetActive(false);
+            animalRescuePanel.SetActive(false);
+            firstStartFlags = true;
+        }
     }
 
     void Update()
     {
+        FirstStart();
         ReduceProgress();
         if (tappingMinigameOngoing == true)
         {
-            StartMiniGame();
+            StartMinigame();
         }
     }
 
@@ -40,39 +62,63 @@ public class TrappedAnimalTriggerScript : MonoBehaviour
         }
     }
 
-    void StartMiniGame()
+    void StartMinigame()
     {
+        animalRescuePanel.SetActive(true);
+
+        Debug.Log("MAXIMUM: " + animalRescueProgressBarScript.maximum);
+
+        animalRescueProgressBarScript.maximum = freeingMaximum;
+        animalRescueProgressBarScript.current = freeingProgress;
+
         if (Input.GetKeyDown("space"))
         {
             freeingProgress += 1;
         }
 
-        if (freeingProgress >= 10)
+        if (freeingProgress >= freeingMaximum)
         {
-            parentObj.SetActive(false);
-            InstantiateStoryAnimal();
-            gameManagerScript.animalsFreed++;
+            trappedAnimalProps.SetActive(false);
+            animalRescuePanel.SetActive(false);
+            SwapDialogueTrigger();
+            gameManagerScript.animalsSaved++;
+            gameObject.SetActive(false);
         }
     }
 
-    void InstantiateStoryAnimal()
+    void EndMinigame()
     {
-        GameObject storyAnimal = Instantiate(storyAnimalPrefab, parentObj.transform.position, transform.rotation, GameObject.Find("StoryAnimal").transform);
-        storyAnimal.transform.localScale = parentObj.transform.localScale;
-        storyAnimal.GetComponent<SpriteRenderer>().sprite = parentObj.GetComponent<SpriteRenderer>().sprite;
-        storyAnimal.GetComponent<SpriteRenderer>().drawMode = parentObj.GetComponent<SpriteRenderer>().drawMode;
-        storyAnimal.transform.Find("StoryAnimalTrigger").GetComponent<StoryAnimalTriggerScript>().animalDialogue = postRescueDialogue;
+
+    }
+
+    void SwapDialogueTrigger()
+    {
+        myDialogueTrigger.SetActive(true);
+    }
+
+    void UpdateAnimalRescueProgressBar()
+    {
+        animalRescuePanel.SetActive(true);
+
     }
 
     void OnTriggerStay2D(Collider2D other)
     {
-        tappingMinigameOngoing = true;
-        UIManagerScript.activeTrappedAnimalTrigger = gameObject;
+        if (other.gameObject.tag == "Player")
+        {
+            animalRescuePanel.SetActive(true);
+            tappingMinigameOngoing = true;
+            UIManagerScript.activeTrappedAnimalTrigger = gameObject;
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        tappingMinigameOngoing = false;
-        UIManagerScript.activeTrappedAnimalTrigger = null;
+        if (other.gameObject.tag == "Player")
+        {
+            animalRescuePanel.SetActive(false);
+            tappingMinigameOngoing = false;
+            UIManagerScript.activeTrappedAnimalTrigger = null;
+        }
     }
 }

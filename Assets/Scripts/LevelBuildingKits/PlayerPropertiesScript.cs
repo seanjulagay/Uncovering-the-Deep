@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PlayerPropertiesScript : MonoBehaviour
 {
+    public UIManagerScript uiManagerScript;
     public GameObject uiOxygenBar;
 
     Rigidbody2D rb;
 
-    public static float oxygenCount = 99f;
+    public float oxygenCount = 99f;
     public float playerScore;
     public bool underwater = false;
 
@@ -16,6 +17,8 @@ public class PlayerPropertiesScript : MonoBehaviour
 
     void Start()
     {
+        uiManagerScript = GameObject.Find("UIManager").GetComponent<UIManagerScript>();
+        uiOxygenBar = GameObject.Find("OxygenBar");
         // Debug.Log("Loaded PlayeRProps");
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
@@ -35,6 +38,10 @@ public class PlayerPropertiesScript : MonoBehaviour
         else if (underwater == false && oxygenCount < 100f)
         {
             oxygenCount += Time.deltaTime * oxygenReplenishRate;
+        }
+        else if (oxygenCount <= 0f)
+        {
+            uiManagerScript.DisplayGameOverPanel();
         }
 
         uiOxygenBar.GetComponent<UIProgressBarScript>().current = (int)oxygenCount;

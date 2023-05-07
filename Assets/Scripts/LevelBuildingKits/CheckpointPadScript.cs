@@ -14,6 +14,7 @@ public class CheckpointPadScript : MonoBehaviour
     public float timer = 0;
     public bool timerRunning = false;
     public bool dialogueShown = false;
+    public bool objInstantiated = false; // flag to prevent double instantiation
     float interactionCooldown = 3f;
 
     void Start()
@@ -43,8 +44,9 @@ public class CheckpointPadScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (AllTrashObjsCleared() == true)
+            if (AllTrashObjsCleared() == true && objInstantiated == false)
             {
+                objInstantiated = true;
                 checkpointManagerScript.CheckpointPassed();
                 checkpointManagerScript.SpawnTrashbag(gameObject.transform.position);
                 checkpointParentObj.SetActive(false);

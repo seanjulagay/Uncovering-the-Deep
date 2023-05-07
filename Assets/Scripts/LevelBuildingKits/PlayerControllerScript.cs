@@ -22,6 +22,7 @@ public class PlayerControllerScript : MonoBehaviour
 
     void Start()
     {
+        arrowKeysUI = GameObject.Find("ArrowKeys");
         uiArrowKeysScript = arrowKeysUI.GetComponent<UIArrowKeysScript>();
 
         playerSpriteManagerScript = gameObject.GetComponent<PlayerSpriteManagerScript>();

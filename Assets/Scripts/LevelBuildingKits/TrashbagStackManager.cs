@@ -4,11 +4,23 @@ using UnityEngine;
 
 public class TrashbagStackManager : MonoBehaviour
 {
+    GameManagerScript gameManagerScript;
+
     public GameObject playerObj;
     public int stackCount = 0;
 
     float trashbagHeight;
     float playerTop;
+
+    void Start()
+    {
+        gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
+    }
+
+    void Update()
+    {
+        gameManagerScript.trashbagStackCount = stackCount;
+    }
 
     public void AddToStack(GameObject trashbag)
     {

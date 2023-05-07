@@ -9,7 +9,7 @@ public class UIManagerScript : MonoBehaviour
 {
     GameManagerScript gameManagerScript;
 
-    public GameObject levelCompletePanel;
+    GameObject levelCompletePanel;
     Image levelCompleteStars;
     public Sprite levelCompleteStars0;
     public Sprite levelCompleteStars1;
@@ -17,50 +17,62 @@ public class UIManagerScript : MonoBehaviour
     public Sprite levelCompleteStars3;
     TMP_Text levelCompleteScoreText;
 
+    GameObject gameOverPanel;
+
     public static GameObject activeTrappedAnimalTrigger = null;
 
-    public TMP_Text trashCountText;
-    public TMP_Text oxygenCountText;
-    public TMP_Text dialogueText;
-    public TMP_Text freeingProgressText;
-    public TMP_Text animalsFreedText;
+    // public TMP_Text trashCountText;
+    // public TMP_Text oxygenCountText;
+    // public TMP_Text dialogueText;
+    // public TMP_Text freeingProgressText;
+    // public TMP_Text animalsFreedText;
     public TMP_Text helperText;
 
-    public TMP_Text timeSpentText;
+    TMP_Text timeSpentText;
 
     string currentDialogue;
     public int dialogueDecaySecs;
 
     public bool listenForInteraction = false;
 
+    bool levelCompletePanelDisabled = false;
+    bool gameOverPanelDisabled = false;
+
     int timeSpent;
 
     void Start()
     {
         gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
+
+        levelCompletePanel = GameObject.Find("LevelCompletePanel");
         levelCompleteStars = levelCompletePanel.transform.Find("LevelCompleteStars").gameObject.GetComponent<Image>();
-        levelCompleteScoreText = levelCompletePanel.transform.Find("ScoreText").gameObject.GetComponent<TMP_Text>();
+        levelCompleteScoreText = levelCompletePanel.transform.Find("LevelCompleteHeaderText").gameObject.GetComponent<TMP_Text>();
         helperText = GameObject.Find("HelperText").GetComponent<TMP_Text>();
 
-        dialogueText.text = "Placeholder dialogue text";
-        dialogueText.enabled = false;
+        gameOverPanel = GameObject.Find("GameOverPanel");
+
+        timeSpentText = GameObject.Find("TimeSpentText").GetComponent<TMP_Text>();
     }
 
     void Update()
     {
         TimeSpentTextHandler();
+        PanelFlags();
+    }
 
-        oxygenCountText.text = "Oxygen: " + PlayerPropertiesScript.oxygenCount;
-        trashCountText.text = "Trash collected: " + gameManagerScript.trashCount;
-        if (activeTrappedAnimalTrigger != null)
+    void PanelFlags()
+    {
+        if (levelCompletePanelDisabled == false)
         {
-            freeingProgressText.text = "Freeing progress: " + activeTrappedAnimalTrigger.GetComponent<TrappedAnimalTriggerScript>().freeingProgress;
+            levelCompletePanel.SetActive(false);
+            levelCompletePanelDisabled = true;
         }
-        else
+
+        if (gameOverPanelDisabled == false)
         {
-            freeingProgressText.text = "No animal trapped";
+            gameOverPanel.SetActive(false);
+            gameOverPanelDisabled = true;
         }
-        animalsFreedText.text = "Animals freed: " + gameManagerScript.animalsFreed;
     }
 
     public void UpdateHelperText(string text = "")
@@ -99,8 +111,9 @@ public class UIManagerScript : MonoBehaviour
         }
     }
 
-    public void displayLevelCompletePanel(int userScore)
+    public void DisplayLevelCompletePanel(int userScore)
     {
+        Time.timeScale = 0;
         levelCompletePanel.SetActive(true);
         levelCompleteScoreText.text = "Score: " + userScore.ToString() + "/3";
 
@@ -121,6 +134,12 @@ public class UIManagerScript : MonoBehaviour
         {
             levelCompleteStars.sprite = levelCompleteStars3;
         }
+    }
+
+    public void DisplayGameOverPanel()
+    {
+        Time.timeScale = 0;
+        gameOverPanel.SetActive(true);
     }
 
 

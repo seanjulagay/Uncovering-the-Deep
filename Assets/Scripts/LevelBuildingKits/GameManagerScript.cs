@@ -5,25 +5,39 @@ using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour
 {
-    public UIManagerScript uiManagerScript;
+    UIManagerScript uiManagerScript;
     CheckpointManagerScript checkpointManagerScript;
     GameObject playerObj;
 
+    [Tooltip("Gamemode 0 - exploration mode; Gamemode 1 - restoration mode")]
+    public int gameMode = 0;
+    [Tooltip("0 = animals saved type, 1 = timer type, 2 = quiz type")]
+    public int endGameType = 1;
     public bool inTestingMode = true;
 
-    public string gameMode; // values: "exploration", "restoration"
+    public int starsThisLevel = 0;
+
     public int trashCount = 0;
-    public int animalsFreed = 0;
+    public int animalsSaved = 0;
+    public int animalsMet = 0;
     public int currentCheckpoint = 0;
+    public int trashbagStackCount = 0;
 
     public int timeSpentSecs = 0;
 
     public bool inStackingState = false;
     public bool isGameActive = true;
 
+    public bool activateReturnPoint = false;
+
     public int userScore = 0;
 
     float timeSpent = 0;
+
+    GameObject startPoint, finishPoint, returnPoint;
+
+    [Tooltip("[1] = one star timer goal, [2] = two star timer goal, [3] = three star timer goal // CONVERT TO SECONDS")]
+    public int[] timeGoals = new int[4] { 0, 0, 0, 0 };
 
     void Start()
     {
@@ -31,7 +45,12 @@ public class GameManagerScript : MonoBehaviour
         checkpointManagerScript = GameObject.Find("CheckpointManager").GetComponent<CheckpointManagerScript>();
         playerObj = GameObject.Find("Player");
 
+        startPoint = GameObject.Find("StartPoint");
+        finishPoint = GameObject.Find("FinishPoint");
+        returnPoint = GameObject.Find("ReturnPoint");
+
         StartGame();
+        Time.timeScale = 1;
     }
 
     void Update()
@@ -65,10 +84,12 @@ public class GameManagerScript : MonoBehaviour
         }
     }
 
-    public void LevelCompleted(int quizScore = 0)
+    public void LevelCompletedQuiz(int quizScore = 0)
     {
         Time.timeScale = 0;
         userScore = quizScore;
-        uiManagerScript.displayLevelCompletePanel(userScore);
+        uiManagerScript.DisplayLevelCompletePanel(userScore);
     }
+
+
 }

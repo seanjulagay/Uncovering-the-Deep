@@ -5,9 +5,15 @@ using TMPro;
 
 public class DialogueTriggerScript : MonoBehaviour
 {
+    public bool isPartOfAnimalsMetCount = false;
+
     GameManagerScript gameManagerScript;
     UIManagerScript uiManagerScript;
     DialoguePanelManagerScript dialoguePanelManagerScript;
+
+    GameObject helperTextObj;
+    GameObject dialougePanelObj;
+    TMP_Text helperText;
 
     public List<string> dialogueText = new List<string>();
     public List<string> dialogueActors = new List<string>();
@@ -19,11 +25,19 @@ public class DialogueTriggerScript : MonoBehaviour
     public bool listenForRepeat = false;
     public bool listenForNext = false;
 
+    void Awake()
+    {
+        dialougePanelObj = GameObject.Find("DialoguePanel");
+    }
+
     void Start()
     {
         gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
         uiManagerScript = GameObject.Find("UIManager").GetComponent<UIManagerScript>();
         dialoguePanelManagerScript = GameObject.Find("DialoguePanelManager").GetComponent<DialoguePanelManagerScript>();
+
+        helperTextObj = GameObject.Find("HelperText");
+        helperText = helperTextObj.GetComponent<TMP_Text>();
 
         InitializeEmpty();
     }
@@ -60,17 +74,43 @@ public class DialogueTriggerScript : MonoBehaviour
         }
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
             if (firstOpen == true)
             {
-                firstOpen = false;
+                if (isPartOfAnimalsMetCount)
+                {
+                    gameManagerScript.animalsMet++;
+                }
                 StartDialogue();
             }
-            else
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            // if (firstOpen == true)
+            // {
+            //     if (isPartOfAnimalsMetCount)
+            //     {
+            //         gameManagerScript.animalsMet++;
+            //     }
+            //     StartDialogue();
+            // }
+            // else
+            // {
+            //     Debug.Log("HELLOOOOOOOO");
+            //     helperText.text = "Press spacebar to interact";
+            //     listenForRepeat = true;
+            // }
+
+            if (firstOpen == false)
             {
+                helperText.text = "Press spacebar to interact";
                 listenForRepeat = true;
             }
         }
@@ -82,6 +122,7 @@ public class DialogueTriggerScript : MonoBehaviour
         {
             if (firstOpen == false)
             {
+                helperText.text = "";
                 listenForRepeat = false;
             }
         }
@@ -89,6 +130,7 @@ public class DialogueTriggerScript : MonoBehaviour
 
     void StartDialogue()
     {
+        helperText.text = "";
         Debug.Log("STARTING DIALOGUE");
         index = 0;
         listenForNext = true;
@@ -107,6 +149,7 @@ public class DialogueTriggerScript : MonoBehaviour
     void EndDialogue()
     {
         Debug.Log("ENDING DIALOGUE");
+        firstOpen = false;
         index = 0;
         listenForNext = false;
         dialoguePanelManagerScript.HideDialogue();
@@ -140,5 +183,6 @@ public class DialogueTriggerScript : MonoBehaviour
     void Update()
     {
         InteractButtonListener();
+        Debug.Log("DIALOGUETRIGGER FIRSTOPEN: " + firstOpen);
     }
 }

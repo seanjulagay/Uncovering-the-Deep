@@ -5,20 +5,22 @@ using UnityEngine;
 public class MovingBubbleObjScript : MonoBehaviour
 {
     MovingBubbleScript movingBubbleScript;
+    PlayerPropertiesScript playerPropertiesScript;
 
     void Start()
     {
         movingBubbleScript = gameObject.transform.parent.gameObject.GetComponent<MovingBubbleScript>();
+        playerPropertiesScript = GameObject.Find("Player").GetComponent<PlayerPropertiesScript>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            PlayerPropertiesScript.oxygenCount += 20f;
-            if (PlayerPropertiesScript.oxygenCount > 100)
+            playerPropertiesScript.oxygenCount += 20f;
+            if (playerPropertiesScript.oxygenCount > 100)
             {
-                PlayerPropertiesScript.oxygenCount = 99f;
+                playerPropertiesScript.oxygenCount = 99f;
             }
 
             movingBubbleScript.BubbleDestroyed();

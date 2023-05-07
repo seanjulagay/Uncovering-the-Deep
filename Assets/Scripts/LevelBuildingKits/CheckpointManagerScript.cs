@@ -1,13 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CheckpointManagerScript : MonoBehaviour
 {
-    public GameObject trashbagsParent;
+    GameObject trashbagsParent;
     public GameObject[] trashbagPFs;
 
-    public GameObject startPoint, finishPoint;
+    public GameObject startPoint, finishPoint, returnPoint;
     Rigidbody2D startRb, finishRb;
 
     public GameObject checkpointObjects;
@@ -18,6 +19,20 @@ public class CheckpointManagerScript : MonoBehaviour
 
     void Start()
     {
+        trashbagsParent = GameObject.Find("Trashbags");
+        startPoint = GameObject.Find("StartPoint");
+        returnPoint = GameObject.Find("ReturnPoint");
+        checkpointObjects = GameObject.Find("CheckpointObjects");
+
+        try
+        {
+            finishPoint = GameObject.Find("FinishPoint");
+        }
+        catch (NullReferenceException e)
+        {
+            finishPoint = null;
+        }
+
         for (int i = 0; i < checkpointObjects.transform.childCount; i++)
         {
             checkpointObjs.Add(checkpointObjects.transform.GetChild(i).gameObject);
@@ -31,7 +46,7 @@ public class CheckpointManagerScript : MonoBehaviour
 
     public void SpawnTrashbag(Vector3 checkpointPadPos)
     {
-        Instantiate(trashbagPFs[Random.Range(0, 2)], checkpointPadPos, transform.rotation, trashbagsParent.transform);
+        Instantiate(trashbagPFs[UnityEngine.Random.Range(0, 2)], checkpointPadPos, transform.rotation, trashbagsParent.transform);
     }
 
     public void TurnAllTrashbagsStackable()

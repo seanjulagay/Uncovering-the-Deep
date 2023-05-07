@@ -13,11 +13,13 @@ TagManager:
   - TrashObj
   - ChaseBounds
   - ChasingAnimal
+  - TrappedAnimal
+  - StoryAnimal
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - HideOnPlay
   - Water
   - UI
   - Terrain

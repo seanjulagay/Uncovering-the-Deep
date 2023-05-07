@@ -4,16 +4,25 @@ using UnityEngine;
 
 public class StoryAnimalTriggerScript : MonoBehaviour
 {
-    public string animalDialogue;
     UIManagerScript uiManagerScript;
+    GameManagerScript gameManagerScript;
+
+    public bool metAnimalYet = false;
 
     void Start()
     {
         uiManagerScript = GameObject.Find("UIManager").GetComponent<UIManagerScript>();
+        gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        // uiManagerScript.UpdateDialogueUI(animalDialogue);
+        if (other.gameObject.tag == "Player" && metAnimalYet == false)
+        {
+            metAnimalYet = true;
+            gameManagerScript.animalsMet++;
+        }
     }
+
+
 }

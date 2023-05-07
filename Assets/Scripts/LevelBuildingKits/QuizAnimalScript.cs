@@ -30,12 +30,14 @@ public class QuizAnimalScript : MonoBehaviour
     QuizManagerScript quizManagerScript;
 
     GameObject connectedQuizPanel;
-    Button nextButton;
-    Button backButton;
-    Button leaveButton;
+    public Button nextButton;
+    public Button backButton;
+    public Button leaveButton;
 
     ToggleGroup toggleGroup;
     List<Toggle> toggle = new List<Toggle>(new Toggle[3]);
+
+    bool addListenersFlag = false;
 
     // ================ TODO: ADD LISTENER TO NEXT AND BACK BUTTONS PROGRAMMATICALLY
 
@@ -51,15 +53,34 @@ public class QuizAnimalScript : MonoBehaviour
         toggle[1] = toggleGroup.transform.Find("Option2").gameObject.GetComponent<Toggle>();
         toggle[2] = toggleGroup.transform.Find("Option3").gameObject.GetComponent<Toggle>();
         nextButton = connectedQuizPanel.transform.Find("QuizNextButton").gameObject.GetComponent<Button>();
-        nextButton.onClick.AddListener(NextQuestion);
+        // nextButton.onClick.AddListener(NextQuestion);
         backButton = connectedQuizPanel.transform.Find("QuizBackButton").gameObject.GetComponent<Button>();
-        backButton.onClick.AddListener(PreviousQuestion);
+        // backButton.onClick.AddListener(PreviousQuestion);
         leaveButton = connectedQuizPanel.transform.Find("QuizLeaveButton").gameObject.GetComponent<Button>();
-        leaveButton.onClick.AddListener(CloseQuizPanel);
+        // leaveButton.onClick.AddListener(CloseQuizPanel);
 
         compiledQuestions = new List<string>() { q1, q2, q3 };
         compiledOptions = new List<string[]>() { q1options, q2options, q3options };
         compiledAnswers = new List<int>() { q1answer, q2answer, q3answer };
+    }
+
+    void AddListeners()
+    {
+        nextButton.onClick.AddListener(NextQuestion);
+        backButton.onClick.AddListener(PreviousQuestion);
+        leaveButton.onClick.AddListener(CloseQuizPanel);
+        Debug.Log("next: " + nextButton.onClick.GetPersistentEventCount());
+        Debug.Log("back: " + backButton.onClick.GetPersistentEventCount());
+        Debug.Log("leave: " + leaveButton.onClick.GetPersistentEventCount());
+    }
+
+    void Update()
+    {
+        if (addListenersFlag == false)
+        {
+            AddListeners();
+            addListenersFlag = true;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -100,11 +121,6 @@ public class QuizAnimalScript : MonoBehaviour
                 break;
             }
         }
-    }
-
-    void Update()
-    {
-
     }
 
     void OpenQuizPanel()
@@ -187,6 +203,6 @@ public class QuizAnimalScript : MonoBehaviour
         }
 
         connectedQuizPanel.SetActive(false);
-        gameManagerScript.LevelCompleted(userScore);
+        gameManagerScript.LevelCompletedQuiz(userScore);
     }
 }

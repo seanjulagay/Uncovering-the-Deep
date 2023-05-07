@@ -63,10 +63,6 @@ public class DialoguePanelManagerScriptOld : MonoBehaviour
     {
         if (inDialogueMode == true)
         {
-            if (helperTextObj.activeSelf == true)
-            {
-                helperTextObj.SetActive(false);
-            }
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (index < diaText.Count - 1)
@@ -86,7 +82,6 @@ public class DialoguePanelManagerScriptOld : MonoBehaviour
                     inDialogueMode = false;
                     gameManagerScript.ToggleGamePause(false);
                     dialoguePanel.SetActive(false);
-                    helperTextObj.SetActive(true);
                 }
             }
         }

@@ -14,7 +14,7 @@ public class DialoguePanelScript : MonoBehaviour
     public TMP_Text dialogueActorText;
     public Image dialogueActorImage;
 
-    GameObject helperTextObj;
+    TMP_Text helperText;
 
     List<string> diaText = new List<string>();
     List<int> assignedSpeaker = new List<int>();
@@ -23,7 +23,7 @@ public class DialoguePanelScript : MonoBehaviour
 
     public Sprite oliveSprite;
 
-    bool inDialogueMode = false;
+    public bool inDialogueMode = false;
     int index;
 
     void Awake()
@@ -40,7 +40,7 @@ public class DialoguePanelScript : MonoBehaviour
     void Start()
     {
         gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
-        helperTextObj = GameObject.Find("HelperText");
+        helperText = GameObject.Find("HelperText").GetComponent<TMP_Text>();
 
         dialoguePanel.SetActive(false);
     }
@@ -62,10 +62,6 @@ public class DialoguePanelScript : MonoBehaviour
     {
         if (inDialogueMode == true)
         {
-            if (helperTextObj.activeSelf == true)
-            {
-                helperTextObj.SetActive(false);
-            }
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 if (index < diaText.Count - 1)
@@ -78,7 +74,6 @@ public class DialoguePanelScript : MonoBehaviour
                     inDialogueMode = false;
                     gameManagerScript.ToggleGamePause(false);
                     dialoguePanel.SetActive(false);
-                    helperTextObj.SetActive(true);
                 }
             }
         }

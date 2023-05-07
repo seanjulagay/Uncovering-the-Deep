@@ -34,6 +34,7 @@ public class MenuManagerScript : MonoBehaviour
 
     public void Start()
     {
+        Time.timeScale = 1;
         UpdateCurrentProfileCard();
         UpdateSettingsOverlay();
     }
