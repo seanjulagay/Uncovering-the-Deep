@@ -65,12 +65,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2024739460502009971, guid: 1639b0e125baefb44a599382b91a8576, type: 3}
       propertyPath: m_Name
-      value: Bubble
+      value: Bubble Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: 2024739460502009975, guid: 1639b0e125baefb44a599382b91a8576, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 5c75dd725ae0d1c41abb9012a1c2639b, type: 3}
+    - target: {fileID: 2024739460502009975, guid: 1639b0e125baefb44a599382b91a8576, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1639b0e125baefb44a599382b91a8576, type: 3}
 --- !u!1 &7740580578469310547 stripped
