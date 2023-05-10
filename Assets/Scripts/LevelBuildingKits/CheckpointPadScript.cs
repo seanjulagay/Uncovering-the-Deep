@@ -9,7 +9,8 @@ public class CheckpointPadScript : MonoBehaviour
     UIManagerScript uiManagerScript;
     CheckpointManagerScript checkpointManagerScript;
     GameObject checkpointParentObj;
-    GameObject[] trashObjs;
+    List<GameObject> allTrashObjs = new List<GameObject>();
+    public List<GameObject> myTrashObjs = new List<GameObject>();
 
     public float timer = 0;
     public bool timerRunning = false;
@@ -24,13 +25,23 @@ public class CheckpointPadScript : MonoBehaviour
         uiManagerScript = GameObject.Find("UIManager").GetComponent<UIManagerScript>();
         checkpointManagerScript = GameObject.Find("CheckpointManager").GetComponent<CheckpointManagerScript>();
         checkpointParentObj = gameObject.transform.parent.gameObject;
+        GetTrashObjects();
+    }
 
-        trashObjs = GameObject.FindGameObjectsWithTag("TrashObj");
+    void GetTrashObjects()
+    {
+        foreach (Transform child in transform.parent)
+        {
+            if (child.tag == "TrashObj")
+            {
+                myTrashObjs.Add(child.gameObject);
+            }
+        }
     }
 
     bool AllTrashObjsCleared()
     {
-        foreach (GameObject trashObj in trashObjs)
+        foreach (GameObject trashObj in myTrashObjs)
         {
             if (trashObj.activeSelf == true)
             {
