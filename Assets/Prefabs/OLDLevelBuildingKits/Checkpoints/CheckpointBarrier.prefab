@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 981234390228540143}
   - component: {fileID: 981234390228540140}
   - component: {fileID: 981234390228540141}
+  - component: {fileID: 8144355719383274485}
   m_Layer: 0
   m_Name: CheckpointBarrierTrigger
   m_TagString: Untagged
@@ -182,7 +183,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f0758415bcc7bb47bb86fc979a34d22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oliveDialogue: 
 --- !u!61 &981234390228540141
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -209,6 +209,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8144355719383274485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981234390228540129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113a56007e4a9c64d85057d4fb48739c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPartOfAnimalsMetCount: 0
+  onlyShowOnce: 0
+  automaticRepeat: 1
+  dialogueText:
+  - I should finish the objectives in this area first!
+  dialogueActors:
+  - Olive
+  assignedDialogueSpeaker: 00000000
+  dialogueSprites:
+  - {fileID: 21300000, guid: 61adfc487169e2c4db2ec0bedb1dd237, type: 3}
 --- !u!1 &981234390280882796
 GameObject:
   m_ObjectHideFlags: 0
