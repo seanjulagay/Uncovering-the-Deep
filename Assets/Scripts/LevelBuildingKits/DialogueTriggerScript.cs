@@ -6,6 +6,8 @@ using TMPro;
 public class DialogueTriggerScript : MonoBehaviour
 {
     public bool isPartOfAnimalsMetCount = false;
+    public bool onlyShowOnce = false;
+    public bool automaticRepeat = false;
 
     GameManagerScript gameManagerScript;
     UIManagerScript uiManagerScript;
@@ -20,10 +22,10 @@ public class DialogueTriggerScript : MonoBehaviour
     public List<int> assignedDialogueSpeaker = new List<int>();
     public List<Sprite> dialogueSprites = new List<Sprite>();
 
-    public int index = 0;
-    public bool firstOpen = true;
-    public bool listenForRepeat = false;
-    public bool listenForNext = false;
+    int index = 0;
+    bool firstOpen = true;
+    bool listenForRepeat = false;
+    bool listenForNext = false;
 
     void Awake()
     {
@@ -86,6 +88,10 @@ public class DialogueTriggerScript : MonoBehaviour
                 }
                 StartDialogue();
             }
+            else if (firstOpen == false && automaticRepeat == true)
+            {
+                StartDialogue();
+            }
         }
     }
 
@@ -108,9 +114,9 @@ public class DialogueTriggerScript : MonoBehaviour
             //     listenForRepeat = true;
             // }
 
-            if (firstOpen == false)
+            if (firstOpen == false && automaticRepeat == false)
             {
-                helperText.text = "Press spacebar to interact";
+                helperText.text = "Press spacebar to repeat dialogue";
                 listenForRepeat = true;
             }
         }
@@ -131,7 +137,6 @@ public class DialogueTriggerScript : MonoBehaviour
     void StartDialogue()
     {
         helperText.text = "";
-        Debug.Log("STARTING DIALOGUE");
         index = 0;
         listenForNext = true;
         listenForRepeat = false;
@@ -142,17 +147,20 @@ public class DialogueTriggerScript : MonoBehaviour
 
     void UpdateDialogue()
     {
-        Debug.Log("UPDATING DIALOGUE");
         dialoguePanelManagerScript.UpdateDialogue(dialogueText[index], dialogueActors[assignedDialogueSpeaker[index]], dialogueSprites[assignedDialogueSpeaker[index]]);
     }
 
     void EndDialogue()
     {
-        Debug.Log("ENDING DIALOGUE");
         firstOpen = false;
         index = 0;
         listenForNext = false;
         dialoguePanelManagerScript.HideDialogue();
+        if (onlyShowOnce == true)
+        {
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            enabled = false; // disable self script
+        }
     }
 
     void InteractButtonListener()
@@ -161,7 +169,6 @@ public class DialogueTriggerScript : MonoBehaviour
         {
             if (listenForNext == true)
             {
-                Debug.Log("GOING NEXT");
                 if (index < dialogueText.Count - 1)
                 {
                     index++;
@@ -174,7 +181,6 @@ public class DialogueTriggerScript : MonoBehaviour
             }
             else if (listenForRepeat == true)
             {
-                Debug.Log("REPEATING");
                 StartDialogue();
             }
         }
@@ -183,6 +189,5 @@ public class DialogueTriggerScript : MonoBehaviour
     void Update()
     {
         InteractButtonListener();
-        Debug.Log("DIALOGUETRIGGER FIRSTOPEN: " + firstOpen);
     }
 }

@@ -6,7 +6,7 @@ public class TrashbagStackManager : MonoBehaviour
 {
     GameManagerScript gameManagerScript;
 
-    public GameObject playerObj;
+    GameObject playerObj;
     public int stackCount = 0;
 
     float trashbagHeight;
@@ -14,6 +14,7 @@ public class TrashbagStackManager : MonoBehaviour
 
     void Start()
     {
+        playerObj = GameObject.Find("Player");
         gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
     }
 
