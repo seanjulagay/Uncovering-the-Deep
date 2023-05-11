@@ -6438,7 +6438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1840428978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7823,6 +7823,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1439923196163470804, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+      propertyPath: timeGoals.Array.data[1]
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439923196163470804, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+      propertyPath: timeGoals.Array.data[2]
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439923196163470804, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+      propertyPath: timeGoals.Array.data[3]
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 1439923197244272551, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
       propertyPath: playerObj
       value: 
@@ -8140,6 +8152,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1593163387}
+    - target: {fileID: 4649996045050879952, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_text
+      value: Level Failed!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649996045050879952, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_fontSize
+      value: 42.95
+      objectReference: {fileID: 0}
     - target: {fileID: 4649996045488699582, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -8244,9 +8264,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4649996046056091907, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 4649996045961822818, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_text
+      value: Whoops! Try again!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
