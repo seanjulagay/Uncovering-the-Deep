@@ -130,7 +130,6 @@ public class ObjectivesManagerScript : MonoBehaviour
     {
         if (conditions == 0)
         {
-            Debug.Log("REPLACED TMP TEXT");
             if (current >= max)
             {
                 objectivesText.text = "<color=#00ff00><b>" + str + ": " + current + "/" + max + "</b></color>";
@@ -142,7 +141,6 @@ public class ObjectivesManagerScript : MonoBehaviour
         }
         else
         {
-            Debug.Log("APPENDED TMP TEXT");
             if (current >= max)
             {
                 objectivesText.text += "<color=#00ff00><br><b>" + str + ": " + current + "/" + max + "</b></color>";
