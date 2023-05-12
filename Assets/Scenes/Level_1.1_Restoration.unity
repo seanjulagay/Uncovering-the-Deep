@@ -639,11 +639,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueActors.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueSprites.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueText.Array.data[0]
@@ -667,12 +667,48 @@ PrefabInstance:
       value: Olive
       objectReference: {fileID: 0}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
+      propertyPath: dialogueActors.Array.data[1]
+      value: Olive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
+      propertyPath: dialogueActors.Array.data[2]
+      value: Olive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
+      propertyPath: dialogueActors.Array.data[3]
+      value: Olive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueSprites.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 61adfc487169e2c4db2ec0bedb1dd237, type: 3}
+      objectReference: {fileID: 21300000, guid: 31060b0cd1ec21242ad7e5d2838a8041, type: 3}
+    - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
+      propertyPath: dialogueSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8cc51cfa568ec6147a054b2b223aed73, type: 3}
+    - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
+      propertyPath: dialogueSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 69317e6cf84a5ee4180398dd14b90e30, type: 3}
+    - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
+      propertyPath: dialogueSprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0f6abfeb5440bd24dbbd05cdd13d99c0, type: 3}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: assignedDialogueSpeaker.Array.size
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
+      propertyPath: assignedDialogueSpeaker.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
+      propertyPath: assignedDialogueSpeaker.Array.data[2]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
+      propertyPath: assignedDialogueSpeaker.Array.data[3]
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8513481938394719693, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: m_Name
@@ -4640,6 +4676,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8144355719383274485, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
+      propertyPath: dialogueSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8cc51cfa568ec6147a054b2b223aed73, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
 --- !u!4 &337664806 stripped
@@ -5986,6 +6026,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8775416152372282565, guid: 167631980e7ca2d42835ad8ddd30a251, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 167631980e7ca2d42835ad8ddd30a251, type: 3}
 --- !u!4 &434634885 stripped
@@ -5993,6 +6037,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8775416152372282560, guid: 167631980e7ca2d42835ad8ddd30a251, type: 3}
   m_PrefabInstance: {fileID: 434634884}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &434634886 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8775416152372282561, guid: 167631980e7ca2d42835ad8ddd30a251, type: 3}
+  m_PrefabInstance: {fileID: 434634884}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &434634887
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434634886}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 3753eddbdc2517f4bbb3cacd0beff0ab, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 3753eddbdc2517f4bbb3cacd0beff0ab, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!4 &441718340 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3446145155861965252, guid: e5c0b3a7b1fe681419e6f1874649ab0d, type: 3}
@@ -7697,6 +7762,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8775416152372282565, guid: 167631980e7ca2d42835ad8ddd30a251, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 167631980e7ca2d42835ad8ddd30a251, type: 3}
 --- !u!4 &605652719 stripped
@@ -7704,6 +7773,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8775416152372282560, guid: 167631980e7ca2d42835ad8ddd30a251, type: 3}
   m_PrefabInstance: {fileID: 605652718}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &605652720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8775416152372282561, guid: 167631980e7ca2d42835ad8ddd30a251, type: 3}
+  m_PrefabInstance: {fileID: 605652718}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &605652721
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605652720}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 3753eddbdc2517f4bbb3cacd0beff0ab, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 3753eddbdc2517f4bbb3cacd0beff0ab, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &605959435
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9162,6 +9252,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8144355719383274485, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
+      propertyPath: dialogueSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8cc51cfa568ec6147a054b2b223aed73, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
 --- !u!4 &693089424 stripped
@@ -10777,7 +10871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8775416152372282565, guid: 167631980e7ca2d42835ad8ddd30a251, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 167631980e7ca2d42835ad8ddd30a251, type: 3}
@@ -10786,6 +10880,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8775416152372282560, guid: 167631980e7ca2d42835ad8ddd30a251, type: 3}
   m_PrefabInstance: {fileID: 871531165}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &871531167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8775416152372282561, guid: 167631980e7ca2d42835ad8ddd30a251, type: 3}
+  m_PrefabInstance: {fileID: 871531165}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &871531168
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871531167}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 3753eddbdc2517f4bbb3cacd0beff0ab, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 3753eddbdc2517f4bbb3cacd0beff0ab, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &876700868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10974,6 +11089,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bubble Variant 1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7740580578469310551, guid: 1d339776b90e52c4486cbf4f0a9741bd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d339776b90e52c4486cbf4f0a9741bd, type: 3}
 --- !u!4 &886303706 stripped
@@ -10981,6 +11100,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7740580578469310546, guid: 1d339776b90e52c4486cbf4f0a9741bd, type: 3}
   m_PrefabInstance: {fileID: 886303705}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &886303707 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7740580578469310547, guid: 1d339776b90e52c4486cbf4f0a9741bd, type: 3}
+  m_PrefabInstance: {fileID: 886303705}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &886303708
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 886303707}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 3753eddbdc2517f4bbb3cacd0beff0ab, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 3753eddbdc2517f4bbb3cacd0beff0ab, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &889152024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12902,7 +13042,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueActors.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueSprites.Array.size
@@ -12923,7 +13063,15 @@ PrefabInstance:
       value: Olive
       objectReference: {fileID: 0}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
+      propertyPath: dialogueActors.Array.data[1]
+      value: Olive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 0f6abfeb5440bd24dbbd05cdd13d99c0, type: 3}
+    - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
+      propertyPath: dialogueSprites.Array.data[1]
       value: 
       objectReference: {fileID: 21300000, guid: 61adfc487169e2c4db2ec0bedb1dd237, type: 3}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
@@ -16545,6 +16693,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bubble Variant 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7740580578469310551, guid: 1d339776b90e52c4486cbf4f0a9741bd, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d339776b90e52c4486cbf4f0a9741bd, type: 3}
 --- !u!4 &1385885015 stripped
@@ -16552,6 +16704,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7740580578469310546, guid: 1d339776b90e52c4486cbf4f0a9741bd, type: 3}
   m_PrefabInstance: {fileID: 1385885014}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1385885016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7740580578469310547, guid: 1d339776b90e52c4486cbf4f0a9741bd, type: 3}
+  m_PrefabInstance: {fileID: 1385885014}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &1385885017
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385885016}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 3753eddbdc2517f4bbb3cacd0beff0ab, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 3753eddbdc2517f4bbb3cacd0beff0ab, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &1393804911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18497,11 +18670,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueActors.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueSprites.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueText.Array.data[0]
@@ -18516,9 +18689,17 @@ PrefabInstance:
       value: Olive
       objectReference: {fileID: 0}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
+      propertyPath: dialogueActors.Array.data[1]
+      value: Olive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueSprites.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 61adfc487169e2c4db2ec0bedb1dd237, type: 3}
+      objectReference: {fileID: 21300000, guid: 0f6abfeb5440bd24dbbd05cdd13d99c0, type: 3}
+    - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
+      propertyPath: dialogueSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 8cc51cfa568ec6147a054b2b223aed73, type: 3}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: assignedDialogueSpeaker.Array.size
       value: 2
@@ -29211,7 +29392,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8775416152372282565, guid: 167631980e7ca2d42835ad8ddd30a251, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 167631980e7ca2d42835ad8ddd30a251, type: 3}
@@ -29220,6 +29401,27 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8775416152372282560, guid: 167631980e7ca2d42835ad8ddd30a251, type: 3}
   m_PrefabInstance: {fileID: 1963578116}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1963578118 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8775416152372282561, guid: 167631980e7ca2d42835ad8ddd30a251, type: 3}
+  m_PrefabInstance: {fileID: 1963578116}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &1963578119
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1963578118}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 3753eddbdc2517f4bbb3cacd0beff0ab, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 3753eddbdc2517f4bbb3cacd0beff0ab, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &1967140888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30900,6 +31102,10 @@ PrefabInstance:
       propertyPath: dialogueActors.Array.data[1]
       value: Whaleshark
       objectReference: {fileID: 0}
+    - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
+      propertyPath: dialogueSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 31060b0cd1ec21242ad7e5d2838a8041, type: 3}
     - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
       propertyPath: dialogueSprites.Array.data[1]
       value: 
