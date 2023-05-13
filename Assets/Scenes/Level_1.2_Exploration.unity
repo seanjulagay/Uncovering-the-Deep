@@ -6658,68 +6658,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3252071488941016183, guid: ac7e7f7429e0c4343b39b7d7b0fad01b, type: 3}
   m_PrefabInstance: {fileID: 862521903}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &870555656
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1459544478}
-    m_Modifications:
-    - target: {fileID: 5987122464932678497, guid: 6fea1226d1e1dca4e9d6eb4839764455, type: 3}
-      propertyPath: m_Name
-      value: Finish Level
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987122464932678498, guid: 6fea1226d1e1dca4e9d6eb4839764455, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987122464932678498, guid: 6fea1226d1e1dca4e9d6eb4839764455, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8.174745
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987122464932678498, guid: 6fea1226d1e1dca4e9d6eb4839764455, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -14.580873
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987122464932678498, guid: 6fea1226d1e1dca4e9d6eb4839764455, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2869.5115
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987122464932678498, guid: 6fea1226d1e1dca4e9d6eb4839764455, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987122464932678498, guid: 6fea1226d1e1dca4e9d6eb4839764455, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987122464932678498, guid: 6fea1226d1e1dca4e9d6eb4839764455, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987122464932678498, guid: 6fea1226d1e1dca4e9d6eb4839764455, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987122464932678498, guid: 6fea1226d1e1dca4e9d6eb4839764455, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987122464932678498, guid: 6fea1226d1e1dca4e9d6eb4839764455, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5987122464932678498, guid: 6fea1226d1e1dca4e9d6eb4839764455, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6fea1226d1e1dca4e9d6eb4839764455, type: 3}
---- !u!4 &870555657 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5987122464932678498, guid: 6fea1226d1e1dca4e9d6eb4839764455, type: 3}
-  m_PrefabInstance: {fileID: 870555656}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &875646578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10565,7 +10503,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1653677896}
   m_Father: {fileID: 421080957}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10685,7 +10624,6 @@ Transform:
   m_Children:
   - {fileID: 743927315}
   - {fileID: 33429192}
-  - {fileID: 870555657}
   m_Father: {fileID: 421080957}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10768,7 +10706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4649996044909596502, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4649996044914017605, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
       propertyPath: m_IsActive
@@ -10873,6 +10811,10 @@ PrefabInstance:
     - target: {fileID: 4649996046056091907, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820804025251697058, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -58.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
@@ -11385,6 +11327,162 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8238648612747933799, guid: 3df6b0d1545999448b1fceaf257e9ebc, type: 3}
   m_PrefabInstance: {fileID: 1630049652}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1653677895
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1456086747}
+    m_Modifications:
+    - target: {fileID: 6664695962161404672, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 21.46095
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404672, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 21.46095
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404672, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 21.46095
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q1
+      value: A type of fish that can be distinguished by its bright orange color
+        along with white stripes.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q2
+      value: An animal characterized by its long streamlined shell.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q3
+      value: What is the largest shark that is considered docile and cannot cause
+        harm to humans?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q1answer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q2answer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q1options.Array.data[0]
+      value: Sea Turtle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q1options.Array.data[1]
+      value: Clownfish
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q1options.Array.data[2]
+      value: Jellyfish
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q2options.Array.data[0]
+      value: Clownfish
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q2options.Array.data[1]
+      value: Sea Turtle
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q2options.Array.data[2]
+      value: Anglerfish
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q3options.Array.data[0]
+      value: Whale Shark
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q3options.Array.data[1]
+      value: Sperm Whale
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q3options.Array.data[2]
+      value: Ghost Shark
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937868, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ac96e4f753b58c843872c3c44963f81e, type: 3}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.30022138
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.30022138
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.30022138
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.232937
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -25.554052
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937871, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 8.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937871, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 8.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937874, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_Name
+      value: QuizAnimal
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+--- !u!4 &1653677896 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+  m_PrefabInstance: {fileID: 1653677895}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1656942199
 PrefabInstance:

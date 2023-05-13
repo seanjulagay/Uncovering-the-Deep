@@ -11369,7 +11369,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1577162678}
   m_Father: {fileID: 421080957}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12068,6 +12069,165 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7535224083252463857, guid: 437e5dc793f2ce5419b5699876f7b043, type: 3}
   m_PrefabInstance: {fileID: 1568691246}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1577162677
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1456086747}
+    m_Modifications:
+    - target: {fileID: 6664695962161404672, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 21.46095
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404672, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 21.46095
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404672, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 21.46095
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q1
+      value: A type of species called Vampire because of its dark red coloration,
+        eye color, and spines on its tentacles.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q2
+      value: They have the largest brain of any living animal.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q3
+      value: A marine animal that is closely related to spiders and scorpions.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q1answer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q2answer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q3answer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q1options.Array.data[0]
+      value: Vampire Fish
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q1options.Array.data[1]
+      value: Vampire Eel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q1options.Array.data[2]
+      value: Vampire Squid
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q2options.Array.data[0]
+      value: Ghost Shark
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q2options.Array.data[1]
+      value: Sperm Whale
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q2options.Array.data[2]
+      value: Dumbo Octopus
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q3options.Array.data[0]
+      value: Horseshoe Crab
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q3options.Array.data[1]
+      value: Gulper Eel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: q3options.Array.data[2]
+      value: Dumbo Octopus
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937868, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ac96e4f753b58c843872c3c44963f81e, type: 3}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.30021998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.30021998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.30021998
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 34.732937
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -38.054054
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937871, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 8.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937871, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 8.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 6664695963510937874, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: m_Name
+      value: QuizAnimal
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+--- !u!4 &1577162678 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6664695963510937869, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+  m_PrefabInstance: {fileID: 1577162677}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1579372199
 PrefabInstance:
@@ -14966,7 +15126,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4649996044909596502, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4649996045690138747, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
       propertyPath: m_Pivot.x
@@ -15063,6 +15223,10 @@ PrefabInstance:
     - target: {fileID: 4649996046056091907, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5820804025251697058, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -78.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
