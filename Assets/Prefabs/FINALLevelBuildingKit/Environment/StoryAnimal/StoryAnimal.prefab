@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4381622899871395848}
   - component: {fileID: 4381622899871395849}
   - component: {fileID: 4381622899871395854}
+  - component: {fileID: 1520440449839583173}
   m_Layer: 0
   m_Name: StoryAnimal
   m_TagString: StoryAnimal
@@ -112,6 +113,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1520440449839583173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4381622899871395851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1458e25bd9191409472b2671e52e60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  height: 1
 --- !u!1 &4381622900940875304
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,6 +252,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPartOfAnimalsMetCount: 1
+  onlyShowOnce: 0
+  automaticRepeat: 0
   dialogueText:
   - Hello, there! I am a story animal.
   - You have triggered the story animal trigger.
@@ -248,7 +265,3 @@ MonoBehaviour:
   dialogueSprites:
   - {fileID: 21300000, guid: 61adfc487169e2c4db2ec0bedb1dd237, type: 3}
   - {fileID: 21300000, guid: d62648608f038014aad4b871731cefa1, type: 3}
-  index: 0
-  firstOpen: 1
-  listenForRepeat: 0
-  listenForNext: 0
