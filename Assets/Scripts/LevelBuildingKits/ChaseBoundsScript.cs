@@ -6,7 +6,6 @@ public class ChaseBoundsScript : MonoBehaviour
 {
     GameObject chasingAnimal;
     ChasingAnimalScript chasingAnimalScript;
-    string msg = "Before the change";
 
     void OnTriggerEnter2D(Collider2D other)
     {
