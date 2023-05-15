@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2024739460502009971, guid: 1639b0e125baefb44a599382b91a8576, type: 3}
       propertyPath: m_Name
-      value: Bubble
+      value: Bubble Variant 1
       objectReference: {fileID: 0}
     - target: {fileID: 2024739460502009975, guid: 1639b0e125baefb44a599382b91a8576, type: 3}
       propertyPath: m_Sprite
@@ -94,3 +94,17 @@ CircleCollider2D:
   m_Offset: {x: 0.81785345, y: -0.9334197}
   serializedVersion: 2
   m_Radius: 0.50322723
+--- !u!114 &8950881789094031485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7740580578469310547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1458e25bd9191409472b2671e52e60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  height: 3
