@@ -5,14 +5,14 @@ using UnityEngine;
 public class AquariumBoundsScript : MonoBehaviour
 {
     GameObject aquariumAnimal;
-    AquariumAnimalScript aquariumAnimalScript;
+    AquariumAnimalMovementScript aquariumAnimalMovementScript;
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "AquariumAnimal")
         {
             aquariumAnimal = other.gameObject;
-            aquariumAnimalScript = aquariumAnimal.GetComponent<AquariumAnimalScript>();
+            aquariumAnimalMovementScript = aquariumAnimal.GetComponent<AquariumAnimalMovementScript>();
         }
     }
 }

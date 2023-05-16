@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-public class AquariumAnimalScript : MonoBehaviour
+public class AquariumAnimalMovementScript : MonoBehaviour
 {
     public int affectionCount = 0;
 
     public GameObject directorPf;
     GameObject director;
-    GameObject myBounds;
+    GameObject bounds;
 
     Rigidbody2D rb;
 
+    BouncingSpriteAnimationScript bouncingSpriteAnimationScript;
     AIDestinationSetter aiDestinationSetter;
     AIPath aiPath;
 
@@ -25,17 +26,17 @@ public class AquariumAnimalScript : MonoBehaviour
 
     void Start()
     {
+        bouncingSpriteAnimationScript = gameObject.GetComponent<BouncingSpriteAnimationScript>();
         aiDestinationSetter = gameObject.GetComponent<AIDestinationSetter>();
         aiPath = gameObject.GetComponent<AIPath>();
 
-        myBounds = transform.parent.Find("Bounds").gameObject;
-
+        bounds = transform.parent.Find("Bounds").gameObject;
 
         xScale = transform.localScale.x;
         rb = gameObject.GetComponent<Rigidbody2D>();
         defaultGravity = rb.gravityScale;
 
-        boundsSize = transform.parent.Find("Bounds").localScale;
+        boundsSize = bounds.transform.localScale;
         boundsUL = new Vector2(-(boundsSize.x / 2), boundsSize.y / 2);
         boundsUR = new Vector2(boundsSize.x / 2, boundsSize.y / 2);
         boundsDL = new Vector2(-(boundsSize.x / 2), -(boundsSize.y / 2));
@@ -78,7 +79,10 @@ public class AquariumAnimalScript : MonoBehaviour
         float directorRandY = Random.Range(boundsDL.y, boundsUR.y);
 
         director.transform.localPosition = new Vector2(directorRandX, directorRandY);
-        // director.GetComponent<SpriteRenderer>().enabled = false;
+        director.GetComponent<SpriteRenderer>().enabled = false;
+
+        // Debug.Log("Director position: " + directorRandX + ", " + directorRandY);
+        // Debug.Log("Bounds: " + boundsUL + " " + boundsUR + " " + boundsDL + " " + boundsDR);
 
         yield return new WaitForSeconds(Random.Range(4f, 7f));
         Destroy(director);
