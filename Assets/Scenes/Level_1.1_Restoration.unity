@@ -5677,6 +5677,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1439923197655076204, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+      propertyPath: startPoint
+      value: 
+      objectReference: {fileID: 1714093841}
+    - target: {fileID: 1439923197655076204, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+      propertyPath: finishPoint
+      value: 
+      objectReference: {fileID: 598316578}
+    - target: {fileID: 1439923197655076204, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+      propertyPath: returnPoint
+      value: 
+      objectReference: {fileID: 1714093841}
+    - target: {fileID: 1439923197655076204, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+      propertyPath: checkpointObjects
+      value: 
+      objectReference: {fileID: 1806654785}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
 --- !u!1001 &434634884
@@ -7211,6 +7227,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2968161657311510411, guid: 2993117957c86d64f9339cc5c2ad84ce, type: 3}
   m_PrefabInstance: {fileID: 595312206}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &598316578 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 315728498040388778, guid: 386b69320361907469a2e39795ef0472, type: 3}
+  m_PrefabInstance: {fileID: 800039838}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &603169914
 PrefabInstance:
@@ -19739,6 +19760,11 @@ Transform:
   m_Father: {fileID: 421080957}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1714093841 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7038825546141629391, guid: 98deddfefd3a46c499388ee1e7138154, type: 3}
+  m_PrefabInstance: {fileID: 1031261307}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1723682962
 PrefabInstance:
   m_ObjectHideFlags: 0
