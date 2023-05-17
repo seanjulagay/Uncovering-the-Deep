@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManagerScript : MonoBehaviour
 {
+    public GameObject SettingsOverlay;
+
     Button levelCompeleteRetryButton;
     Button levelCompleteNextButton;
     Button levelCompleteHomeButton;
@@ -14,6 +16,8 @@ public class ButtonManagerScript : MonoBehaviour
     Button gameOverRetryButton;
     Button gameOverHomeButton;
     Button gameOverMapButton;
+
+    Button pauseButton;
 
     void Start()
     {
@@ -26,6 +30,8 @@ public class ButtonManagerScript : MonoBehaviour
         gameOverHomeButton = GameObject.Find("GameOverHomeButton").GetComponent<Button>();
         gameOverMapButton = GameObject.Find("GameOverMapButton").GetComponent<Button>();
 
+        pauseButton = GameObject.Find("PuaseButton").GetComponent<Button>();
+
         levelCompeleteRetryButton.onClick.AddListener(ButtonRetryLevel);
         levelCompleteNextButton.onClick.AddListener(ButtonNextLevel);
         levelCompleteHomeButton.onClick.AddListener(ButtonMainMenu);
@@ -34,6 +40,10 @@ public class ButtonManagerScript : MonoBehaviour
         gameOverRetryButton.onClick.AddListener(ButtonRetryLevel);
         gameOverHomeButton.onClick.AddListener(ButtonMainMenu);
         gameOverMapButton.onClick.AddListener(ButtonMap);
+
+        pauseButton.onClick.AddListener(ButtonPause);
+        pauseButton.onClick.AddListener(Close_ButtonPause);
+
     }
 
     public void ButtonRetryLevel()
@@ -55,4 +65,18 @@ public class ButtonManagerScript : MonoBehaviour
     {
         // Load Next Level Here
     }
+
+    // Pause Panel
+    public void ButtonPause()
+    {
+        SettingsOverlay.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void Close_ButtonPause()
+    {
+        SettingsOverlay.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
 }
