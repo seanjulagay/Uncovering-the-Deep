@@ -7,6 +7,7 @@ public class GameManagerScript : MonoBehaviour
 {
     UIManagerScript uiManagerScript;
     CheckpointManagerScript checkpointManagerScript;
+    SoundsManagerScript soundsManagerScript;
     GameObject playerObj;
 
     [Tooltip("Gamemode 0 - exploration mode; Gamemode 1 - restoration mode")]
@@ -42,7 +43,12 @@ public class GameManagerScript : MonoBehaviour
     void Start()
     {
         uiManagerScript = GameObject.Find("UIManager").GetComponent<UIManagerScript>();
-        checkpointManagerScript = GameObject.Find("CheckpointManager").GetComponent<CheckpointManagerScript>();
+        checkpointManagerScript = GameObject.Find("CheckpointManager").
+       // soundsManagerScript = GameObject.Find("SoundsManager").
+
+        GetComponent<CheckpointManagerScript>();
+        GetComponent<SoundsManagerScript>();
+
         playerObj = GameObject.Find("Player");
 
         startPoint = GameObject.Find("StartPoint");
@@ -51,6 +57,8 @@ public class GameManagerScript : MonoBehaviour
 
         StartGame();
         Time.timeScale = 1;
+
+        
     }
 
     void Update()
@@ -90,6 +98,17 @@ public class GameManagerScript : MonoBehaviour
         userScore = quizScore;
         uiManagerScript.DisplayLevelCompletePanel(userScore);
     }
+
+    // //SOUNDS
+    // public void playGameOverSound()
+    // {
+    //     soundsManagerScript.PlaySound("GameoverSound");
+    // }
+
+    // public void playVictorySound()
+    // {
+    //     soundsManagerScript.PlaySound("Sound");
+    // }
 
 
 }
