@@ -17,12 +17,10 @@ public class CheckpointManagerScript : MonoBehaviour
     public bool stackingPhase = false;
     public int checkpointCount = 0;
 
-    void Start()
+    void Awake()
     {
-        trashbagsParent = GameObject.Find("Trashbags");
         startPoint = GameObject.Find("StartPoint");
         returnPoint = GameObject.Find("ReturnPoint");
-        checkpointObjects = GameObject.Find("CheckpointObjects");
 
         try
         {
@@ -32,6 +30,14 @@ public class CheckpointManagerScript : MonoBehaviour
         {
             finishPoint = null;
         }
+    }
+
+    void Start()
+    {
+        trashbagsParent = GameObject.Find("Trashbags");
+        checkpointObjects = GameObject.Find("CheckpointObjects");
+
+
 
         for (int i = 0; i < checkpointObjects.transform.childCount; i++)
         {

@@ -82,11 +82,11 @@ public class DialogueTriggerScript : MonoBehaviour
         {
             if (firstOpen == true)
             {
+                StartDialogue();
                 if (isPartOfAnimalsMetCount)
                 {
                     gameManagerScript.animalsMet++;
                 }
-                StartDialogue();
             }
             else if (firstOpen == false && automaticRepeat == true)
             {

@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 7885580945630104010}
   m_Layer: 0
   m_Name: PlayerTrigger
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 7885580946877190698}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -397,6 +397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf48dfc997e37924aa4ff74ee67fc1c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  arrowKeysUI: {fileID: 0}
   moveUpSpd: 2
   moveDownSpd: 1
   moveSideSpd: 2
@@ -434,6 +435,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc1b70dd04b1b0c45930c19cd817af90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  uiManagerScript: {fileID: 0}
+  uiOxygenBar: {fileID: 0}
+  oxygenCount: 99
   playerScore: 0
   underwater: 0
 --- !u!212 &7885580946877190711
@@ -500,7 +504,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc65f242152b86b4cb6b2304d9d12855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
 --- !u!114 &7885580946877190698
 MonoBehaviour:
   m_ObjectHideFlags: 0
