@@ -43,11 +43,9 @@ public class GameManagerScript : MonoBehaviour
     void Start()
     {
         uiManagerScript = GameObject.Find("UIManager").GetComponent<UIManagerScript>();
-        checkpointManagerScript = GameObject.Find("CheckpointManager").
+        checkpointManagerScript = GameObject.Find("CheckpointManager").GetComponent<CheckpointManagerScript>();
        // soundsManagerScript = GameObject.Find("SoundsManager").
-
-        GetComponent<CheckpointManagerScript>();
-        GetComponent<SoundsManagerScript>();
+        // GetComponent<SoundsManagerScript>();
 
         playerObj = GameObject.Find("Player");
 
@@ -72,10 +70,10 @@ public class GameManagerScript : MonoBehaviour
 
     void StartGame()
     {
-        if (inTestingMode == false)
-        {
-            playerObj.transform.position = checkpointManagerScript.startPoint.transform.position;
-        }
+        // if (inTestingMode == false)
+        // {
+        //     playerObj.transform.position = checkpointManagerScript.startPoint.transform.position;
+        // }
     }
 
     public void ToggleGamePause(bool isPaused)

@@ -1310,7 +1310,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -69.86
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1230776860805529995, guid: 5130f358a52c408499ca3be8d5cff5e2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5130f358a52c408499ca3be8d5cff5e2, type: 3}
 --- !u!4 &74102851 stripped
 Transform:
@@ -4603,7 +4604,6 @@ GameObject:
   m_Component:
   - component: {fileID: 375548317}
   - component: {fileID: 375548320}
-  - component: {fileID: 375548319}
   - component: {fileID: 375548318}
   m_Layer: 0
   m_Name: Bubbles Animation (9)
@@ -4651,24 +4651,6 @@ MonoBehaviour:
   ascendingDuration: 10
   respawnDelay: 1
   speed: 500
---- !u!114 &375548319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375548316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89b6615d97dcc8a41a8c213fb2daad95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bubbleObj: {fileID: 0}
-  startPoint: {fileID: 0}
-  endPoint: {fileID: 0}
-  minWaitTime: 0
-  maxWaitTime: 5
-  bubbleSpeed: 3
 --- !u!111 &375548320
 Animation:
   m_ObjectHideFlags: 0
@@ -4866,7 +4848,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -69.86
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1230776860805529995, guid: 5130f358a52c408499ca3be8d5cff5e2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5130f358a52c408499ca3be8d5cff5e2, type: 3}
 --- !u!4 &395771056 stripped
 Transform:
@@ -14453,7 +14436,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1015720599}
   - component: {fileID: 1015720602}
-  - component: {fileID: 1015720601}
   - component: {fileID: 1015720600}
   m_Layer: 0
   m_Name: Bubbles Animation (2)
@@ -14501,24 +14483,6 @@ MonoBehaviour:
   ascendingDuration: 10
   respawnDelay: 1
   speed: 500
---- !u!114 &1015720601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1015720598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89b6615d97dcc8a41a8c213fb2daad95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bubbleObj: {fileID: 0}
-  startPoint: {fileID: 0}
-  endPoint: {fileID: 0}
-  minWaitTime: 0
-  maxWaitTime: 5
-  bubbleSpeed: 3
 --- !u!111 &1015720602
 Animation:
   m_ObjectHideFlags: 0
@@ -33863,7 +33827,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -69.86
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1230776860805529995, guid: 5130f358a52c408499ca3be8d5cff5e2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5130f358a52c408499ca3be8d5cff5e2, type: 3}
 --- !u!4 &2132040942 stripped
 Transform:

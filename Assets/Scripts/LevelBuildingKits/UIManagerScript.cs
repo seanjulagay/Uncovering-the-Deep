@@ -52,7 +52,7 @@ public class UIManagerScript : MonoBehaviour
 
         gameOverPanel = GameObject.Find("GameOverPanel");
 
-        soundsManagerScript = GameObject.Find("SoundsManager").GetComponent<SoundsManagerScript>();
+        // soundsManagerScript = GameObject.Find("SoundsManager").GetComponent<SoundsManagerScript>();
 
         timeSpentText = GameObject.Find("TimeSpentText").GetComponent<TMP_Text>();
     }
