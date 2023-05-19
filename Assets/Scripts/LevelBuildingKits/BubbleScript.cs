@@ -13,7 +13,7 @@ public class BubbleScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.name == "PlayerTrigger")
         {
             playerPropertiesScript.oxygenCount += 20f;
             if (playerPropertiesScript.oxygenCount > 100)

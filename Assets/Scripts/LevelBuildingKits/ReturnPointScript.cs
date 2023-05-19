@@ -39,7 +39,7 @@ public class ReturnPointScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" && gameManagerScript.activateReturnPoint == true)
+        if (other.gameObject.name == "PlayerTrigger" && gameManagerScript.activateReturnPoint == true)
         {
             if (gameManagerScript.endGameType == 0) // animals saved type
             {

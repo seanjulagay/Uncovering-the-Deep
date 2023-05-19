@@ -21,6 +21,7 @@ public class TrashbagScript : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" && isStacked == false)
         {
+            Debug.Log("DETECTED PROPERLY");
             gameObject.tag = "TrashbagStacked";
             isStacked = true;
             trashbagStackManager.AddToStack(gameObject);

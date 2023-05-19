@@ -44,9 +44,11 @@ public class CheckpointManagerScript : MonoBehaviour
         checkpointCount++;
     }
 
-    public void SpawnTrashbag(Vector3 checkpointPadPos)
+    public void SpawnTrashbag(GameObject checkpointPad)
     {
-        Instantiate(trashbagPFs[UnityEngine.Random.Range(0, 2)], checkpointPadPos, transform.rotation, trashbagsParent.transform);
+        float trashY = checkpointPad.transform.position.y - 2.2f;
+
+        Instantiate(trashbagPFs[UnityEngine.Random.Range(0, 2)], new Vector3(checkpointPad.transform.position.x, trashY, checkpointPad.transform.position.z), transform.rotation, trashbagsParent.transform);
     }
 
     public void TurnAllTrashbagsStackable()

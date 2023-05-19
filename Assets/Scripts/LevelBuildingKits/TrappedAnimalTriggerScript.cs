@@ -104,7 +104,7 @@ public class TrappedAnimalTriggerScript : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.name == "PlayerTrigger")
         {
             animalRescuePanel.SetActive(true);
             tappingMinigameOngoing = true;
@@ -114,7 +114,7 @@ public class TrappedAnimalTriggerScript : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.name == "PlayerTrigger")
         {
             animalRescuePanel.SetActive(false);
             tappingMinigameOngoing = false;
