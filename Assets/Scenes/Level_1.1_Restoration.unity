@@ -3430,7 +3430,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 244131410}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3e800de47e67cef41b495f38600dce5d, type: 3}
   m_Name: 
@@ -4571,12 +4571,16 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 981234390228540142, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 35.054573
+      objectReference: {fileID: 0}
+    - target: {fileID: 981234390228540142, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.094513
+      value: 34.9273
       objectReference: {fileID: 0}
     - target: {fileID: 981234390228540143, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
       propertyPath: m_Color.a
-      value: 0.62352943
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 981234390280882796, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
       propertyPath: m_Name
@@ -9304,6 +9308,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1788637709}
     m_Modifications:
+    - target: {fileID: 981234390187532804, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 981234390187532806, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -9326,7 +9334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 981234390228540143, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
       propertyPath: m_Color.a
-      value: 0.70980394
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 981234390280882796, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
       propertyPath: m_Name
