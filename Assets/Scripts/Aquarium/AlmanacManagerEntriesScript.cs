@@ -63,12 +63,14 @@ public class AlmanacManagerEntriesScript : MonoBehaviour
     {
         animalEntriesAreaGroup.SetActive(false);
         trashEntriesAreaGroup.SetActive(true);
+        sideButtonCategory = 0;
     }
 
     public void SwitchAnimalsCategory()
     {
         animalEntriesAreaGroup.SetActive(true);
         trashEntriesAreaGroup.SetActive(false);
+        sideButtonCategory = 1;
     }
 
     public void SwitchInGameImage()
