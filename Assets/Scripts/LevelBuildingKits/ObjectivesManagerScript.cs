@@ -17,12 +17,12 @@ public class ObjectivesManagerScript : MonoBehaviour
     public bool includeTrashCollected;
     public bool includeTrashbags;
 
-    int animalsMetMax = 0;
+    public int animalsMetMax = 0;
     int animalsSavedMax = 0;
     int trashCollectedMax = 0;
     int trashbagsMax = 0;
 
-    int animalsMetCurrent = 0;
+    public int animalsMetCurrent = 0;
     int animalsSavedCurrent = 0;
     int trashCollectedCurrent = 0;
     int trashbagsCurrent = 0;
