@@ -5,8 +5,6 @@ using Pathfinding;
 
 public class AquariumAnimalMovementScript : MonoBehaviour
 {
-    public int affectionCount = 0;
-
     public GameObject directorPf;
     GameObject director;
     GameObject bounds;
@@ -30,7 +28,7 @@ public class AquariumAnimalMovementScript : MonoBehaviour
         aiDestinationSetter = gameObject.GetComponent<AIDestinationSetter>();
         aiPath = gameObject.GetComponent<AIPath>();
 
-        bounds = transform.parent.Find("Bounds").gameObject;
+        bounds = GameObject.Find("Bounds");
 
         xScale = transform.localScale.x;
         rb = gameObject.GetComponent<Rigidbody2D>();
