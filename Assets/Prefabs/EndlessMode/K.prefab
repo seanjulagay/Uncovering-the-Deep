@@ -47,13 +47,14 @@ GameObject:
   - component: {fileID: 8654935486030646611}
   - component: {fileID: 5891978640718904485}
   - component: {fileID: 827187067197465566}
+  - component: {fileID: 8844748842472381309}
   m_Layer: 0
-  m_Name: SpawnPoint
+  m_Name: Destroyer
   m_TagString: SpawnPoint
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1227184090316543371
 Transform:
   m_ObjectHideFlags: 0
@@ -113,7 +114,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.016934007, y: 0.03408546}
@@ -129,6 +130,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3408137, y: 0.3224569}
   m_EdgeRadius: 0
+--- !u!114 &8844748842472381309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61688408357639929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aca58f99c19281b4981cd5ec4c10170a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &469205061352160623
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,7 +623,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.016934007, y: 0.03408546}
@@ -815,7 +828,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.016934007, y: 0.03408546}
@@ -1539,6 +1552,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8825203658771161219}
+  - component: {fileID: -1212447871182983311}
   m_Layer: 0
   m_Name: K
   m_TagString: Untagged
@@ -1566,6 +1580,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-1212447871182983311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8825203658771161216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14f420521ad95944b37729f1befd06c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8825203658992007697
 GameObject:
   m_ObjectHideFlags: 0
