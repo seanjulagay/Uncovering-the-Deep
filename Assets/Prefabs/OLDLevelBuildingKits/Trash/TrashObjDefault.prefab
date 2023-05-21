@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3446145155861965257}
   - component: {fileID: 3446145155861965254}
   - component: {fileID: 3869441019966766286}
+  - component: {fileID: 4807928039208909738}
   m_Layer: 0
   m_Name: TrashObjDefault
   m_TagString: TrashObjDefault
@@ -96,7 +97,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 3446145155861965253}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 38e782798940dda41927c6c954693b2c, type: 2}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -139,3 +140,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   height: 1
+  enableBounce: 1
+--- !u!114 &4807928039208909738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3446145155861965253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc94ff02bc70dc540bd57645c8a5650c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
