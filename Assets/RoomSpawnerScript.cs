@@ -16,7 +16,7 @@ public class RoomSpawnerScript : MonoBehaviour
 
     void Start(){
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplatesScript>();
-        Invoke("Spawn", 5f);
+        Invoke("Spawn", 1f);
     }
 
     void Spawn()
