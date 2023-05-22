@@ -61,6 +61,7 @@ public class PlayerControllerScript : MonoBehaviour
                     if (rb.velocity.x <= moveVelocityLimit)
                     {
                         rb.AddForce(transform.right * moveSideSpd);
+                        rb.AddForce(transform.up * 0.05f);
                     }
 
                     if (trashbagStackManager.stackCount > 0) // PLAYER CARRYING
@@ -80,6 +81,7 @@ public class PlayerControllerScript : MonoBehaviour
                     if (rb.velocity.x >= -moveVelocityLimit)
                     {
                         rb.AddForce(-transform.right * moveSideSpd);
+                        rb.AddForce(transform.up * 0.05f);
                     }
 
                     if (trashbagStackManager.stackCount > 0) // PLAYER CARRYING

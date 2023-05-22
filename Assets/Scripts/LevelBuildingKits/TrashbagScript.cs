@@ -27,4 +27,18 @@ public class TrashbagScript : MonoBehaviour
             trashbagStackManager.AddToStack(gameObject);
         }
     }
+
+    // void OnCollisionStay2D(Collision2D other)
+    // {
+    //     if (other.gameObject.tag == "Player" && isStacked == false)
+    //     {
+    //         gameObject.tag = "TrashbagStacked";
+    //         isStacked = true;
+    //         trashbagStackManager.AddToStack(gameObject);
+    //     }
+    // }
+
+    // void MaintainY() {
+    //     if()
+    // }
 }
