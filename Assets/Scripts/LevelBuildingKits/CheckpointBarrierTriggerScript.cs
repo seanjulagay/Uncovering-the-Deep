@@ -39,7 +39,7 @@ public class CheckpointBarrierTriggerScript : MonoBehaviour
         if (other.gameObject.name == "PlayerTrigger")
         {
             redirectPlayer = true;
-            playerControllerScript.canPlayerMove = false;
+            // playerControllerScript.canPlayerMove = false;
             // uiManagerScript.OliveDialogue(oliveDialogue);
         }
     }
@@ -49,7 +49,7 @@ public class CheckpointBarrierTriggerScript : MonoBehaviour
         if (other.gameObject.name == "PlayerTrigger")
         {
             redirectPlayer = false;
-            playerControllerScript.canPlayerMove = true;
+            // playerControllerScript.canPlayerMove = true;
         }
     }
 

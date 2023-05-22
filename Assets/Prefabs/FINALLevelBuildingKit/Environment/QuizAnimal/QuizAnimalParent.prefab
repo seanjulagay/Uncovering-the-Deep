@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6664695962161404925}
   - component: {fileID: 6664695962161404675}
   - component: {fileID: 6664695962161404674}
+  - component: {fileID: 9218998085977496633}
   m_Layer: 3
   m_Name: QuizAnimal
   m_TagString: Untagged
@@ -46,6 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e508a154d8a9b12468842a32d49456d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  quizSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   q1: Question 1
   q1options:
   - asdasdasd
@@ -66,6 +71,9 @@ MonoBehaviour:
   q3answer: 0
   userAnswers: 000000000000000000000000
   activeQuestion: 0
+  nextButton: {fileID: 0}
+  backButton: {fileID: 0}
+  leaveButton: {fileID: 0}
 --- !u!212 &6664695962161404675
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -144,6 +152,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &9218998085977496633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6664695962161404673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 113a56007e4a9c64d85057d4fb48739c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPartOfAnimalsMetCount: 0
+  onlyShowOnce: 0
+  automaticRepeat: 1
+  dialogueText:
+  - I should finish meeting with all the other animals in this area first!
+  dialogueActors:
+  - Olive
+  assignedDialogueSpeaker: 00000000
+  dialogueSprites:
+  - {fileID: 21300000, guid: 8cc51cfa568ec6147a054b2b223aed73, type: 3}
 --- !u!1 &6664695963510937874
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +186,7 @@ GameObject:
   - component: {fileID: 6664695963510937868}
   - component: {fileID: 6664695963510937871}
   m_Layer: 0
-  m_Name: QuizAnimal
+  m_Name: QuizAnimalParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

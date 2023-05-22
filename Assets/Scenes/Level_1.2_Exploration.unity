@@ -17889,6 +17889,18 @@ PrefabInstance:
       propertyPath: q3options.Array.data[2]
       value: Ghost Shark
       objectReference: {fileID: 0}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: quizSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 9b653ae91dd6fcd4b821b0460c52137d, type: 3}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: quizSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 35e6f18c132d0f94ca3a13e4d7a62752, type: 3}
+    - target: {fileID: 6664695962161404925, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: quizSprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: d9af63c6501325f4596e2eafc882cd8f, type: 3}
     - target: {fileID: 6664695963510937868, guid: 5184579862c076c42a72341672e3f80f, type: 3}
       propertyPath: m_FlipX
       value: 1
@@ -17955,15 +17967,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6664695963510937871, guid: 5184579862c076c42a72341672e3f80f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 8.98
+      value: 9.57
       objectReference: {fileID: 0}
     - target: {fileID: 6664695963510937871, guid: 5184579862c076c42a72341672e3f80f, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 8.54
+      value: 7.08
       objectReference: {fileID: 0}
     - target: {fileID: 6664695963510937874, guid: 5184579862c076c42a72341672e3f80f, type: 3}
       propertyPath: m_Name
-      value: QuizAnimal
+      value: QuizAnimalParent
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5184579862c076c42a72341672e3f80f, type: 3}

@@ -3472,9 +3472,6 @@ MonoBehaviour:
   levelIconButton:
   - {fileID: 1009566150}
   - {fileID: 194365144}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   starIconSprite:
   - {fileID: 21300000, guid: 4f4a679b6c981704d8da0a82e2d820ce, type: 3}
   - {fileID: 21300000, guid: d9be7478c014dfa42840cbc126f56fb8, type: 3}
@@ -3483,9 +3480,6 @@ MonoBehaviour:
   levelIconSprite:
   - {fileID: 21300000, guid: c489a675d6538bf4683e04e549035b06, type: 3}
   - {fileID: 21300000, guid: 15d3b5c8eb30e0946a8743bf7abc7b5d, type: 3}
-  - {fileID: 21300000, guid: 2082f13c97597b645b38815ed12a0cfa, type: 3}
-  - {fileID: 21300000, guid: be15a1d2c8a205a43bfa2ca21d4c93b5, type: 3}
-  - {fileID: 21300000, guid: 2a0cb14d4545abb46a456b94fb710e2c, type: 3}
   - {fileID: 21300000, guid: 7c848c23bc4757a4db00ab49b92f25c2, type: 3}
   menuManagerScript: {fileID: 384906386}
 --- !u!1 &460802883
@@ -12657,6 +12651,7 @@ MonoBehaviour:
   emptyResearcherPrefab: {fileID: 5133723893716950320, guid: 1cf85893b1ea2384d91340fcb606dace, type: 3}
   addResearcherPrefab: {fileID: 2939452376851025407, guid: 8f30d1890afbfe44a9d7438dd9fbf677, type: 3}
   filledResearcherPrefab: {fileID: 6207062168852503260, guid: 1fcf73ae8bd033f4aa3269221d79dada, type: 3}
+  profileNumberText: {fileID: 1862723504}
   menuManagerScript: {fileID: 384906386}
   cardObj:
   - {fileID: 1571865606}
@@ -15594,7 +15589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1862723503
 RectTransform:
   m_ObjectHideFlags: 0
