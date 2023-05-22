@@ -5994,6 +5994,18 @@ PrefabInstance:
       propertyPath: OliveSprite
       value: 
       objectReference: {fileID: 21300000, guid: 8cc51cfa568ec6147a054b2b223aed73, type: 3}
+    - target: {fileID: 1439923196163470804, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+      propertyPath: timeGoals.Array.data[1]
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439923196163470804, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+      propertyPath: timeGoals.Array.data[2]
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 1439923196163470804, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+      propertyPath: timeGoals.Array.data[3]
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 1439923197368634146, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
       propertyPath: m_Name
       value: Managers
