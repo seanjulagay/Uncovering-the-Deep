@@ -180,7 +180,7 @@ public class DialogueTriggerScript : MonoBehaviour
 
     void StartDialogue()
     {
-        helperText.text = "";
+       // helperText.text = "";
         index = 0;
         listenForNext = true;
         listenForRepeat = false;

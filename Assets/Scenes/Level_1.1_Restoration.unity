@@ -1652,6 +1652,10 @@ PrefabInstance:
       propertyPath: dialogueSprites.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 35e6f18c132d0f94ca3a13e4d7a62752, type: 3}
+    - target: {fileID: 8022387311123223332, guid: 4b44f3616ccd2044490049ec6ee7f6c5, type: 3}
+      propertyPath: dialogueSprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 31060b0cd1ec21242ad7e5d2838a8041, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b44f3616ccd2044490049ec6ee7f6c5, type: 3}
 --- !u!4 &110300347 stripped
@@ -1736,7 +1740,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123505738}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.31, y: -15.03, z: 0}
+  m_LocalPosition: {x: -15.16, y: -15.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5561,6 +5565,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4649996045690138745, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4649996045690138747, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -9537,7 +9545,7 @@ PrefabInstance:
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueSprites.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 61adfc487169e2c4db2ec0bedb1dd237, type: 3}
+      objectReference: {fileID: 21300000, guid: 69317e6cf84a5ee4180398dd14b90e30, type: 3}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: assignedDialogueSpeaker.Array.size
       value: 2
@@ -11959,7 +11967,7 @@ PrefabInstance:
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueSprites.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 61adfc487169e2c4db2ec0bedb1dd237, type: 3}
+      objectReference: {fileID: 21300000, guid: 0f6abfeb5440bd24dbbd05cdd13d99c0, type: 3}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: assignedDialogueSpeaker.Array.size
       value: 2
@@ -12960,17 +12968,57 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 82781839}
     m_Modifications:
+    - target: {fileID: 7038825546141629384, guid: 98deddfefd3a46c499388ee1e7138154, type: 3}
+      propertyPath: m_Size.x
+      value: 13.211668
+      objectReference: {fileID: 0}
+    - target: {fileID: 7038825546141629384, guid: 98deddfefd3a46c499388ee1e7138154, type: 3}
+      propertyPath: m_Size.y
+      value: 8.327
+      objectReference: {fileID: 0}
+    - target: {fileID: 7038825546141629384, guid: 98deddfefd3a46c499388ee1e7138154, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.03856373
+      objectReference: {fileID: 0}
+    - target: {fileID: 7038825546141629384, guid: 98deddfefd3a46c499388ee1e7138154, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.038562775
+      objectReference: {fileID: 0}
+    - target: {fileID: 7038825546141629384, guid: 98deddfefd3a46c499388ee1e7138154, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 13.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7038825546141629384, guid: 98deddfefd3a46c499388ee1e7138154, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 8.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7038825546141629385, guid: 98deddfefd3a46c499388ee1e7138154, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b5bfeef63ff35d544ac830c369b73c60, type: 3}
+    - target: {fileID: 7038825546141629385, guid: 98deddfefd3a46c499388ee1e7138154, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7038825546141629385, guid: 98deddfefd3a46c499388ee1e7138154, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7038825546141629385, guid: 98deddfefd3a46c499388ee1e7138154, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7038825546141629390, guid: 98deddfefd3a46c499388ee1e7138154, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7038825546141629390, guid: 98deddfefd3a46c499388ee1e7138154, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -37.767063
+      value: -37.67
       objectReference: {fileID: 0}
     - target: {fileID: 7038825546141629390, guid: 98deddfefd3a46c499388ee1e7138154, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -13.054052
+      value: -11.14
       objectReference: {fileID: 0}
     - target: {fileID: 7038825546141629390, guid: 98deddfefd3a46c499388ee1e7138154, type: 3}
       propertyPath: m_LocalPosition.z
@@ -19089,7 +19137,7 @@ PrefabInstance:
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueSprites.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 8cc51cfa568ec6147a054b2b223aed73, type: 3}
+      objectReference: {fileID: 21300000, guid: 31060b0cd1ec21242ad7e5d2838a8041, type: 3}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: assignedDialogueSpeaker.Array.size
       value: 2
@@ -20801,7 +20849,7 @@ PrefabInstance:
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueSprites.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 61adfc487169e2c4db2ec0bedb1dd237, type: 3}
+      objectReference: {fileID: 21300000, guid: 31060b0cd1ec21242ad7e5d2838a8041, type: 3}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: assignedDialogueSpeaker.Array.size
       value: 2
