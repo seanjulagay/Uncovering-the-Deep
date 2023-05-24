@@ -69,27 +69,9 @@ public class ReturnPointScript : MonoBehaviour
                 }
 
                 displayDetails = true;
-                // if (gameManagerScript.timeSpentSecs <= gameManagerScript.timeGoals[0])
-                // {
-                //     gameManagerScript.starsThisLevel = 0;
-                //     levelCompleteStarsImg.sprite = levelCompleteStarsArr[0];
-                // }
-                // else if (gameManagerScript.timeSpentSecs <= gameManagerScript.timeGoals[1])
-                // {
-                //     gameManagerScript.starsThisLevel = 1;
-                //     levelCompleteStarsImg.sprite = levelCompleteStarsArr[1];
-                // }
-                // else if (gameManagerScript.timeSpentSecs <= gameManagerScript.timeGoals[2])
-                // {
-                //     gameManagerScript.starsThisLevel = 2;
-                //     levelCompleteStarsImg.sprite = levelCompleteStarsArr[2];
-                // }
-                // else
-                // {
-                //     gameManagerScript.starsThisLevel = 3;
-                //     levelCompleteStarsImg.sprite = levelCompleteStarsArr[3];
-                // }
             }
+            gameManagerScript.CompareBests();
+            SceneDataHandler.FinishedLevel(gameManagerScript.zoneVal, gameManagerScript.levelVal);
             levelCompleteHeaderText.text = "Level Complete!";
             levelCompletePanel.SetActive(true);
             Time.timeScale = 0;

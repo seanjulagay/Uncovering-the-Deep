@@ -5885,7 +5885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 792742512750901397, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3298639766062862347, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_Sprite
@@ -5914,6 +5914,22 @@ PrefabInstance:
     - target: {fileID: 3298639766062862355, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1.6703
+      objectReference: {fileID: 0}
+    - target: {fileID: 3298639766062862357, guid: 73e28e43871dd764da257f8642976a93, type: 3}
+      propertyPath: m_Size.x
+      value: 13.935125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3298639766062862357, guid: 73e28e43871dd764da257f8642976a93, type: 3}
+      propertyPath: m_Size.y
+      value: 13.935125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3298639766062862357, guid: 73e28e43871dd764da257f8642976a93, type: 3}
+      propertyPath: m_Offset.x
+      value: 1.5910565
+      objectReference: {fileID: 0}
+    - target: {fileID: 3298639766062862357, guid: 73e28e43871dd764da257f8642976a93, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.6176922
       objectReference: {fileID: 0}
     - target: {fileID: 6016808572741715667, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_RootOrder
@@ -6334,6 +6350,7 @@ GameObject:
   - component: {fileID: 1148414894}
   - component: {fileID: 1148414893}
   - component: {fileID: 1148414892}
+  - component: {fileID: 1148414895}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6407,6 +6424,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1148414895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1148414891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56666c5a40171f54783dd416a44f42bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_MaxRayIntersections: 0
 --- !u!1 &1228281146
 GameObject:
   m_ObjectHideFlags: 0

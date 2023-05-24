@@ -41,8 +41,8 @@ public class DialogueTriggerScript : MonoBehaviour
         dialoguePanelManagerScript = GameObject.Find("DialoguePanelManager").GetComponent<DialoguePanelManagerScript>();
         objectivesManagerScript = GameObject.Find("ObjectivesManager").GetComponent<ObjectivesManagerScript>();
 
-        helperTextObj = GameObject.Find("HelperText");
-        helperText = helperTextObj.GetComponent<TMP_Text>();
+        // helperTextObj = GameObject.Find("HelperText");
+        // helperText = helperTextObj.GetComponent<TMP_Text>();
 
         InitializeEmpty();
     }
@@ -160,7 +160,7 @@ public class DialogueTriggerScript : MonoBehaviour
 
             if (firstOpen == false && automaticRepeat == false)
             {
-                helperText.text = "Press spacebar to repeat dialogue";
+                // helperText.text = "Press spacebar to repeat dialogue";
                 listenForRepeat = true;
             }
         }
@@ -172,7 +172,7 @@ public class DialogueTriggerScript : MonoBehaviour
         {
             if (firstOpen == false)
             {
-                helperText.text = "";
+                // helperText.text = "";
                 listenForRepeat = false;
             }
         }
@@ -180,7 +180,7 @@ public class DialogueTriggerScript : MonoBehaviour
 
     void StartDialogue()
     {
-        helperText.text = "";
+        // helperText.text = "";
         index = 0;
         listenForNext = true;
         listenForRepeat = false;

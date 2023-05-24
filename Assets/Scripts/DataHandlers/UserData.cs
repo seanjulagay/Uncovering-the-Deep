@@ -20,5 +20,15 @@ public class UserData
     public int currentLevel = 0; // 0 = level 1
 
     // USER STATS
-    public int[] levelStars = new int[15];
+    public int[] levelStars = new int[6];
+    public int[] levelBestTime = new int[6];
+
+    // AQUARIUM ANIMALS
+    public bool[] isInteractable = new bool[10];
+    public int[] interactionLevel = new int[10];
+
+    // AQUARIUM DATA
+    public bool[] hasUnlockedAchievement = new bool[5];
+    public bool[] hasUnlockedAlmanacAnimal = new bool[12];
+    public bool[] hasUnlockedAlmanacTrash = new bool[9];
 }

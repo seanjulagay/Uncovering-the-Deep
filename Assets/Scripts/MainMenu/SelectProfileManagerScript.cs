@@ -86,6 +86,7 @@ public class SelectProfileManagerScript : MonoBehaviour
         ProfileManagerScript.StoreActiveUserID();
         Debug.Log("Set activeUser: " + ProfileManagerScript.activeUser.userID);
         menuManagerScript.UpdateCurrentProfileCard();
+        SceneDataHandler.MenuTransferData();
         // Debug.Log("Active user: " + ProfileManagerScript.activeUser.username);
 
     }

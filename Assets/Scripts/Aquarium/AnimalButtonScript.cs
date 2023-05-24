@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.EventSystems;
 
-public class AnimalButtonScript : MonoBehaviour
+public class AnimalButtonScript : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     AquariumDialogueManagerScript aquariumDialogueManagerScript;
     AnimalDialogueScript animalDialogueScript;
@@ -22,18 +23,19 @@ public class AnimalButtonScript : MonoBehaviour
         Debug.Log("my object: " + gameObject);
     }
 
-    // void OnMouseOver()
-    // {
-    //     spriteRenderer.color = hoverColor;
-    // }
-
-    // void OnMouseExit()
-    // {
-    //     spriteRenderer.color = Color.white;
-    // }
-
-    void OnMouseUp()
+    public void OnPointerEnter(PointerEventData eventData)
     {
+        spriteRenderer.color = hoverColor;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        spriteRenderer.color = Color.white;
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        Debug.Log("CLICKED " + gameObject);
         if (interactionButtonsManagerScript.animalInteractionMode == 1) // interact
         {
             Debug.Log("CALC: " + (animalInteractScript.lastInteractionTime.AddDays(1) - DateTime.Today));

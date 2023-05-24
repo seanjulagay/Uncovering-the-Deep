@@ -71,6 +71,7 @@ public class LevelSelectManagerScript : MonoBehaviour
 
     public void InitializeLevelButtons()
     {
+        Debug.Log("INITIALIZELEVELBUTTONS");
         for (int i = 0; i < numberOfLevels; i++)
         { // clear all
             levelIconButton[i].GetComponent<Image>().sprite = levelIconSprite[numberOfLevels];
@@ -84,13 +85,20 @@ public class LevelSelectManagerScript : MonoBehaviour
             for (int i = 0; i < numberOfLevels; i++)
             { // load working buttons until user's current level
                 // Debug.Log("User selected current zone");
+                int index = i;
+                levelIconButton[index].GetComponent<Button>().onClick.AddListener(() => { LoadLevel(index); });
+                Debug.Log("Added LoadLevel(" + index + ") to " + levelIconButton[i].name);
                 levelIconButton[i].GetComponent<Image>().sprite = levelIconSprite[i];
                 levelIconButton[i].transform.Find("LevelStars").GetComponent<Image>().sprite = starIconSprite[ProfileManagerScript.activeUser.levelStars[(numberOfLevels * selectedZone) + i]];
+                Debug.Log("Stars for level " + levelIconButton[i].name + " is " + ProfileManagerScript.activeUser.levelStars[index] + ", assigning " + starIconSprite[ProfileManagerScript.activeUser.levelStars[index]].name);
             }
 
             for (int i = ProfileManagerScript.activeUser.currentLevel + 1; i < numberOfLevels; i++)
             { // load locked levels
+                int index = i;
                 levelIconButton[i].GetComponent<Image>().sprite = levelIconSprite[numberOfLevels];
+                levelIconButton[index].GetComponent<Button>().onClick.RemoveAllListeners();
+                Debug.Log("Removed LoadLevel(" + index + ") from " + levelIconButton[index].name);
             }
         }
         else if (selectedZone < ProfileManagerScript.activeUser.currentZone)
@@ -104,51 +112,44 @@ public class LevelSelectManagerScript : MonoBehaviour
         }
     }
 
-    public void PickLevel1()
+    public void LoadLevel(int level)
     {
-        selectedLevel = 1;
-        LoadLevel();
-    }
+        selectedLevel = level;
+        Debug.Log("selectedZone: " + selectedZone + " selectedLevel: " + selectedLevel + " LEVEL: " + level);
 
-    public void PickLevel2()
-    {
-        selectedLevel = 2;
-        LoadLevel();
-    }
-
-    public void LoadLevel()
-    {
         if (selectedZone == 0)
         {
-            if (selectedLevel == 1)
+            if (selectedLevel == 0)
             {
+                Debug.Log("LEVEL 1");
                 SceneManager.LoadScene("Level_1.1_Restoration");
             }
             else
             {
+                Debug.Log("LEVEL 2");
                 SceneManager.LoadScene("Level_1.2_Exploration");
             }
         }
         else if (selectedZone == 1)
         {
-            if (selectedLevel == 1)
+            if (selectedLevel == 0)
             {
-                SceneManager.LoadScene("Level_2.2_Restoration");
+                SceneManager.LoadScene("Level_2.1_Restoration");
             }
             else
             {
-                SceneManager.LoadScene("Level_2.3_Exploration");
+                SceneManager.LoadScene("Level_2.2_Exploration");
             }
         }
         else
         {
-            if (selectedLevel == 1)
+            if (selectedLevel == 0)
             {
                 SceneManager.LoadScene("Level_3.1_Restoration");
             }
             else
             {
-                SceneManager.LoadScene("Level_3.3_Exploration");
+                SceneManager.LoadScene("Level_3.2_Exploration");
             }
         }
     }
