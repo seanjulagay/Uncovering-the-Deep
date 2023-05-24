@@ -9,6 +9,7 @@ public class PlayerControllerScript : MonoBehaviour
 
     PlayerSpriteManagerScript playerSpriteManagerScript;
     TrashbagStackManager trashbagStackManager;
+    SoundsManagerScript soundsManagerScript;
 
     Rigidbody2D rb;
     float moveX, moveY;
@@ -27,6 +28,7 @@ public class PlayerControllerScript : MonoBehaviour
 
         playerSpriteManagerScript = gameObject.GetComponent<PlayerSpriteManagerScript>();
         trashbagStackManager = GameObject.Find("TrashbagStackManager").GetComponent<TrashbagStackManager>();
+        soundsManagerScript = GameObject.Find("SoundsManager").GetComponent<SoundsManagerScript>();
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
@@ -53,6 +55,7 @@ public class PlayerControllerScript : MonoBehaviour
         {
             if (moveX != 0 || moveY != 0)
             {
+                soundsManagerScript.PlaySound("swimming");
                 if (moveX > 0) // PLAYER GOES RIGHT
                 {
                     uiArrowKeysScript.ActivateArrow("right");

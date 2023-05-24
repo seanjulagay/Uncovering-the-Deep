@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class MenuManagerScript : MonoBehaviour
 {
@@ -37,6 +38,11 @@ public class MenuManagerScript : MonoBehaviour
         Time.timeScale = 1;
         UpdateCurrentProfileCard();
         UpdateSettingsOverlay();
+    }
+
+    public void OpenAquarium()
+    {
+        SceneManager.LoadScene("Aquarium");
     }
 
     // =========== MAIN BUTTON GROUP =========== //
