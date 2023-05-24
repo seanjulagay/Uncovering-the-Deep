@@ -8,28 +8,24 @@ public class SoundsManagerScript : MonoBehaviour
 
     void Start()
     {
-        buttonClickSound = GameObject.Find("ButtonSound").GetComponent<AudioSource>();
+        // buttonClickSound = GameObject.Find("ButtonSound").GetComponent<AudioSource>();
 
-        trashSound = GameObject.Find("TrashSound").GetComponent<AudioSource>();
-        freeingAnimalSound = GameObject.Find("FreeingAnimalSound").GetComponent<AudioSource>();
-        
-        swimmingSound = GameObject.Find("SwimmingSound").GetComponent<AudioSource>();
-        bubbleSound = GameObject.Find("BubbleSound").GetComponent<AudioSource>();
-        oxygenWarningSound = GameObject.Find("OxygenWarningSound").GetComponent<AudioSource>();
-        
-        victorySound = GameObject.Find("VictorySound").GetComponent<AudioSource>();
-        gameoverSound = GameObject.Find("GameoverSound").GetComponent<AudioSource>();
-    }
+        // trashSound = GameObject.Find("TrashSound").GetComponent<AudioSource>();
+        // freeingAnimalSound = GameObject.Find("FreeingAnimalSound").GetComponent<AudioSource>();
 
-    void Update()
-    {
+        // swimmingSound = GameObject.Find("SwimmingSound").GetComponent<AudioSource>();
+        // bubbleSound = GameObject.Find("BubbleSound").GetComponent<AudioSource>();
+        // oxygenWarningSound = GameObject.Find("OxygenWarningSound").GetComponent<AudioSource>();
 
+        // victorySound = GameObject.Find("VictorySound").GetComponent<AudioSource>();
+        // gameoverSound = GameObject.Find("GameoverSound").GetComponent<AudioSource>();
     }
 
     public void PlaySound(string sound)
     {
-        if (GlobalScript.keepSoundsOn)
+        if (SceneDataHandler.activeUser.soundOn == true)
         {
+            Debug.Log("PLAYING SOUNDS");
             switch (sound)
             {
                 case "buttonClick":
@@ -37,6 +33,7 @@ public class SoundsManagerScript : MonoBehaviour
                     break;
                 case "swimming":
                     swimmingSound.Play();
+                    Debug.Log("SWIMMING" + swimmingSound.isPlaying);
                     break;
                 case "bubble":
                     bubbleSound.Play();
@@ -53,7 +50,7 @@ public class SoundsManagerScript : MonoBehaviour
                 case "victory":
                     victorySound.Play();
                     break;
-                case "gameover":
+                case "gameOver":
                     gameoverSound.Play();
                     break;
                 default:
