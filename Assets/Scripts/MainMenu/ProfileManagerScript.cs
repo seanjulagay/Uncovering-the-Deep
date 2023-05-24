@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ProfileManagerScript : MonoBehaviour
 {
@@ -27,10 +28,17 @@ public class ProfileManagerScript : MonoBehaviour
         CheckForBlankProfiles();
 
         InitializeActiveUser();
+        Debug.Log("activeuser: " + activeUser.username);
     }
 
     public static void SerializeJson() // save class values to json
     {
+        if (SceneManager.GetActiveScene().name != "MainMenu")
+        {
+            activeUser = SceneDataHandler.activeUser;
+            Debug.Log("Accessing SceneDataHandler from ProfileManagerScript");
+        }
+
         userData[activeUser.userID] = activeUser;
 
         string arrToJson = JsonHelper.ToJson(userData, true);

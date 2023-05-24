@@ -16,6 +16,8 @@ public class SelectProfileManagerScript : MonoBehaviour
     public GameObject addResearcherPrefab;
     public GameObject filledResearcherPrefab;
 
+    public TMP_Text profileNumberText;
+
     public MenuManagerScript menuManagerScript;
 
     public List<GameObject> cardObj;
@@ -33,6 +35,15 @@ public class SelectProfileManagerScript : MonoBehaviour
 
     public void UpdateProfileUI()
     {
+        try
+        {
+            profileNumberText.text = "Available profile slots: " + cardObj.Count + "/6";
+        }
+        catch (NullReferenceException e)
+        {
+            profileNumberText.text = "Available profile slots: " + 0 + "/6";
+        }
+
         for (int i = 0; i < 6; i++) // Reflect existing/non-existing profiles
         {
             int local_i = i;
@@ -75,6 +86,7 @@ public class SelectProfileManagerScript : MonoBehaviour
         ProfileManagerScript.StoreActiveUserID();
         Debug.Log("Set activeUser: " + ProfileManagerScript.activeUser.userID);
         menuManagerScript.UpdateCurrentProfileCard();
+        SceneDataHandler.MenuTransferData();
         // Debug.Log("Active user: " + ProfileManagerScript.activeUser.username);
 
     }

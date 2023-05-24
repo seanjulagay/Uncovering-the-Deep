@@ -27,6 +27,8 @@ public class DialogueTriggerScript : MonoBehaviour
     bool listenForRepeat = false;
     bool listenForNext = false;
 
+    ObjectivesManagerScript objectivesManagerScript;
+
     void Awake()
     {
         dialougePanelObj = GameObject.Find("DialoguePanel");
@@ -37,9 +39,10 @@ public class DialogueTriggerScript : MonoBehaviour
         gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
         uiManagerScript = GameObject.Find("UIManager").GetComponent<UIManagerScript>();
         dialoguePanelManagerScript = GameObject.Find("DialoguePanelManager").GetComponent<DialoguePanelManagerScript>();
+        objectivesManagerScript = GameObject.Find("ObjectivesManager").GetComponent<ObjectivesManagerScript>();
 
-        helperTextObj = GameObject.Find("HelperText");
-        helperText = helperTextObj.GetComponent<TMP_Text>();
+        // helperTextObj = GameObject.Find("HelperText");
+        // helperText = helperTextObj.GetComponent<TMP_Text>();
 
         InitializeEmpty();
     }
@@ -78,26 +81,67 @@ public class DialogueTriggerScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.name == "PlayerTrigger")
         {
-            if (firstOpen == true)
+            if (gameObject.name == "QuizAnimal")
             {
-                StartDialogue();
-                if (isPartOfAnimalsMetCount)
+                if (objectivesManagerScript.animalsMetCurrent < objectivesManagerScript.animalsMetMax)
                 {
-                    gameManagerScript.animalsMet++;
+                    StartDialogue();
+
                 }
             }
-            else if (firstOpen == false && automaticRepeat == true)
+            else
             {
-                StartDialogue();
+                if (firstOpen == true)
+                {
+                    StartDialogue();
+                    if (isPartOfAnimalsMetCount)
+                    {
+                        gameManagerScript.animalsMet++;
+                    }
+                }
+                else if (firstOpen == false && automaticRepeat == true)
+                {
+                    StartDialogue();
+                }
+            }
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.name == "PlayerTrigger")
+        {
+            if (gameObject.name == "QuizAnimal")
+            {
+                if (objectivesManagerScript.animalsMetCurrent < objectivesManagerScript.animalsMetMax)
+                {
+                    StartDialogue();
+
+                }
+            }
+            else
+            {
+                if (firstOpen == true)
+                {
+                    StartDialogue();
+                    if (isPartOfAnimalsMetCount)
+                    {
+                        gameManagerScript.animalsMet++;
+                    }
+                }
+                else if (firstOpen == false && automaticRepeat == true)
+                {
+                    StartDialogue();
+                }
             }
         }
     }
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.name == "PlayerTrigger")
         {
             // if (firstOpen == true)
             // {
@@ -116,7 +160,7 @@ public class DialogueTriggerScript : MonoBehaviour
 
             if (firstOpen == false && automaticRepeat == false)
             {
-                helperText.text = "Press spacebar to repeat dialogue";
+                // helperText.text = "Press spacebar to repeat dialogue";
                 listenForRepeat = true;
             }
         }
@@ -124,11 +168,11 @@ public class DialogueTriggerScript : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.name == "PlayerTrigger")
         {
             if (firstOpen == false)
             {
-                helperText.text = "";
+                // helperText.text = "";
                 listenForRepeat = false;
             }
         }
@@ -136,7 +180,7 @@ public class DialogueTriggerScript : MonoBehaviour
 
     void StartDialogue()
     {
-        helperText.text = "";
+        // helperText.text = "";
         index = 0;
         listenForNext = true;
         listenForRepeat = false;

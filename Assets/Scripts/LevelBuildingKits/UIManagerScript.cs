@@ -8,6 +8,7 @@ using TMPro;
 public class UIManagerScript : MonoBehaviour
 {
     GameManagerScript gameManagerScript;
+    SoundsManagerScript soundsManagerScript;
 
     GameObject levelCompletePanel;
     Image levelCompleteStars;
@@ -50,6 +51,8 @@ public class UIManagerScript : MonoBehaviour
         helperText = GameObject.Find("HelperText").GetComponent<TMP_Text>();
 
         gameOverPanel = GameObject.Find("GameOverPanel");
+
+        // soundsManagerScript = GameObject.Find("SoundsManager").GetComponent<SoundsManagerScript>();
 
         timeSpentText = GameObject.Find("TimeSpentText").GetComponent<TMP_Text>();
     }
@@ -140,6 +143,7 @@ public class UIManagerScript : MonoBehaviour
     {
         Time.timeScale = 0;
         gameOverPanel.SetActive(true);
+        // soundsManagerScript.PlaySound("victory");
     }
 
 

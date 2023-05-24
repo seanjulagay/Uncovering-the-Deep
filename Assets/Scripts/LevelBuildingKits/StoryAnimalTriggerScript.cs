@@ -17,7 +17,7 @@ public class StoryAnimalTriggerScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" && metAnimalYet == false)
+        if (other.gameObject.name == "PlayerTrigger" && metAnimalYet == false)
         {
             metAnimalYet = true;
             gameManagerScript.animalsMet++;
