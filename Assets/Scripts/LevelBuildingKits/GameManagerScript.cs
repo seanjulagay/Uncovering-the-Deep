@@ -142,6 +142,8 @@ public class GameManagerScript : MonoBehaviour
         Debug.Log("Best stars for this level: " + bestStars + ", best time spent for this level: " + bestTimeSpent);
     }
 
+    
+
     // //SOUNDS
     // public void playGameOverSound()
     // {

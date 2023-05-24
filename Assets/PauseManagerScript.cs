@@ -10,6 +10,7 @@ public class PauseManagerScript : MonoBehaviour
     public Button resumeLevelButton;
     public Button backToMainMenuButton;
     public Button retryLevelButton;
+    public Button mapSelectButton;
 
     //back to level select button here
 
@@ -33,6 +34,9 @@ public class PauseManagerScript : MonoBehaviour
         retryLevelButton = GameObject.Find("PausePanelRetryButton").GetComponent<Button>();
         retryLevelButton.onClick.AddListener(retryLevel);
         
+        mapSelectButton = GameObject.Find("LevelCompleteMapButton").GetComponent<Button>();
+        mapSelectButton.onClick.AddListener(levelSelect);
+
     }
 
     public void pauseGame()
@@ -61,6 +65,11 @@ public class PauseManagerScript : MonoBehaviour
     
     public void retryLevel(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void levelSelect(){
+        SceneManager.LoadScene("MainMenu");
+        MenuManagerScript.OpenZone();
     }
 
     void Update()
