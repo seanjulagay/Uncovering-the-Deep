@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerPropertiesScript : MonoBehaviour
 {
@@ -17,8 +18,16 @@ public class PlayerPropertiesScript : MonoBehaviour
 
     void Start()
     {
-        uiManagerScript = GameObject.Find("UIManager").GetComponent<UIManagerScript>();
-        uiOxygenBar = GameObject.Find("OxygenBar");
+        try
+        {
+            uiManagerScript = GameObject.Find("UIManager").GetComponent<UIManagerScript>();
+            uiOxygenBar = GameObject.Find("OxygenBar");
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e);
+        }
+
         // Debug.Log("Loaded PlayeRProps");
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
@@ -44,7 +53,14 @@ public class PlayerPropertiesScript : MonoBehaviour
             uiManagerScript.DisplayGameOverPanel();
         }
 
-        uiOxygenBar.GetComponent<UIProgressBarScript>().current = (int)oxygenCount;
+        try
+        {
+            uiOxygenBar.GetComponent<UIProgressBarScript>().current = (int)oxygenCount;
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e);
+        }
     }
 
     void PlayerPhysicsHandler()
