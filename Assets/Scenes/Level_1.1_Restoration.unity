@@ -5661,6 +5661,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4649996045787510091, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 431614701}
+    - target: {fileID: 4649996045787510091, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: pauseGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4649996045787510091, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PauseManagerScript, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 5820804024934991201, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -6198,8 +6210,23 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8654114047700932339, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+      propertyPath: pausePanel
+      value: 
+      objectReference: {fileID: 7365407930528103423, guid: 2a804a6bd4e50e1449005e662dfa8713, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+--- !u!114 &431614701 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8654114047700932339, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+  m_PrefabInstance: {fileID: 431614699}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f56f99f6d5e45ca4a87066e502d91594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &434634884
 PrefabInstance:
   m_ObjectHideFlags: 0
