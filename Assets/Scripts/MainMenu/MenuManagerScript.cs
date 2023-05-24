@@ -201,4 +201,8 @@ public class MenuManagerScript : MonoBehaviour
     {
         helpOverlay.SetActive(false);
     }
+
+    public static void OpenZone(){
+        //OpenZoneOverlay();
+    }
 }
