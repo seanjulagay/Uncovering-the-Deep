@@ -28,7 +28,7 @@ public class PauseManagerScript : MonoBehaviour
         resumeLevelButton.onClick.AddListener(resumeGame);
 
         backToMainMenuButton = GameObject.Find("PausePanelHomeButton").GetComponent<Button>();
-        resumeLevelButton.onClick.AddListener(backToMainMenu);
+        backToMainMenuButton.onClick.AddListener(backToMainMenu);
 
         retryLevelButton = GameObject.Find("PausePanelRetryButton").GetComponent<Button>();
         retryLevelButton.onClick.AddListener(retryLevel);
@@ -49,12 +49,14 @@ public class PauseManagerScript : MonoBehaviour
         // GameObject pausePanel = GameObject.Find("PausePanel");
         pausePanel.SetActive(false);
         // hideflag = true;
+        Debug.Log("hgfhdfghdfgh");
     }
 
     public void backToMainMenu(){
         SceneManager.LoadScene("MainMenu");
-        SceneDataHandler.transferTempDataFlag = true;
+        //SceneDataHandler.transferTempDataFlag = true;
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Debug.Log("hgfhdfghdfgh");
     }
     
     public void retryLevel(){
