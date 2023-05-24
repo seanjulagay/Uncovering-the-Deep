@@ -211,9 +211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a05efee13f0c5546a29536817f0062c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trashbagSprites:
-  - {fileID: 21300000, guid: 0276c47eb21381649bf06eafef34a056, type: 3}
-  - {fileID: 21300000, guid: e256c09c01a276243b0c38770685af94, type: 3}
   isStacked: 0
 --- !u!50 &1055922185264362296
 Rigidbody2D:
@@ -231,7 +228,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0.1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 38e782798940dda41927c6c954693b2c, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0

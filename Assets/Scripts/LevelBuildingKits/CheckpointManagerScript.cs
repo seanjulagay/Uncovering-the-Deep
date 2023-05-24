@@ -17,12 +17,10 @@ public class CheckpointManagerScript : MonoBehaviour
     public bool stackingPhase = false;
     public int checkpointCount = 0;
 
-    void Start()
+    void Awake()
     {
-        trashbagsParent = GameObject.Find("Trashbags");
         startPoint = GameObject.Find("StartPoint");
         returnPoint = GameObject.Find("ReturnPoint");
-        checkpointObjects = GameObject.Find("CheckpointObjects");
 
         try
         {
@@ -32,6 +30,14 @@ public class CheckpointManagerScript : MonoBehaviour
         {
             finishPoint = null;
         }
+    }
+
+    void Start()
+    {
+        trashbagsParent = GameObject.Find("Trashbags");
+        checkpointObjects = GameObject.Find("CheckpointObjects");
+
+
 
         for (int i = 0; i < checkpointObjects.transform.childCount; i++)
         {
@@ -44,9 +50,11 @@ public class CheckpointManagerScript : MonoBehaviour
         checkpointCount++;
     }
 
-    public void SpawnTrashbag(Vector3 checkpointPadPos)
+    public void SpawnTrashbag(GameObject checkpointPad)
     {
-        Instantiate(trashbagPFs[UnityEngine.Random.Range(0, 2)], checkpointPadPos, transform.rotation, trashbagsParent.transform);
+        float trashY = checkpointPad.transform.position.y - 2.2f;
+
+        Instantiate(trashbagPFs[UnityEngine.Random.Range(0, 2)], new Vector3(checkpointPad.transform.position.x, trashY, checkpointPad.transform.position.z), transform.rotation, trashbagsParent.transform);
     }
 
     public void TurnAllTrashbagsStackable()

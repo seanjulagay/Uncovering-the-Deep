@@ -7,6 +7,7 @@ using TMPro;
 public class DialoguePanelManagerScript : MonoBehaviour
 {
     GameManagerScript gameManagerScript;
+    public Sprite OliveSprite;
 
     public GameObject dialoguePanel;
     TMP_Text dialogueText;
@@ -63,6 +64,6 @@ public class DialoguePanelManagerScript : MonoBehaviour
         ShowDialogue();
         dialogueText.text = diaText;
         dialogueActor.text = "Olive";
-        dialogueSprite.sprite = null;
+        dialogueSprite.sprite = OliveSprite;
     }
 }

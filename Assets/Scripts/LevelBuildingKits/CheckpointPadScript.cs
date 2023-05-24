@@ -53,13 +53,14 @@ public class CheckpointPadScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.name == "PlayerTrigger")
         {
             if (AllTrashObjsCleared() == true && objInstantiated == false)
             {
                 objInstantiated = true;
                 checkpointManagerScript.CheckpointPassed();
-                checkpointManagerScript.SpawnTrashbag(gameObject.transform.position);
+                // checkpointManagerScript.SpawnTrashbag(gameObject.transform.position);
+                checkpointManagerScript.SpawnTrashbag(gameObject);
                 checkpointParentObj.SetActive(false);
                 nextCheckpointBarrier.SetActive(false);
             }

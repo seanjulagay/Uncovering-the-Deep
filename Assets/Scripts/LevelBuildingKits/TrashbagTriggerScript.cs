@@ -19,9 +19,21 @@ public class TrashbagTriggerScript : MonoBehaviour
     {
         if ((other.gameObject.tag == "Trashbag" || other.gameObject.tag == "Terrain") && trashbagScript.isStacked == true)
         {
-            trashbag.tag = "Trashbag";
-            trashbagScript.isStacked = false;
             trashbagStackManager.stackCount--;
+            trashbagScript.isStacked = false;
+            trashbag.tag = "Trashbag";
         }
     }
+
+    // void OnTriggerExit2D(Collider2D other)
+    // {
+    //     Debug.Log("EXITED");
+    //     if ((other.gameObject.tag == "TrashbagStacked" || other.gameObject.tag == "Player"))
+    //     {
+    //         Debug.Log("EXITED CONDITIONALLY");
+    //         trashbagStackManager.stackCount--;
+    //         trashbagScript.isStacked = false;
+    //         trashbag.tag = "Trashbag";
+    //     }
+    // }
 }

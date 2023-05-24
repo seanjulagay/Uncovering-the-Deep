@@ -1,4 +1,6 @@
 using UnityEngine;
+using Pathfinding;
+
 
 public class BouncingSpriteAnimationScript : MonoBehaviour
 {
@@ -7,6 +9,8 @@ public class BouncingSpriteAnimationScript : MonoBehaviour
 
     // Adjust this to change the height of the bounce
     public float height = 1f;
+
+    public bool enableBounce = true;
 
     private float startY; // The initial Y position of the sprite
 
@@ -17,10 +21,13 @@ public class BouncingSpriteAnimationScript : MonoBehaviour
 
     private void Update()
     {
-        // Calculate the new Y position using a sine wave
-        float newY = startY + Mathf.Sin(Time.time * speed) * height;
+        if (enableBounce == true)
+        {
+            // Calculate the new Y position using a sine wave
+            float newY = startY + Mathf.Sin(Time.time * speed) * height;
 
-        // Update the sprite's position
-        transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+            // Update the sprite's position
+            transform.position = new Vector3(transform.position.x, newY, transform.position.z);
+        }
     }
 }

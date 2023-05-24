@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
@@ -7,6 +8,9 @@ using TMPro;
 
 public class QuizAnimalScript : MonoBehaviour
 {
+    public Sprite[] quizSprites = new Sprite[3];
+    Image quizAnimalSprite;
+
     public string q1 = "question1";
     public string[] q1options = new string[3] { "option1", "option2", "option3" };
     public int q1answer = 0;
@@ -34,12 +38,23 @@ public class QuizAnimalScript : MonoBehaviour
     public Button backButton;
     public Button leaveButton;
 
+    TMP_Text questionCountText;
+
     ToggleGroup toggleGroup;
     List<Toggle> toggle = new List<Toggle>(new Toggle[3]);
 
     bool addListenersFlag = false;
 
+    ObjectivesManagerScript objectivesManagerScript;
+
     // ================ TODO: ADD LISTENER TO NEXT AND BACK BUTTONS PROGRAMMATICALLY
+
+    void Awake()
+    {
+        questionCountText = GameObject.Find("QuestionCountText").GetComponent<TMP_Text>();
+        quizAnimalSprite = GameObject.Find("QuizAnimalSprite").GetComponent<Image>();
+        objectivesManagerScript = GameObject.Find("ObjectivesManager").GetComponent<ObjectivesManagerScript>();
+    }
 
     void Start()
     {
@@ -71,14 +86,9 @@ public class QuizAnimalScript : MonoBehaviour
         leaveButton.onClick.AddListener(CloseQuizPanel);
     }
 
-    void Update()
-    {
-        
-    }
-
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.name == "PlayerTrigger")
+        if (other.gameObject.name == "PlayerTrigger" && (objectivesManagerScript.animalsMetCurrent >= objectivesManagerScript.animalsMetMax))
         {
             Debug.Log("HELLO PLAYER");
             OpenQuizPanel();
@@ -100,6 +110,17 @@ public class QuizAnimalScript : MonoBehaviour
         option1.GetComponent<Text>().text = compiledOptions[activeQuestion][0];
         option2.GetComponent<Text>().text = compiledOptions[activeQuestion][1];
         option3.GetComponent<Text>().text = compiledOptions[activeQuestion][2];
+
+        questionCountText.text = "Question " + (activeQuestion + 1) + " of 3";
+
+        try
+        {
+            quizAnimalSprite.sprite = quizSprites[activeQuestion];
+        }
+        catch (NullReferenceException e)
+        {
+            Debug.Log("NULLREFERENCE EXCEPTION FOR QUIZANIMALSCRIPT");
+        }
 
         for (int i = 0; i < 3; i++)
         {
