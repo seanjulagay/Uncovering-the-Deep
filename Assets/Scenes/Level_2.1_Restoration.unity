@@ -2079,11 +2079,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2968161657311510411, guid: 2993117957c86d64f9339cc5c2ad84ce, type: 3}
   m_PrefabInstance: {fileID: 171761614}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &180038850 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 807751093929289266, guid: e96a1e21c494eca4ea81a27756cdc34c, type: 3}
-  m_PrefabInstance: {fileID: 1347589553}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &186364008
 GameObject:
   m_ObjectHideFlags: 0
@@ -7174,7 +7169,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541404792}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 113a56007e4a9c64d85057d4fb48739c, type: 3}
   m_Name: 
@@ -18080,33 +18075,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 807751093929289265, guid: e96a1e21c494eca4ea81a27756cdc34c, type: 3}
   m_PrefabInstance: {fileID: 1347589553}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1347589555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 180038850}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113a56007e4a9c64d85057d4fb48739c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPartOfAnimalsMetCount: 0
-  onlyShowOnce: 0
-  automaticRepeat: 0
-  dialogueText:
-  - Please help me look for my daughter. She's somewhere down here and I can't find
-    her.
-  - No worries! I'll help.
-  - Thank you very much.
-  dialogueActors:
-  - Mrs. Anglerfish
-  - Olive
-  assignedDialogueSpeaker: 000000000100000000000000
-  dialogueSprites:
-  - {fileID: 21300000, guid: d62648608f038014aad4b871731cefa1, type: 3}
-  - {fileID: 21300000, guid: 31060b0cd1ec21242ad7e5d2838a8041, type: 3}
 --- !u!1 &1351156428
 GameObject:
   m_ObjectHideFlags: 0
@@ -19799,38 +19767,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2968161657311510411, guid: 2993117957c86d64f9339cc5c2ad84ce, type: 3}
   m_PrefabInstance: {fileID: 1454038866}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1455725409 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 807751094193480103, guid: e96a1e21c494eca4ea81a27756cdc34c, type: 3}
-  m_PrefabInstance: {fileID: 1347589553}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1455725418
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1455725409}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 113a56007e4a9c64d85057d4fb48739c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPartOfAnimalsMetCount: 0
-  onlyShowOnce: 0
-  automaticRepeat: 0
-  dialogueText:
-  - Please help me look for my daughter. She's somewhere down here and I can't find
-    her.
-  - No worries! I'll help.
-  - Thank you very much.
-  dialogueActors:
-  - Mrs. Anglerfish
-  - Olive
-  assignedDialogueSpeaker: 000000000100000000000000
-  dialogueSprites:
-  - {fileID: 21300000, guid: d62648608f038014aad4b871731cefa1, type: 3}
-  - {fileID: 21300000, guid: 31060b0cd1ec21242ad7e5d2838a8041, type: 3}
 --- !u!1 &1456086746
 GameObject:
   m_ObjectHideFlags: 0
