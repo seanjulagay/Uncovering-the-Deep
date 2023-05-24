@@ -178,16 +178,17 @@ public class MenuManagerScript : MonoBehaviour
     // =========== HELP OVERLAY =========== //
     public void OpenHelpOverlay()
     {
-        if (ProfileManagerScript.activeUser.isTutorialFinished == false)
-        {
-            // TODO: Popup telling user to finish initial levels first
-            Debug.Log("Finish initial levels first!");
-        }
-        else
-        {
-            helpOverlay.SetActive(true);
-            helpManager.GetComponent<HelpManagerScript>().InitializeHelpPanel();
-        }
+        // if (ProfileManagerScript.activeUser.isTutorialFinished == false)
+        // {
+        //     // TODO: Popup telling user to finish initial levels first
+        //     Debug.Log("Finish initial levels first!");
+        // }
+        // else
+        // {
+        //     helpOverlay.SetActive(true);
+        //     helpManager.GetComponent<HelpManagerScript>().InitializeHelpPanel();
+        // }
+        helpOverlay.SetActive(true);
     }
 
     public void CloseHelpOverlay()
