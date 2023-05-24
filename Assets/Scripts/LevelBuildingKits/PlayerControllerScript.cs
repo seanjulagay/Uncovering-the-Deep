@@ -17,7 +17,7 @@ public class PlayerControllerScript : MonoBehaviour
     public float moveUpSpd = 5f; // original value: 2f
     public float moveDownSpd = 1f;
     public float moveSideSpd = 5f;
-    float moveVelocityLimit = 5f; // original value: 3f
+    public float moveVelocityLimit = 5f; // original value: 3f
     float sinkVelocityLimit = 1f;
 
     public bool canPlayerMove = true;
