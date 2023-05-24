@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerControllerScript : MonoBehaviour
 {
@@ -23,12 +24,20 @@ public class PlayerControllerScript : MonoBehaviour
 
     void Start()
     {
-        arrowKeysUI = GameObject.Find("ArrowKeys");
-        uiArrowKeysScript = arrowKeysUI.GetComponent<UIArrowKeysScript>();
+        try
+        {
+            arrowKeysUI = GameObject.Find("ArrowKeys");
+            uiArrowKeysScript = arrowKeysUI.GetComponent<UIArrowKeysScript>();
+            trashbagStackManager = GameObject.Find("TrashbagStackManager").GetComponent<TrashbagStackManager>();
+            soundsManagerScript = GameObject.Find("SoundsManager").GetComponent<SoundsManagerScript>();
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e);
+        }
 
         playerSpriteManagerScript = gameObject.GetComponent<PlayerSpriteManagerScript>();
-        trashbagStackManager = GameObject.Find("TrashbagStackManager").GetComponent<TrashbagStackManager>();
-        soundsManagerScript = GameObject.Find("SoundsManager").GetComponent<SoundsManagerScript>();
+
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
@@ -51,110 +60,118 @@ public class PlayerControllerScript : MonoBehaviour
 
     void PlayerControls()
     {
-        if (canPlayerMove == true)
+        try
         {
-            if (moveX != 0 || moveY != 0)
+            if (canPlayerMove == true)
             {
-                soundsManagerScript.PlaySound("swimming");
-                if (moveX > 0) // PLAYER GOES RIGHT
+                if (moveX != 0 || moveY != 0)
                 {
-                    uiArrowKeysScript.ActivateArrow("right");
-                    uiArrowKeysScript.DeactivateArrow("left");
-
-                    if (rb.velocity.x <= moveVelocityLimit)
+                    soundsManagerScript.PlaySound("swimming");
+                    if (moveX > 0) // PLAYER GOES RIGHT
                     {
-                        rb.AddForce(transform.right * moveSideSpd);
-                        rb.AddForce(transform.up * 0.05f);
+                        uiArrowKeysScript.ActivateArrow("right");
+                        uiArrowKeysScript.DeactivateArrow("left");
+
+                        if (rb.velocity.x <= moveVelocityLimit)
+                        {
+                            rb.AddForce(transform.right * moveSideSpd);
+                            rb.AddForce(transform.up * 0.05f);
+                        }
+
+                        if (trashbagStackManager.stackCount > 0) // PLAYER CARRYING
+                        {
+                            playerSpriteManagerScript.ChangePlayerSprite("oliveRightCarrying");
+                        }
+                        else
+                        {
+                            playerSpriteManagerScript.ChangePlayerSprite("oliveRightEmpty");
+                        }
                     }
-
-                    if (trashbagStackManager.stackCount > 0) // PLAYER CARRYING
+                    else if (moveX < 0) // PLAYER GOES LEFT
                     {
-                        playerSpriteManagerScript.ChangePlayerSprite("oliveRightCarrying");
+                        uiArrowKeysScript.ActivateArrow("left");
+                        uiArrowKeysScript.DeactivateArrow("right");
+
+                        if (rb.velocity.x >= -moveVelocityLimit)
+                        {
+                            rb.AddForce(-transform.right * moveSideSpd);
+                            rb.AddForce(transform.up * 0.05f);
+                        }
+
+                        if (trashbagStackManager.stackCount > 0) // PLAYER CARRYING
+                        {
+                            playerSpriteManagerScript.ChangePlayerSprite("oliveLeftCarrying");
+                        }
+                        else
+                        {
+                            playerSpriteManagerScript.ChangePlayerSprite("oliveLeftEmpty");
+                        }
                     }
                     else
                     {
-                        playerSpriteManagerScript.ChangePlayerSprite("oliveRightEmpty");
-                    }
-                }
-                else if (moveX < 0) // PLAYER GOES LEFT
-                {
-                    uiArrowKeysScript.ActivateArrow("left");
-                    uiArrowKeysScript.DeactivateArrow("right");
-
-                    if (rb.velocity.x >= -moveVelocityLimit)
-                    {
-                        rb.AddForce(-transform.right * moveSideSpd);
-                        rb.AddForce(transform.up * 0.05f);
+                        uiArrowKeysScript.DeactivateArrow("left");
+                        uiArrowKeysScript.DeactivateArrow("right");
                     }
 
-                    if (trashbagStackManager.stackCount > 0) // PLAYER CARRYING
+                    if (moveY > 0) // PLAYER GOES UP
                     {
-                        playerSpriteManagerScript.ChangePlayerSprite("oliveLeftCarrying");
+                        uiArrowKeysScript.ActivateArrow("up");
+                        uiArrowKeysScript.DeactivateArrow("down");
+
+                        if (rb.velocity.y <= moveVelocityLimit)
+                        {
+                            rb.AddForce(transform.up * moveUpSpd);
+                        }
+
+                        playerSpriteManagerScript.ChangePlayerSprite("oliveUp");
+                    }
+                    else if (moveY < 0) // PLAYER GOES DOWN
+                    {
+                        uiArrowKeysScript.ActivateArrow("down");
+                        uiArrowKeysScript.DeactivateArrow("up");
+
+                        if (rb.velocity.y >= -moveVelocityLimit)
+                        {
+                            rb.AddForce(-transform.up * moveDownSpd);
+                        }
+
+                        if (trashbagStackManager.stackCount > 0) // PLAYER CARRYING
+                        {
+                            playerSpriteManagerScript.ChangePlayerSprite("oliveDownCarrying");
+                        }
+                        else
+                        {
+                            playerSpriteManagerScript.ChangePlayerSprite("oliveDownEmpty");
+                        }
                     }
                     else
                     {
-                        playerSpriteManagerScript.ChangePlayerSprite("oliveLeftEmpty");
+                        uiArrowKeysScript.DeactivateArrow("up");
+                        uiArrowKeysScript.DeactivateArrow("down");
                     }
                 }
                 else
                 {
                     uiArrowKeysScript.DeactivateArrow("left");
-                    uiArrowKeysScript.DeactivateArrow("right");
-                }
-
-                if (moveY > 0) // PLAYER GOES UP
-                {
-                    uiArrowKeysScript.ActivateArrow("up");
-                    uiArrowKeysScript.DeactivateArrow("down");
-
-                    if (rb.velocity.y <= moveVelocityLimit)
-                    {
-                        rb.AddForce(transform.up * moveUpSpd);
-                    }
-
-                    playerSpriteManagerScript.ChangePlayerSprite("oliveUp");
-                }
-                else if (moveY < 0) // PLAYER GOES DOWN
-                {
-                    uiArrowKeysScript.ActivateArrow("down");
                     uiArrowKeysScript.DeactivateArrow("up");
-
-                    if (rb.velocity.y >= -moveVelocityLimit)
+                    uiArrowKeysScript.DeactivateArrow("right");
+                    uiArrowKeysScript.DeactivateArrow("down");
+                    if (rb.velocity.y >= 0)
                     {
-                        rb.AddForce(-transform.up * moveDownSpd);
+                        playerSpriteManagerScript.ChangePlayerSprite("oliveNeutral");
                     }
-
-                    if (trashbagStackManager.stackCount > 0) // PLAYER CARRYING
+                    else
                     {
                         playerSpriteManagerScript.ChangePlayerSprite("oliveDownCarrying");
                     }
-                    else
-                    {
-                        playerSpriteManagerScript.ChangePlayerSprite("oliveDownEmpty");
-                    }
-                }
-                else
-                {
-                    uiArrowKeysScript.DeactivateArrow("up");
-                    uiArrowKeysScript.DeactivateArrow("down");
-                }
-            }
-            else
-            {
-                uiArrowKeysScript.DeactivateArrow("left");
-                uiArrowKeysScript.DeactivateArrow("up");
-                uiArrowKeysScript.DeactivateArrow("right");
-                uiArrowKeysScript.DeactivateArrow("down");
-                if (rb.velocity.y >= 0)
-                {
-                    playerSpriteManagerScript.ChangePlayerSprite("oliveNeutral");
-                }
-                else
-                {
-                    playerSpriteManagerScript.ChangePlayerSprite("oliveDownCarrying");
                 }
             }
         }
+        catch (Exception e)
+        {
+            Debug.Log(e);
+        }
+
     }
 
 }
