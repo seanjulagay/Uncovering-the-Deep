@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ButtonManagerScript : MonoBehaviour
 {
-    public GameObject SettingsOverlay;
+    GameManagerScript gameManagerScript;
 
     Button levelCompeleteRetryButton;
     Button levelCompleteNextButton;
@@ -17,10 +17,10 @@ public class ButtonManagerScript : MonoBehaviour
     Button gameOverHomeButton;
     Button gameOverMapButton;
 
-    Button pauseButton;
-
     void Start()
     {
+        gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
+
         levelCompeleteRetryButton = GameObject.Find("LevelCompleteRetryButton").GetComponent<Button>();
         levelCompleteNextButton = GameObject.Find("LevelCompleteNextButton").GetComponent<Button>();
         levelCompleteHomeButton = GameObject.Find("LevelCompleteHomeButton").GetComponent<Button>();
@@ -30,8 +30,6 @@ public class ButtonManagerScript : MonoBehaviour
         gameOverHomeButton = GameObject.Find("GameOverHomeButton").GetComponent<Button>();
         gameOverMapButton = GameObject.Find("GameOverMapButton").GetComponent<Button>();
 
-        pauseButton = GameObject.Find("PuaseButton").GetComponent<Button>();
-
         levelCompeleteRetryButton.onClick.AddListener(ButtonRetryLevel);
         levelCompleteNextButton.onClick.AddListener(ButtonNextLevel);
         levelCompleteHomeButton.onClick.AddListener(ButtonMainMenu);
@@ -40,10 +38,6 @@ public class ButtonManagerScript : MonoBehaviour
         gameOverRetryButton.onClick.AddListener(ButtonRetryLevel);
         gameOverHomeButton.onClick.AddListener(ButtonMainMenu);
         gameOverMapButton.onClick.AddListener(ButtonMap);
-
-        pauseButton.onClick.AddListener(ButtonPause);
-        pauseButton.onClick.AddListener(Close_ButtonPause);
-
     }
 
     public void ButtonRetryLevel()
@@ -64,20 +58,26 @@ public class ButtonManagerScript : MonoBehaviour
 
     public void ButtonNextLevel()
     {
-        // Load Next Level Here
+        switch (gameManagerScript.rawLevelValue)
+        {
+            case 0:
+                SceneManager.LoadScene("Level_1.2_Exploration");
+                break;
+            case 1:
+                SceneManager.LoadScene("Level_2.1_Restoration");
+                break;
+            case 2:
+                SceneManager.LoadScene("Level_2.2_Exploration");
+                break;
+            case 3:
+                SceneManager.LoadScene("Level_3.1_Restoration");
+                break;
+            case 4:
+                SceneManager.LoadScene("Level_3.2_Exploration");
+                break;
+            default:
+                Debug.Log("ButtonNextLevel Error");
+                break;
+        }
     }
-
-    // Pause Panel
-    public void ButtonPause()
-    {
-        SettingsOverlay.SetActive(true);
-        Time.timeScale = 0f;
-    }
-
-    public void Close_ButtonPause()
-    {
-        SettingsOverlay.SetActive(false);
-        Time.timeScale = 1f;
-    }
-
 }

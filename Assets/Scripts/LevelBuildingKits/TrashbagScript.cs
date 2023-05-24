@@ -19,7 +19,7 @@ public class TrashbagScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Player" && isStacked == false)
+        if ((other.gameObject.tag == "Player" || other.gameObject.tag == "TrashbagStacked") && isStacked == false)
         {
             Debug.Log("DETECTED PROPERLY");
             gameObject.tag = "TrashbagStacked";

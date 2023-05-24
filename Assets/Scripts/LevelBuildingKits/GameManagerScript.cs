@@ -68,8 +68,33 @@ public class GameManagerScript : MonoBehaviour
 
     void ComputeZoneLevel()
     {
-        zoneVal = (rawLevelValue / 2) * 2;
-        levelVal = (rawLevelValue - 1) % 2 + 1;
+        switch (rawLevelValue)
+        {
+            case 0:
+                zoneVal = 0;
+                levelVal = 0;
+                break;
+            case 1:
+                zoneVal = 0;
+                levelVal = 1;
+                break;
+            case 2:
+                zoneVal = 1;
+                levelVal = 0;
+                break;
+            case 3:
+                zoneVal = 1;
+                levelVal = 1;
+                break;
+            case 4:
+                zoneVal = 2;
+                levelVal = 0;
+                break;
+            case 5:
+                zoneVal = 2;
+                levelVal = 1;
+                break;
+        }
         Debug.Log("ZONEVAL: " + zoneVal + " LEVELVAL: " + levelVal);
     }
 
