@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManagerScript : MonoBehaviour
 {
@@ -165,6 +166,8 @@ public class GameManagerScript : MonoBehaviour
         bestTimeSpent = SceneDataHandler.activeUser.levelBestTime[rawLevelValue];
         Debug.Log("Best stars for this level: " + bestStars + ", best time spent for this level: " + bestTimeSpent);
     }
+
+    
 
     // //SOUNDS
     // public void playGameOverSound()
