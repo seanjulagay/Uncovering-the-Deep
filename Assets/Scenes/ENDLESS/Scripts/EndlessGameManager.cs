@@ -6,6 +6,7 @@ public class EndlessGameManager : MonoBehaviour
 {
     GameObject player;
     GameObject entryPortal;
+    public int playerScore = 0;
 
     void Start()
     {

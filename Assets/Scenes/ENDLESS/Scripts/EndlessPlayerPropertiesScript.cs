@@ -5,7 +5,7 @@ using UnityEngine;
 public class EndlessPlayerPropertiesScript : MonoBehaviour
 {
     EndlessGameManager endlessGameManager;
-    float oxygenCount = 99f;
+    public float oxygenCount = 99f;
 
     void Start()
     {

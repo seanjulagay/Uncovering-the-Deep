@@ -11,6 +11,10 @@ public class RoomTemplates : MonoBehaviour
 
     public GameObject closedRoom;
 
+    public List<GameObject> trashCells;
+    public List<GameObject> bubbleCells;
+    public GameObject randomContentCell;
+
     public List<GameObject> rooms;
 
     public GameObject entryPortalPf;
@@ -18,6 +22,22 @@ public class RoomTemplates : MonoBehaviour
 
     public float waitTime = 1.5f;
     public bool spawnedExit;
+
+    public GameObject RandomizeContentCell()
+    {
+        int rand = Random.Range(0, 100);
+
+        if (rand < 60) // trash cell
+        {
+            randomContentCell = trashCells[Random.Range(0, trashCells.Count - 1)];
+        }
+        else
+        { // bubble cell
+            randomContentCell = bubbleCells[Random.Range(0, bubbleCells.Count - 1)];
+        }
+
+        return randomContentCell;
+    }
 
     void Update()
     {

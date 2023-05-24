@@ -37,6 +37,16 @@ public class ExitPortalScript : MonoBehaviour
             Debug.Log("Destroyed");
         }
 
+        foreach (GameObject trash in GameObject.FindGameObjectsWithTag("EndlessTrash"))
+        {
+            Destroy(trash);
+        }
+
+        foreach (GameObject bubble in GameObject.FindGameObjectsWithTag("EndlessBubble"))
+        {
+            Destroy(bubble);
+        }
+
         foreach (GameObject spawnPoint in GameObject.FindGameObjectsWithTag("SpawnPoint"))
         {
             Debug.Log("Reset spawn status");

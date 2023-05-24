@@ -58,6 +58,7 @@ public class RoomSpawner : MonoBehaviour
                 rand = Random.Range(0, templates.rightRooms.Length - 1);
                 Instantiate(templates.rightRooms[rand], transform.position, Quaternion.identity);
             }
+            Instantiate(templates.RandomizeContentCell(), transform.position, Quaternion.identity);
             spawned = true;
         }
     }
