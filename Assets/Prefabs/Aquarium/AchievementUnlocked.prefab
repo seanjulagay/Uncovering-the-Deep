@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NEW ACHIEVEMENT UNLCOKED!
+  m_text: NEW ACHIEVEMENT UNLOCKED!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 888ddee6e60fc304ba9619a2336d94d2, type: 2}
   m_sharedMaterial: {fileID: 4252167249964339717, guid: 888ddee6e60fc304ba9619a2336d94d2, type: 2}
@@ -553,6 +553,7 @@ GameObject:
   - component: {fileID: 4542065867454377906}
   - component: {fileID: 4542065867454377908}
   - component: {fileID: 4542065867454377909}
+  - component: {fileID: 6555858213943784024}
   m_Layer: 5
   m_Name: AchievementUnlocked
   m_TagString: Untagged
@@ -650,7 +651,7 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4542065867454377904}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 2b5eba3ddf1a93347b163b1b12a51ee0, type: 2}
   m_Animations: []
@@ -658,6 +659,22 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &6555858213943784024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4542065867454377904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e32c287cfe19345ab6c8e538f6975c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slideDistance: 250
+  slideDuration: 1
+  retractDelay: 2
+  retractDuration: 1
 --- !u!1 &4542065867634220975
 GameObject:
   m_ObjectHideFlags: 0
