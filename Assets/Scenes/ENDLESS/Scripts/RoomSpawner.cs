@@ -22,7 +22,7 @@ public class RoomSpawner : MonoBehaviour
 
     public void BeginSpawn()
     {
-        Invoke("Spawn", 0.1f);
+        Invoke("Spawn", Random.Range(0.1f, 0.2f));
     }
 
     public void Spawn()
@@ -58,7 +58,11 @@ public class RoomSpawner : MonoBehaviour
                 rand = Random.Range(0, templates.rightRooms.Length - 1);
                 Instantiate(templates.rightRooms[rand], transform.position, Quaternion.identity);
             }
-            Instantiate(templates.RandomizeContentCell(), transform.position, Quaternion.identity);
+
+            if (openingDirection != 0)
+            {
+                Instantiate(templates.RandomizeContentCell(), transform.position, Quaternion.identity);
+            }
             spawned = true;
         }
     }
@@ -70,7 +74,7 @@ public class RoomSpawner : MonoBehaviour
             if (other.GetComponent<RoomSpawner>().spawned == false && spawned == false)
             {
                 // Instantiate(templates.closedRoom, transform.position, Quaternion.identity);
-                GameObject.CreatePrimitive(PrimitiveType.Cube);
+                // GameObject.CreatePrimitive(PrimitiveType.Cube);
                 Destroy(gameObject);
             }
             spawned = true;

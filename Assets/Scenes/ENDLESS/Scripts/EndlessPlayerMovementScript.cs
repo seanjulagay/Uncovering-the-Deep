@@ -1,22 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System;
 
 public class EndlessPlayerMovementScript : MonoBehaviour
 {
-    public float moveUpSpd = 5f;
+    PlayerSpriteManagerScript playerSpriteManagerScript;
+    UIArrowKeysScript uiArrowKeysScript;
+
+    public float moveUpSpd = 2f;
     public float moveDownSpd = 1f;
-    public float moveSideSpd = 5f;
-    float moveVelocityLimit = 5f;
+    public float moveSideSpd = 2f;
+    public float moveVelocityLimit = 5f;
     float sinkVelocityLimit = 1f;
 
     Rigidbody2D rb;
     float moveX, moveY;
     bool canPlayerMove = true;
 
+    Image playerSprite;
+
     void Start()
     {
+        playerSpriteManagerScript = GameObject.Find("Player").GetComponent<PlayerSpriteManagerScript>();
+        uiArrowKeysScript = GameObject.Find("ArrowKeys").GetComponent<UIArrowKeysScript>();
         rb = gameObject.GetComponent<Rigidbody2D>();
+        playerSprite = GameObject.Find("Player").GetComponent<Image>();
     }
 
     void Update()
@@ -38,59 +48,149 @@ public class EndlessPlayerMovementScript : MonoBehaviour
 
     void PlayerControls()
     {
-        if (canPlayerMove == true)
+        try
         {
-            if (moveX != 0 || moveY != 0)
+            if (canPlayerMove == true)
             {
-                if (moveX > 0) // PLAYER GOES RIGHT
+                if (moveX != 0 || moveY != 0)
                 {
-                    if (rb.velocity.x <= moveVelocityLimit)
+                    if (moveX > 0) // PLAYER GOES RIGHT
                     {
-                        rb.AddForce(transform.right * moveSideSpd);
-                        rb.AddForce(transform.up * 0.05f);
+                        uiArrowKeysScript.ActivateArrow("right");
+                        uiArrowKeysScript.DeactivateArrow("left");
+
+                        if (rb.velocity.x <= moveVelocityLimit)
+                        {
+                            rb.AddForce(transform.right * moveSideSpd);
+                            rb.AddForce(transform.up * 0.05f);
+                        }
+
+                        playerSpriteManagerScript.ChangePlayerSprite("oliveRightEmpty");
+
                     }
-                }
-                else if (moveX < 0) // PLAYER GOES LEFT
-                {
-                    if (rb.velocity.x >= -moveVelocityLimit)
+                    else if (moveX < 0) // PLAYER GOES LEFT
                     {
-                        rb.AddForce(-transform.right * moveSideSpd);
-                        rb.AddForce(transform.up * 0.05f);
+                        uiArrowKeysScript.ActivateArrow("left");
+                        uiArrowKeysScript.DeactivateArrow("right");
+
+                        if (rb.velocity.x >= -moveVelocityLimit)
+                        {
+                            rb.AddForce(-transform.right * moveSideSpd);
+                            rb.AddForce(transform.up * 0.05f);
+                        }
+
+                        playerSpriteManagerScript.ChangePlayerSprite("oliveLeftEmpty");
+
+                    }
+                    else
+                    {
+                        uiArrowKeysScript.DeactivateArrow("left");
+                        uiArrowKeysScript.DeactivateArrow("right");
+                    }
+
+                    if (moveY > 0) // PLAYER GOES UP
+                    {
+                        uiArrowKeysScript.ActivateArrow("up");
+                        uiArrowKeysScript.DeactivateArrow("down");
+
+                        if (rb.velocity.y <= moveVelocityLimit)
+                        {
+                            rb.AddForce(transform.up * moveUpSpd);
+                        }
+
+                        playerSpriteManagerScript.ChangePlayerSprite("oliveUp");
+                    }
+                    else if (moveY < 0) // PLAYER GOES DOWN
+                    {
+                        uiArrowKeysScript.ActivateArrow("down");
+                        uiArrowKeysScript.DeactivateArrow("up");
+
+                        if (rb.velocity.y >= -moveVelocityLimit)
+                        {
+                            rb.AddForce(-transform.up * moveDownSpd);
+                        }
+
+                        playerSpriteManagerScript.ChangePlayerSprite("oliveDownEmpty");
+
+                    }
+                    else
+                    {
+                        uiArrowKeysScript.DeactivateArrow("up");
+                        uiArrowKeysScript.DeactivateArrow("down");
                     }
                 }
                 else
                 {
-                    ;
-                }
-
-                if (moveY > 0) // PLAYER GOES UP
-                {
-
-
-                    if (rb.velocity.y <= moveVelocityLimit)
+                    uiArrowKeysScript.DeactivateArrow("left");
+                    uiArrowKeysScript.DeactivateArrow("up");
+                    uiArrowKeysScript.DeactivateArrow("right");
+                    uiArrowKeysScript.DeactivateArrow("down");
+                    if (rb.velocity.y >= 0)
                     {
-                        rb.AddForce(transform.up * moveUpSpd);
+                        playerSpriteManagerScript.ChangePlayerSprite("oliveNeutral");
                     }
-
-                }
-                else if (moveY < 0) // PLAYER GOES DOWN
-                {
-
-
-                    if (rb.velocity.y >= -moveVelocityLimit)
+                    else
                     {
-                        rb.AddForce(-transform.up * moveDownSpd);
+                        playerSpriteManagerScript.ChangePlayerSprite("oliveDownCarrying");
                     }
-
                 }
-                else
-                {
-
-                }
-            }
-            else
-            {
             }
         }
+        catch (Exception e)
+        {
+            Debug.Log(e);
+        }
+
+        // void PlayerControls()
+        // {
+        //     if (canPlayerMove == true)
+        //     {
+        //         if (moveX != 0 || moveY != 0)
+        //         {
+        //             if (moveX > 0) // PLAYER GOES RIGHT
+        //             {
+        //                 playerSprite.sprite = playerSpriteManagerScript.oliveRightEmpty;
+        //                 if (rb.velocity.x <= moveVelocityLimit)
+        //                 {
+        //                     rb.AddForce(transform.right * moveSideSpd);
+        //                     rb.AddForce(transform.up * 0.05f);
+        //                 }
+        //             }
+        //             else if (moveX < 0) // PLAYER GOES LEFT
+        //             {
+        //                 playerSprite.sprite = playerSpriteManagerScript.oliveLeftEmpty;
+        //                 if (rb.velocity.x >= -moveVelocityLimit)
+        //                 {
+        //                     rb.AddForce(-transform.right * moveSideSpd);
+        //                     rb.AddForce(transform.up * 0.05f);
+        //                 }
+        //             }
+        //             else
+        //             {
+        //                 ;
+        //             }
+
+        //             if (moveY > 0) // PLAYER GOES UP
+        //             {
+        //                 playerSprite.sprite = playerSpriteManagerScript.oliveUp;
+        //                 if (rb.velocity.y <= moveVelocityLimit)
+        //                 {
+        //                     rb.AddForce(transform.up * moveUpSpd);
+        //                 }
+
+        //             }
+        //             else if (moveY < 0) // PLAYER GOES DOWN
+        //             {
+        //                 playerSprite.sprite = playerSpriteManagerScript.oliveDownEmpty;
+        //                 if (rb.velocity.y >= -moveVelocityLimit)
+        //                 {
+        //                     rb.AddForce(-transform.up * moveDownSpd);
+        //                 }
+
+        //             }
+        //         }
+        //     }
+        // }
     }
 }
+

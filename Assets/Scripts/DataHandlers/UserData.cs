@@ -31,4 +31,7 @@ public class UserData
     public bool[] hasUnlockedAchievement = new bool[5];
     public bool[] hasUnlockedAlmanacAnimal = new bool[12];
     public bool[] hasUnlockedAlmanacTrash = new bool[9];
+
+    // ENDLESS DATA
+    public int endlessHighScore;
 }

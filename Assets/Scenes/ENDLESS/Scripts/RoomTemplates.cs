@@ -20,7 +20,7 @@ public class RoomTemplates : MonoBehaviour
     public GameObject entryPortalPf;
     public GameObject exitPortalPf;
 
-    public float waitTime = 1.5f;
+    public float waitTime = 1f;
     public bool spawnedExit;
 
     public GameObject RandomizeContentCell()

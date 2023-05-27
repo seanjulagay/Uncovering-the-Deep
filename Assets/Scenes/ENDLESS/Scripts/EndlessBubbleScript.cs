@@ -13,7 +13,17 @@ public class EndlessBubbleScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        endlessPlayerPropertiesScript.oxygenCount += 20f;
-        Destroy(this.gameObject);
+        if (other.gameObject.tag == "Player")
+        {
+            if (endlessPlayerPropertiesScript.oxygenCount <= 99f)
+            {
+                endlessPlayerPropertiesScript.oxygenCount += 20f;
+                if (endlessPlayerPropertiesScript.oxygenCount >= 100f)
+                {
+                    endlessPlayerPropertiesScript.oxygenCount = 99f;
+                }
+                Destroy(this.gameObject);
+            }
+        }
     }
 }
