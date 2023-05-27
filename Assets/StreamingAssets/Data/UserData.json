@@ -2,8 +2,8 @@
     "Items": [
         {
             "userID": 0,
-            "userExists": false,
-            "username": "Empty",
+            "userExists": true,
+            "username": "user0",
             "iconID": 0,
             "musicOn": true,
             "soundOn": true,
@@ -16,7 +16,177 @@
                 0,
                 0,
                 0,
+                0,
+                0
+            ],
+            "levelBestTime": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "isInteractable": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "interactionLevel": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "hasUnlockedAchievement": [
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "hasUnlockedAlmanacAnimal": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "hasUnlockedAlmanacTrash": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "endlessHighScore": 12
+        },
+        {
+            "userID": 1,
+            "userExists": true,
+            "username": "user1",
+            "iconID": 1,
+            "musicOn": true,
+            "soundOn": true,
+            "isTutorialFinished": false,
+            "isFirstRun": true,
+            "currentZone": 0,
+            "currentLevel": 0,
+            "levelStars": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "levelBestTime": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "isInteractable": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "interactionLevel": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "hasUnlockedAchievement": [
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "hasUnlockedAlmanacAnimal": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "hasUnlockedAlmanacTrash": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "endlessHighScore": 3
+        },
+        {
+            "userID": 2,
+            "userExists": true,
+            "username": "Manta",
+            "iconID": 2,
+            "musicOn": true,
+            "soundOn": true,
+            "isTutorialFinished": false,
+            "isFirstRun": true,
+            "currentZone": 1,
+            "currentLevel": 0,
+            "levelStars": [
                 3,
+                2,
+                0,
+                0,
+                0,
                 0
             ],
             "levelBestTime": [
@@ -82,10 +252,11 @@
                 false,
                 false,
                 false
-            ]
+            ],
+            "endlessHighScore": 8
         },
         {
-            "userID": 0,
+            "userID": 3,
             "userExists": false,
             "username": "Empty",
             "iconID": 0,
@@ -166,10 +337,11 @@
                 false,
                 false,
                 false
-            ]
+            ],
+            "endlessHighScore": 0
         },
         {
-            "userID": 0,
+            "userID": 4,
             "userExists": false,
             "username": "Empty",
             "iconID": 0,
@@ -250,10 +422,11 @@
                 false,
                 false,
                 false
-            ]
+            ],
+            "endlessHighScore": 0
         },
         {
-            "userID": 0,
+            "userID": 5,
             "userExists": false,
             "username": "Empty",
             "iconID": 0,
@@ -334,175 +507,8 @@
                 false,
                 false,
                 false
-            ]
-        },
-        {
-            "userID": 0,
-            "userExists": false,
-            "username": "Empty",
-            "iconID": 0,
-            "musicOn": true,
-            "soundOn": true,
-            "isTutorialFinished": false,
-            "isFirstRun": true,
-            "currentZone": 0,
-            "currentLevel": 0,
-            "levelStars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
             ],
-            "levelBestTime": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "isInteractable": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "interactionLevel": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "hasUnlockedAchievement": [
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "hasUnlockedAlmanacAnimal": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "hasUnlockedAlmanacTrash": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ]
-        },
-        {
-            "userID": 0,
-            "userExists": false,
-            "username": "Empty",
-            "iconID": 0,
-            "musicOn": true,
-            "soundOn": true,
-            "isTutorialFinished": false,
-            "isFirstRun": true,
-            "currentZone": 0,
-            "currentLevel": 0,
-            "levelStars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "levelBestTime": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "isInteractable": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "interactionLevel": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "hasUnlockedAchievement": [
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "hasUnlockedAlmanacAnimal": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "hasUnlockedAlmanacTrash": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ]
+            "endlessHighScore": 0
         }
     ]
 }

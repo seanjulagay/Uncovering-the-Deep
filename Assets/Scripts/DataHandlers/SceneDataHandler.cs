@@ -9,7 +9,7 @@ public class SceneDataHandler : MonoBehaviour
     public static UserData activeUser = new UserData();
     int rawLevelVal = 0;
 
-    public static bool transferTempDataFlag = false;
+    public static bool transferTempData = false;
 
     void Start()
     {
@@ -25,10 +25,10 @@ public class SceneDataHandler : MonoBehaviour
         Debug.Log("CURRENT ZONE: " + activeUser.currentZone);
         Debug.Log("CURRENT LEVEL: " + activeUser.currentLevel);
 
-        if (transferTempDataFlag == true)
+        if (transferTempData == true)
         {
             TransferTempData();
-            transferTempDataFlag = false;
+            transferTempData = false;
         }
     }
 
@@ -56,6 +56,8 @@ public class SceneDataHandler : MonoBehaviour
         activeUser.hasUnlockedAchievement = ProfileManagerScript.activeUser.hasUnlockedAchievement;
         activeUser.hasUnlockedAlmanacAnimal = ProfileManagerScript.activeUser.hasUnlockedAlmanacAnimal;
         activeUser.hasUnlockedAlmanacTrash = ProfileManagerScript.activeUser.hasUnlockedAlmanacTrash;
+
+        activeUser.endlessHighScore = ProfileManagerScript.activeUser.endlessHighScore;
     }
 
     public static void TransferTempData()
@@ -83,6 +85,11 @@ public class SceneDataHandler : MonoBehaviour
         ProfileManagerScript.activeUser.hasUnlockedAchievement = activeUser.hasUnlockedAchievement;
         ProfileManagerScript.activeUser.hasUnlockedAlmanacAnimal = activeUser.hasUnlockedAlmanacAnimal;
         ProfileManagerScript.activeUser.hasUnlockedAlmanacTrash = activeUser.hasUnlockedAlmanacTrash;
+
+        ProfileManagerScript.activeUser.endlessHighScore = activeUser.endlessHighScore;
+
+        ProfileManagerScript.SerializeJson();
+        Debug.Log("Transferred temp data to central database");
     }
 
     public static void FinishedLevel(int zone, int level)
@@ -117,7 +124,6 @@ public class SceneDataHandler : MonoBehaviour
                 }
             }
         }
-
-        ProfileManagerScript.SerializeJson();
+        transferTempData = true;
     }
 }

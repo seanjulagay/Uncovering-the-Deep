@@ -61,7 +61,7 @@ public class AquariumDialogueManagerScript : MonoBehaviour
 
     public void AlreadyInteractedDialogue(GameObject obj)
     {
-        dialogueFooter.text = "Interact again tomorrow!";
+        dialogueFooter.text = "Affection level raised today!";
         animalName.text = obj.name;
         animalSprite.sprite = obj.GetComponent<SpriteRenderer>().sprite;
         myDialogue = interactedDialogue;
