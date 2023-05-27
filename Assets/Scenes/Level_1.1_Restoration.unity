@@ -6222,6 +6222,10 @@ PrefabInstance:
       propertyPath: pausePanel
       value: 
       objectReference: {fileID: 7365407930528103423, guid: 2a804a6bd4e50e1449005e662dfa8713, type: 3}
+    - target: {fileID: 8668135653093012261, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+      propertyPath: achievement
+      value: 
+      objectReference: {fileID: 1098780033}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
 --- !u!114 &431614701 stripped
@@ -13583,6 +13587,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 317a839d8a9a6594ea72373fd5e11ff9, type: 3}
+--- !u!95 &1098780033 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5825606210696724456, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+  m_PrefabInstance: {fileID: 385513914}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1113356731
 PrefabInstance:
   m_ObjectHideFlags: 0

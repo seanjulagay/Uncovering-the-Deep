@@ -12,7 +12,6 @@ public class AnimalInteractScript : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("last interaction time: " + lastInteractionTime);
-        Debug.Log("interacted today? : " + interactedToday);
+
     }
 }
