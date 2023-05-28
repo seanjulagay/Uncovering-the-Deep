@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class EndlessModeHelpPanelManagerScript : MonoBehaviour
 {
@@ -49,11 +50,13 @@ public class EndlessModeHelpPanelManagerScript : MonoBehaviour
 
     void openHelpOverlay(){
         Debug.Log("Tutorial Panel is triggering");
+        Time.timeScale = 0f;
         EndlessTutorialPanel.SetActive(true);
     }
 
      void closePanel(){
         // EndlessModeTutorialPanel.SetActive(false);
+        Time.timeScale = 1f;
         EndlessTutorialPanel.SetActive(false);
     }
 
