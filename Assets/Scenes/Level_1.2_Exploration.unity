@@ -16706,6 +16706,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 224552888051787287, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224552888051787287, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: retractDelay
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224552888051787287, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: slideDistance
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 224552888051787287, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: slideDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224552888051787287, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: retractDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2006509873035771499, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3831168429484302852, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: animationComponent
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3831168429484302852, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: animateNotificationBar
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4649996044686106625, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -16834,8 +16866,77 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -58.5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5825606210696724456, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5825606210696724457, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5825606210696724457, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_PlayAutomatically
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5825606210696724460, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_Name
+      value: NotificationPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5825606210696724461, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5825606210696724461, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 666.0242
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 224552888051787287, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+--- !u!1 &1510179124 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5825606210696724460, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+  m_PrefabInstance: {fileID: 1503948284}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1510179132 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3831168429484302852, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+  m_PrefabInstance: {fileID: 1503948284}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510179124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e32c287cfe19345ab6c8e538f6975c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1510179139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510179124}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2021a27029e4854ab1b8251a2190848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1510179140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1510179124}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9513f7776a1e4b745a659df375946a7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notificationBar: {fileID: 0}
+  clip: {fileID: 0}
+  audio: {fileID: 0}
+  notificationPanel: {fileID: 0}
 --- !u!1 &1517501334
 GameObject:
   m_ObjectHideFlags: 0
@@ -19677,6 +19778,10 @@ PrefabInstance:
       propertyPath: rawLevelValue
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1439923196163470804, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+      propertyPath: notificationAnimationScript
+      value: 
+      objectReference: {fileID: 1510179132}
     - target: {fileID: 1439923196551385933, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
       propertyPath: includeAnimalsSaved
       value: 0

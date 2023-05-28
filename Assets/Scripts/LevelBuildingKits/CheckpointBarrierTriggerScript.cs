@@ -34,9 +34,9 @@ public class CheckpointBarrierTriggerScript : MonoBehaviour
         RedirectPlayer();
     }
 
-    void OnTriggerStay2D(Collider2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.name == "PlayerTrigger")
+        if (other.gameObject.tag == "Player")
         {
             redirectPlayer = true;
             // playerControllerScript.canPlayerMove = false;
@@ -44,9 +44,9 @@ public class CheckpointBarrierTriggerScript : MonoBehaviour
         }
     }
 
-    void OnTriggerExit2D(Collider2D other)
+    void OnCollisionExit2D(Collision2D other)
     {
-        if (other.gameObject.name == "PlayerTrigger")
+        if (other.gameObject.tag == "Player")
         {
             redirectPlayer = false;
             // playerControllerScript.canPlayerMove = true;
