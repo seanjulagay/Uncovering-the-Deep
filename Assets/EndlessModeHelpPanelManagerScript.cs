@@ -19,8 +19,9 @@ public class EndlessModeHelpPanelManagerScript : MonoBehaviour
     Button buttonCloseTutorial;
     Button buttonEndlessModeHelpButton;
     GameObject EndlessModeTutorialPanel;
-
-    public GameObject tutorialHelpOverlayEndless;
+    GameObject EndlessTutorialPanel;
+    // public GameObject tutorialHelpOverlayEndless;
+    bool hideflag = false;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,7 @@ public class EndlessModeHelpPanelManagerScript : MonoBehaviour
 
         buttonCloseTutorial = GameObject.Find("TutorialCloseButton").GetComponent<Button>();
         
-        EndlessModeTutorialPanel = GameObject.Find("TutorialPanelEmpty");
+        EndlessTutorialPanel = GameObject.Find("TutorialPanelEmpty");
 
         //updatePanel();
         addButtonListeners();
@@ -47,16 +48,23 @@ public class EndlessModeHelpPanelManagerScript : MonoBehaviour
     }
 
     void openHelpOverlay(){
-        helpOverlay.SetActive(true);
+        Debug.Log("Tutorial Panel is triggering");
+        EndlessTutorialPanel.SetActive(true);
     }
 
      void closePanel(){
-        EndlessModeTutorialPanel.SetActive(false);
+        // EndlessModeTutorialPanel.SetActive(false);
+        EndlessTutorialPanel.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+         if (hideflag == false)
+        {
+            EndlessTutorialPanel.SetActive(false);
+           // descAreaRealLifeImage.SetActive(false);
+            hideflag = true;
+        }
     }
 }
