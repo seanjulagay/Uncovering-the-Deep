@@ -40,6 +40,10 @@ public class UIManagerScript : MonoBehaviour
     bool gameOverPanelDisabled = false;
 
     int timeSpent;
+    public SlidingNotificationAnimationScript slidingNotificationAnimationScript;
+    public GameObject notificationBar;
+
+    public NotificationManager notificationManager;
 
     void Start()
     {
@@ -55,6 +59,10 @@ public class UIManagerScript : MonoBehaviour
         // soundsManagerScript = GameObject.Find("SoundsManager").GetComponent<SoundsManagerScript>();
 
         timeSpentText = GameObject.Find("TimeSpentText").GetComponent<TMP_Text>();
+
+        slidingNotificationAnimationScript = GameObject.Find("AchievementUnlocked").GetComponent<SlidingNotificationAnimationScript>();
+
+        notificationManager = GameObject.Find("AchievementUnlocked").GetComponent<NotificationManager>();
     }
 
     void Update()
@@ -137,6 +145,11 @@ public class UIManagerScript : MonoBehaviour
         {
             levelCompleteStars.sprite = levelCompleteStars3;
         }
+
+        //slidingNotificationAnimationScript.playNotificationAnimation();
+        //Debug.Log("Level completed!");
+        //string message = "Level completed!";
+        //notificationManager.ShowNotification();
     }
 
     public void DisplayGameOverPanel()
@@ -144,7 +157,10 @@ public class UIManagerScript : MonoBehaviour
         Time.timeScale = 0;
         gameOverPanel.SetActive(true);
         // soundsManagerScript.PlaySound("victory");
+        //slidingNotificationAnimationScript.playNotificationAnimation();
     }
+
+    
 
 
 }

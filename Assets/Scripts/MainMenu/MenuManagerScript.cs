@@ -15,6 +15,7 @@ public class MenuManagerScript : MonoBehaviour
     public GameObject helpOverlay;
     public GameObject selectZoneOverlay;
     public GameObject selectLevelOverlay;
+    public GameObject leaderboardOverlay;
 
     public GameObject helpManager;
     public GameObject levelSelectManager;
@@ -38,6 +39,23 @@ public class MenuManagerScript : MonoBehaviour
         Time.timeScale = 1;
         UpdateCurrentProfileCard();
         UpdateSettingsOverlay();
+    }
+
+    public void OpenLeaderboard()
+    {
+        leaderboardOverlay.SetActive(true);
+        GameObject.Find("LeaderboardManager").GetComponent<LeaderboardManagerScript>().InitializeLeaderboard();
+    }
+
+    public void CloseLeaderboard()
+    {
+        GameObject.Find("LeaderboardManager").GetComponent<LeaderboardManagerScript>().ClearLeaderboard();
+        leaderboardOverlay.SetActive(false);
+    }
+
+    public void LoadEndless()
+    {
+        SceneManager.LoadScene("Endless");
     }
 
     public void OpenAquarium()
@@ -200,5 +218,10 @@ public class MenuManagerScript : MonoBehaviour
     public void CloseHelpOverlay()
     {
         helpOverlay.SetActive(false);
+    }
+
+    public static void OpenZone()
+    {
+        //OpenZoneOverlay();
     }
 }
