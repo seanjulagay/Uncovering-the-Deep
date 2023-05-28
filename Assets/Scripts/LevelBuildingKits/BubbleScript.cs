@@ -16,9 +16,16 @@ public class BubbleScript : MonoBehaviour
         if (other.gameObject.name == "PlayerTrigger")
         {
             playerPropertiesScript.oxygenCount += 20f;
-            if (playerPropertiesScript.oxygenCount > 100)
+            if (other.gameObject.tag == "Player")
             {
-                playerPropertiesScript.oxygenCount = 99f;
+                if (playerPropertiesScript.oxygenCount <= 99f)
+                {
+                    playerPropertiesScript.oxygenCount += 20f;
+                    if (playerPropertiesScript.oxygenCount >= 100f)
+                    {
+                        playerPropertiesScript.oxygenCount = 99f;
+                    }
+                }
             }
             gameObject.SetActive(false);
         }

@@ -111,7 +111,7 @@ public class DialogueTriggerScript : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.name == "PlayerTrigger")
+        if (other.gameObject.tag == "Player")
         {
             if (gameObject.name == "QuizAnimal")
             {

@@ -48,7 +48,6 @@ public class ButtonManagerScript : MonoBehaviour
     public void ButtonMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
-        SceneDataHandler.transferTempDataFlag = true;
     }
 
     public void ButtonMap()

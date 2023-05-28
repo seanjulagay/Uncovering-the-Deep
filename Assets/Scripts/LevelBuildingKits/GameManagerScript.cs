@@ -2,12 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManagerScript : MonoBehaviour
 {
     UIManagerScript uiManagerScript;
     CheckpointManagerScript checkpointManagerScript;
     SoundsManagerScript soundsManagerScript;
+    SlidingNotificationAnimationScript notificationAnimationScript;
     GameObject playerObj;
 
     public int rawLevelValue = 0;
@@ -41,6 +43,13 @@ public class GameManagerScript : MonoBehaviour
     public float timeSpent = 0;
     public int bestTimeSpent;
 
+
+    //FOR ANIMATION//
+    public Animator animateNotificationBar;
+
+    public GameObject AchievementUnlocked;
+    public SlidingNotificationAnimationScript slidingNotificationAnimationScript;
+
     GameObject startPoint, finishPoint, returnPoint;
 
     [Tooltip("[1] = one star timer goal, [2] = two star timer goal, [3] = three star timer goal // CONVERT TO SECONDS")]
@@ -53,8 +62,15 @@ public class GameManagerScript : MonoBehaviour
 
         uiManagerScript = GameObject.Find("UIManager").GetComponent<UIManagerScript>();
         checkpointManagerScript = GameObject.Find("CheckpointManager").GetComponent<CheckpointManagerScript>();
+        
+        slidingNotificationAnimationScript = GameObject.Find("AchievementUnlocked").GetComponent<SlidingNotificationAnimationScript>();
+
         // soundsManagerScript = GameObject.Find("SoundsManager").
         // GetComponent<SoundsManagerScript>();
+
+        //find animator object
+        //animateNotificationBar = GameObject.Find("AchievementUnlocked").GetComponent<Animator>();
+        
 
         playerObj = GameObject.Find("Player");
 
@@ -64,6 +80,14 @@ public class GameManagerScript : MonoBehaviour
 
         StartGame();
         Time.timeScale = 1;
+
+        //NOTIFICATION ANIMATION
+        // startPosition = transform.position;
+        // targetPosition = startPosition - new Vector3(0f, slideDistance, 0f);
+
+        // Start the sliding animation
+        // StartCoroutine(notificationAnimation());
+        //NOTIFICATION ANIMATION
     }
 
     void ComputeZoneLevel()
@@ -137,6 +161,9 @@ public class GameManagerScript : MonoBehaviour
         starsThisLevel = userScore;
         CompareBests();
         SceneDataHandler.FinishedLevel(zoneVal, levelVal);
+
+        //notification slider
+        notificationAnimationScript.playNotificationAnimation();
     }
 
     public void CompareBests()
@@ -157,7 +184,11 @@ public class GameManagerScript : MonoBehaviour
             SceneDataHandler.activeUser.levelBestTime[rawLevelValue] = bestTimeSpent;
             Debug.Log("New record: " + SceneDataHandler.activeUser.levelBestTime[rawLevelValue]);
         }
+        // notificationAnimationScript.StartAnimation();
+        //slidingNotificationAnimationScript.playNotificationAnimation();
     }
+
+
 
     public void UnpackData()
     {
@@ -165,6 +196,8 @@ public class GameManagerScript : MonoBehaviour
         bestTimeSpent = SceneDataHandler.activeUser.levelBestTime[rawLevelValue];
         Debug.Log("Best stars for this level: " + bestStars + ", best time spent for this level: " + bestTimeSpent);
     }
+
+    
 
     // //SOUNDS
     // public void playGameOverSound()
