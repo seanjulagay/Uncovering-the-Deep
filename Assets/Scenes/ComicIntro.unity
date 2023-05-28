@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 170517452}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 2c28c8153ff64c24c9178cd5bbb175b3, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &170517452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,6 +480,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 252a14723bf96b24e9ea3b42a55f9500, type: 3}
   - {fileID: 21300000, guid: dc7f62df5b841264e8de6ec95f48c3bc, type: 3}
   index: 0
+  comicPanelImage: {fileID: 0}
+  buttonNextComicPanel: {fileID: 0}
+  buttonPrevComicPanel: {fileID: 0}
 --- !u!1 &1320088100
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,7 +839,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 70e4b63305bbd9746b832cea53e80c58, type: 3}
+      - m_Target: {fileID: 11500000, guid: 2c28c8153ff64c24c9178cd5bbb175b3, type: 3}
         m_TargetAssemblyTypeName: 
         m_MethodName: 
         m_Mode: 1
@@ -893,3 +908,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 252a14723bf96b24e9ea3b42a55f9500, type: 3}
   - {fileID: 21300000, guid: dc7f62df5b841264e8de6ec95f48c3bc, type: 3}
   index: 0
+  comicPanelImage: {fileID: 0}
+  buttonNextComicPanel: {fileID: 0}
+  buttonPrevComicPanel: {fileID: 0}
