@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
 
 public class ComicIntroScript : MonoBehaviour
 {
@@ -51,10 +53,24 @@ public class ComicIntroScript : MonoBehaviour
                     UpdatePanelPage();
             }
         
-        if (index==(comicPanel.Count-1)){
-            //SceneManager.LoadScene("MainMenu");
+        else if (index == (comicPanel.Count - 1))
+    {
+        if (buttonNextComicPanel.interactable)
+        {
+            // Disable the next button to prevent multiple clicks
+            buttonNextComicPanel.interactable = false;
+        }
+        else
+        {
+            SceneManager.LoadScene("MainMenu");
         }
     }
 
+    // async void DelayandLoadScene(float delayTime){
+    //     await Task.Delay((int)(delayTime * 1000)); // Delay the specified time
+    //     SceneManager.LoadScene("MainMenu");
+    // }
 
+
+}
 }
