@@ -5633,10 +5633,9 @@ MonoBehaviour:
   userScore: 0
   timeSpent: 0
   bestTimeSpent: 0
-  slideDistance: 100
-  slideDuration: 1
-  retractDelay: 2
-  retractDuration: 1
+  animateNotificationBar: {fileID: 0}
+  AchievementUnlocked: {fileID: 0}
+  slidingNotificationAnimationScript: {fileID: 0}
   timeGoals: 00000000000000000000000000000000
 --- !u!224 &5825606210696724461 stripped
 RectTransform:
