@@ -63,7 +63,7 @@ public class AnimalButtonScript : MonoBehaviour, IPointerClickHandler, IPointerE
         }
         else if (interactionButtonsManagerScript.animalInteractionMode == 2) // talk
         {
-            aquariumDialogueManagerScript.ImportDialogueData(animalDialogueScript.animalName, gameObject.GetComponent<SpriteRenderer>().sprite, animalDialogueScript.animalDialogue[UnityEngine.Random.Range(0, animalDialogueScript.animalDialogue.Count)]);
+            aquariumDialogueManagerScript.ImportDialogueData(animalDialogueScript.animalName, gameObject.GetComponent<SpriteRenderer>().sprite, animalDialogueScript.animalDialogue[UnityEngine.Random.Range(0, animalInteractScript.animalAffection)]);
         }
     }
 }
