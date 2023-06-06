@@ -5935,10 +5935,10 @@ PrefabInstance:
     - target: {fileID: 3298639766062862347, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 192e80614acba25468e479c8cef354e1, type: 3}
+      objectReference: {fileID: 21300000, guid: 64ef69a0b80554649894f48e0b7b4265, type: 3}
     - target: {fileID: 3298639766062862354, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_Name
-      value: Octopus
+      value: Angler
       objectReference: {fileID: 0}
     - target: {fileID: 3298639766062862355, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_LocalScale.x
@@ -6030,19 +6030,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalName
-      value: Jellyfish
+      value: Anglerfish
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.data[0]
-      value: Bzzzz...
+      value: Mamaaa! Have you seen my Mama?
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.data[1]
-      value: Bzz!
+      value: This is one comfy aquarium, thank you Ms. Otter/Whenever I get lost,Mama
+        always said to go from LEFT to RIGHT and everything will be alright!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
+      propertyPath: animalDialogue.Array.data[2]
+      value: "This aquarium sure is nice\u2026But I still need to get back to my
+        Mama!/Mama always said to stay away from the big bad fishies, they like to
+        bully and not let you get through!"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e28e43871dd764da257f8642976a93, type: 3}
@@ -9344,10 +9351,10 @@ PrefabInstance:
     - target: {fileID: 3298639766062862347, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3f1a1f5274938d64588de58133fd58cb, type: 3}
+      objectReference: {fileID: 21300000, guid: de3e0e8e691eb13409b7c297834e1d59, type: 3}
     - target: {fileID: 3298639766062862354, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_Name
-      value: Jellyfish
+      value: Gulper
       objectReference: {fileID: 0}
     - target: {fileID: 3298639766062862355, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_LocalScale.x
@@ -9439,19 +9446,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalName
-      value: Jellyfish
+      value: Gully
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.data[0]
-      value: Bzzzz...
+      value: "Thank you Olive\u2026.being stuck down there is not fun at all!/Nice
+        Aquarium you got here, mind if I stay for a while?"
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.data[1]
-      value: Bzz!
+      value: "Please try to check if there\u2019s still trash on each section before
+        moving on\u2026./Sea creatures need pampering too you know...."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
+      propertyPath: animalDialogue.Array.data[2]
+      value: "What you\u2019re doing here is amazing Ms. Otter, you\u2019re an inspiration!/Try
+        to listen to the other animals if you can, you might hear something useful."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e28e43871dd764da257f8642976a93, type: 3}
@@ -9654,10 +9668,10 @@ PrefabInstance:
     - target: {fileID: 3298639766062862347, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f5e1bf1dc6f8c184fa448b4f544e235b, type: 3}
+      objectReference: {fileID: 21300000, guid: 34e329340e45e984d907367ad1b4a57f, type: 3}
     - target: {fileID: 3298639766062862354, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_Name
-      value: Mantaray
+      value: Horseshoe
       objectReference: {fileID: 0}
     - target: {fileID: 3298639766062862355, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_LocalScale.x
@@ -9749,19 +9763,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalName
-      value: Jellyfish
+      value: Harris
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.data[0]
-      value: Bzzzz...
+      value: "I hate trash! Why do we have to suffer because of someone else\u2019s
+        actions?/Sea creatures can feel pain too..."
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.data[1]
-      value: Bzz!
+      value: "I can\u2019t thank you enough for everything you\u2019ve done.../Try
+        to tend to the other animals, they might open up and help you out\u2026"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
+      propertyPath: animalDialogue.Array.data[2]
+      value: "Whenever you\u2019re low on oxygen, look for BIG and BRIGHT bubbles,
+        that\u2019s where the most air can be found./After all of this, maybe you
+        can talk to the humans next..."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e28e43871dd764da257f8642976a93, type: 3}
@@ -12790,10 +12812,10 @@ PrefabInstance:
     - target: {fileID: 3298639766062862347, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 34e329340e45e984d907367ad1b4a57f, type: 3}
+      objectReference: {fileID: 21300000, guid: 152bd4d11fd7e4947a4925bab2f5dbd2, type: 3}
     - target: {fileID: 3298639766062862354, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_Name
-      value: Horseshoe
+      value: GhostShark
       objectReference: {fileID: 0}
     - target: {fileID: 3298639766062862355, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_LocalScale.x
@@ -12885,19 +12907,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalName
-      value: Jellyfish
+      value: Gasper
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.data[0]
-      value: Bzzzz...
+      value: "Being trapped does not feel good!/Thanks again for taking me in\u2026"
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.data[1]
-      value: Bzz!
+      value: Make sure you find the finish flag first before picking up trash bags!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
+      propertyPath: animalDialogue.Array.data[2]
+      value: "I know the ocean is my home, but I sure hate to be trapped in it!/Sea
+        creatures can be lonely too you know\u2026"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e28e43871dd764da257f8642976a93, type: 3}
@@ -16850,10 +16877,10 @@ PrefabInstance:
     - target: {fileID: 3298639766062862347, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 64ef69a0b80554649894f48e0b7b4265, type: 3}
+      objectReference: {fileID: 21300000, guid: 192e80614acba25468e479c8cef354e1, type: 3}
     - target: {fileID: 3298639766062862354, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_Name
-      value: Anglerfish
+      value: Dumbo
       objectReference: {fileID: 0}
     - target: {fileID: 3298639766062862355, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_LocalScale.x
@@ -16945,19 +16972,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalName
-      value: Jellyfish
+      value: Dumbo
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.data[0]
-      value: Bzzzz...
+      value: "I sure do hate being stuck down there!/Thank you for taking care of
+        us Olive\u2026."
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.data[1]
-      value: Bzz!
+      value: Remember to bring the trash bags back to your ship!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
+      propertyPath: animalDialogue.Array.data[2]
+      value: "Try talking to the other creatures, see what they have to say\u2026/Once
+        I\u2019m all healed I\u2019m going back home!"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e28e43871dd764da257f8642976a93, type: 3}
@@ -19597,9 +19630,13 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3298639766062862347, guid: 73e28e43871dd764da257f8642976a93, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 25a60f887a4bff844b63b348c6838b1f, type: 3}
     - target: {fileID: 3298639766062862354, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_Name
-      value: Nemo
+      value: SeaTurtle
       objectReference: {fileID: 0}
     - target: {fileID: 3298639766062862357, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_Enabled
@@ -19607,6 +19644,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3298639766062862357, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861841638027059370, guid: 73e28e43871dd764da257f8642976a93, type: 3}
+      propertyPath: maxAffection
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861841638027059370, guid: 73e28e43871dd764da257f8642976a93, type: 3}
+      propertyPath: animalAffection
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6016808572741715667, guid: 73e28e43871dd764da257f8642976a93, type: 3}
@@ -19655,19 +19700,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalName
-      value: Clownfish
+      value: Billy
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.data[0]
-      value: Testdialogue1/Testdialogue2/Testdialgoue3
+      value: I thought I was never going to get out!/Hello again Olive, nice to see
+        you again!
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.data[1]
-      value: Test1/Test2
+      value: Have you tried to stack up the garbage bags? That would go a lot faster
+        when exploring.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
+      propertyPath: animalDialogue.Array.data[2]
+      value: ".this aquarium of yours sure is nice\u2026.I think I might stay a little
+        bit longer\u2026/A lot of animals still need your help Olive, better get
+        going!"
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3672115570061523732, guid: 73e28e43871dd764da257f8642976a93, type: 3}

@@ -3,21 +3,21 @@
         {
             "userID": 0,
             "userExists": true,
-            "username": "user0",
-            "iconID": 0,
+            "username": "user1",
+            "iconID": 1,
             "musicOn": true,
             "soundOn": true,
             "isTutorialFinished": false,
             "isFirstRun": true,
-            "currentZone": 0,
-            "currentLevel": 0,
+            "currentZone": 2,
+            "currentLevel": 1,
             "levelStars": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
+                3,
+                2,
+                3,
+                3,
+                3,
+                3
             ],
             "levelBestTime": [
                 0,
@@ -40,20 +40,117 @@
                 false
             ],
             "lastInteractionTime": [
-                "1/1/0001 12:00:00 AM",
-                "1/1/0001 12:00:00 AM",
-                "1/1/0001 12:00:00 AM",
-                "1/1/0001 12:00:00 AM",
-                "1/1/0001 12:00:00 AM",
-                "1/1/0001 12:00:00 AM",
+                "06/06/2023 8:55:20 PM",
+                "06/06/2023 9:11:23 PM",
+                "06/06/2023 9:11:43 PM",
+                "01/01/0001 12:00:00 AM",
+                "01/01/0001 12:00:00 AM",
+                "01/01/0001 12:00:00 AM",
                 "1/1/0001 12:00:00 AM",
                 "1/1/0001 12:00:00 AM",
                 "1/1/0001 12:00:00 AM",
                 "1/1/0001 12:00:00 AM"
             ],
             "interactionLevel": [
+                1,
+                1,
+                1,
                 0,
                 0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "hasUnlockedAchievement": [
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "hasUnlockedAlmanacAnimal": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "hasUnlockedAlmanacTrash": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "endlessHighScore": 3
+        },
+        {
+            "userID": 1,
+            "userExists": true,
+            "username": "Manta",
+            "iconID": 2,
+            "musicOn": true,
+            "soundOn": true,
+            "isTutorialFinished": false,
+            "isFirstRun": true,
+            "currentZone": 3,
+            "currentLevel": 2,
+            "levelStars": [
+                3,
+                2,
+                3,
+                3,
+                3,
+                3
+            ],
+            "levelBestTime": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "isInteractable": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+            ],
+            "lastInteractionTime": [
+                "06/05/2023 8:01:42 PM",
+                "06/05/2023 8:21:14 PM",
+                "01/01/0001 12:00:00 AM",
+                "01/01/0001 12:00:00 AM",
+                "01/01/0001 12:00:00 AM",
+                "01/01/0001 12:00:00 AM",
+                "1/1/0001 12:00:00 AM",
+                "1/1/0001 12:00:00 AM",
+                "1/1/0001 12:00:00 AM",
+                "1/1/0001 12:00:00 AM"
+            ],
+            "interactionLevel": [
+                1,
+                2,
                 0,
                 0,
                 0,
@@ -95,13 +192,13 @@
                 false,
                 false
             ],
-            "endlessHighScore": 12
+            "endlessHighScore": 8
         },
         {
-            "userID": 1,
-            "userExists": true,
-            "username": "user1",
-            "iconID": 1,
+            "userID": 2,
+            "userExists": false,
+            "username": "Empty",
+            "iconID": 0,
             "musicOn": true,
             "soundOn": true,
             "isTutorialFinished": false,
@@ -192,104 +289,7 @@
                 false,
                 false
             ],
-            "endlessHighScore": 3
-        },
-        {
-            "userID": 2,
-            "userExists": true,
-            "username": "Manta",
-            "iconID": 2,
-            "musicOn": true,
-            "soundOn": true,
-            "isTutorialFinished": false,
-            "isFirstRun": true,
-            "currentZone": 1,
-            "currentLevel": 0,
-            "levelStars": [
-                3,
-                2,
-                0,
-                0,
-                0,
-                0
-            ],
-            "levelBestTime": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "isInteractable": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "lastInteractionTime": [
-                "6/5/2023 8:01:42 PM",
-                "6/5/2023 8:21:14 PM",
-                "1/1/0001 12:00:00 AM",
-                "1/1/0001 12:00:00 AM",
-                "1/1/0001 12:00:00 AM",
-                "1/1/0001 12:00:00 AM",
-                "1/1/0001 12:00:00 AM",
-                "1/1/0001 12:00:00 AM",
-                "1/1/0001 12:00:00 AM",
-                "1/1/0001 12:00:00 AM"
-            ],
-            "interactionLevel": [
-                1,
-                2,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            "hasUnlockedAchievement": [
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "hasUnlockedAlmanacAnimal": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "hasUnlockedAlmanacTrash": [
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false,
-                false
-            ],
-            "endlessHighScore": 8
+            "endlessHighScore": 0
         },
         {
             "userID": 3,
