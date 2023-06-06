@@ -41,12 +41,12 @@ public class AquariumDialogueManagerScript : MonoBehaviour
         InteractionButtonListener();
     }
 
-    public void ImportDialogueData(string name, Sprite sprite, List<string> importedDialogue)
+    public void ImportDialogueData(string name, Sprite sprite, string importedDialogue)
     {
         dialogueFooter.text = "Press spacebar to proceed";
         animalName.text = name;
         animalSprite.sprite = sprite;
-        myDialogue = importedDialogue;
+        myDialogue = new List<string>(importedDialogue.Split('/'));
         UpdateDialoguePanel();
     }
 
