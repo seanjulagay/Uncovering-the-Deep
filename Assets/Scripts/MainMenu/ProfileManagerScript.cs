@@ -29,6 +29,22 @@ public class ProfileManagerScript : MonoBehaviour
 
         InitializeActiveUser();
         Debug.Log("activeuser: " + activeUser.username);
+        InitializeDateTimeIfEmpty();
+    }
+
+    public static void InitializeDateTimeIfEmpty()
+    {
+        for (int i = 0; i < activeUser.lastInteractionTime.Length; i++)
+        {
+            Debug.Log("Initializaton iteration");
+            if (activeUser.lastInteractionTime[i] == null || activeUser.lastInteractionTime[i] == "")
+            {
+                Debug.Log(activeUser.username + " initialization successful");
+                activeUser.lastInteractionTime[i] = "1/1/0001 12:00:00 AM";
+            }
+        }
+
+        SerializeJson();
     }
 
     public static void SerializeJson() // save class values to json
@@ -86,6 +102,7 @@ public class ProfileManagerScript : MonoBehaviour
     public static void StoreActiveUserID()
     {
         PlayerPrefs.SetInt("activeUserID", activeUser.userID);
+        InitializeDateTimeIfEmpty();
     }
 
     public static void InitializeActiveUser()

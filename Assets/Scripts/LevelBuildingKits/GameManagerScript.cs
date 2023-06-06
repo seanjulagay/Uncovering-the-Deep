@@ -62,7 +62,7 @@ public class GameManagerScript : MonoBehaviour
 
         uiManagerScript = GameObject.Find("UIManager").GetComponent<UIManagerScript>();
         checkpointManagerScript = GameObject.Find("CheckpointManager").GetComponent<CheckpointManagerScript>();
-        
+
         slidingNotificationAnimationScript = GameObject.Find("AchievementUnlocked").GetComponent<SlidingNotificationAnimationScript>();
 
         // soundsManagerScript = GameObject.Find("SoundsManager").
@@ -70,7 +70,7 @@ public class GameManagerScript : MonoBehaviour
 
         //find animator object
         //animateNotificationBar = GameObject.Find("AchievementUnlocked").GetComponent<Animator>();
-        
+
 
         playerObj = GameObject.Find("Player");
 
@@ -197,7 +197,7 @@ public class GameManagerScript : MonoBehaviour
         Debug.Log("Best stars for this level: " + bestStars + ", best time spent for this level: " + bestTimeSpent);
     }
 
-    
+
 
     // //SOUNDS
     // public void playGameOverSound()

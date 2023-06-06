@@ -11,6 +11,7 @@ public class InteractionButtonsManagerScript : MonoBehaviour
     Button talkButton;
     Button almanacButton;
 
+    GameObject affectionPanel;
     GameObject almanacPanel;
     GameObject achievementsPanel;
     GameObject dialoguePanel;
@@ -19,6 +20,8 @@ public class InteractionButtonsManagerScript : MonoBehaviour
 
     public int animalInteractionMode = 0; // 0 = none, 1 = interact, 2 = talk
 
+    bool hideFlag = false;
+
     void Start()
     {
         achievementsButton = GameObject.Find("AchievementsButton").GetComponent<Button>();
@@ -26,6 +29,7 @@ public class InteractionButtonsManagerScript : MonoBehaviour
         talkButton = GameObject.Find("TalkButton").GetComponent<Button>();
         almanacButton = GameObject.Find("AlmanacButton").GetComponent<Button>();
 
+        affectionPanel = GameObject.Find("AffectionPanel");
         almanacPanel = GameObject.Find("AlmanacPanel");
         achievementsPanel = GameObject.Find("AchievementsPanel");
         dialoguePanel = GameObject.Find("DialoguePanel");
@@ -33,6 +37,15 @@ public class InteractionButtonsManagerScript : MonoBehaviour
         aquariumDialogueManagerScript = GameObject.Find("DialogueManager").GetComponent<AquariumDialogueManagerScript>();
 
         AddListeners();
+    }
+
+    void Update()
+    {
+        if (hideFlag == false)
+        {
+            affectionPanel.SetActive(false);
+            hideFlag = true;
+        }
     }
 
     void AddListeners()
@@ -46,6 +59,7 @@ public class InteractionButtonsManagerScript : MonoBehaviour
     public void OpenAlmanacPanel()
     {
         Debug.Log("ALMANAC");
+        affectionPanel.SetActive(false);
         almanacPanel.SetActive(true);
         animalInteractionMode = 0;
         aquariumDialogueManagerScript.HideDialoguePanel();
@@ -60,6 +74,7 @@ public class InteractionButtonsManagerScript : MonoBehaviour
 
     public void TalkButton()
     {
+        affectionPanel.SetActive(false);
         dialoguePanel.SetActive(false);
         animalInteractionMode = 2;
         aquariumDialogueManagerScript.dialogueIndex = 0;
@@ -68,6 +83,7 @@ public class InteractionButtonsManagerScript : MonoBehaviour
     public void OpenAchievementsPanel()
     {
         Debug.Log("ACHIEVEMENTS");
+        affectionPanel.SetActive(false);
         achievementsPanel.SetActive(true);
         animalInteractionMode = 0;
         aquariumDialogueManagerScript.HideDialoguePanel();

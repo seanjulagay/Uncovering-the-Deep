@@ -279,6 +279,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a0f7d190baa2c4942912ac1384d057b3, type: 3}
   - {fileID: 21300000, guid: 796b9b5f0c1df0b45ad053107c3cad03, type: 3}
   - {fileID: 21300000, guid: aad4b2024789ec54fa20018e442818f1, type: 3}
+  - {fileID: 21300000, guid: 984ca6b55ddc63c45877c9d69689cdb5, type: 3}
   tutorialHeader:
   - 'Movement '
   - Oxygen Meter
@@ -288,6 +289,7 @@ MonoBehaviour:
   - Finish Exploring Level
   - Tidying Up
   - Exploration Mode
+  - Endless Mode
   tutorialBody:
   - 'Press the W,A,S,D or the Up, Down, Left, Right and Arrow Keys to move.  '
   - "The Oxygen Meter on the side of the panel serves as Olive\u2019s health bar
@@ -308,6 +310,10 @@ MonoBehaviour:
   - Interact with animals on Exploration Mode levels to learn more about them. At
     the end of each level, interact with an animal with the Quiz! Label on them to
     launch a Quiz Game.
+  - Collect as many trash as possible while maintaining your oxygen levels. Whirlpool
+    portals at the end of the current generation leads to another randomized map! 
+    The level difficulty increases every 30 seconds, meaning a higher oxygen drain
+    rate.
   index: 0
 --- !u!1 &3557076521902825378
 GameObject:

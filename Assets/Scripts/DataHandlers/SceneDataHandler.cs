@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class SceneDataHandler : MonoBehaviour
 {
     public static UserData activeUser = new UserData();
-    int rawLevelVal = 0;
+    public int rawLevelVal = 0;
 
     public static bool transferTempData = false;
 
@@ -51,6 +51,7 @@ public class SceneDataHandler : MonoBehaviour
         activeUser.levelBestTime = ProfileManagerScript.activeUser.levelBestTime;
 
         activeUser.isInteractable = ProfileManagerScript.activeUser.isInteractable;
+        activeUser.lastInteractionTime = ProfileManagerScript.activeUser.lastInteractionTime;
         activeUser.interactionLevel = ProfileManagerScript.activeUser.interactionLevel;
 
         activeUser.hasUnlockedAchievement = ProfileManagerScript.activeUser.hasUnlockedAchievement;
@@ -80,6 +81,7 @@ public class SceneDataHandler : MonoBehaviour
         ProfileManagerScript.activeUser.levelBestTime = activeUser.levelBestTime;
 
         ProfileManagerScript.activeUser.isInteractable = activeUser.isInteractable;
+        ProfileManagerScript.activeUser.lastInteractionTime = activeUser.lastInteractionTime;
         ProfileManagerScript.activeUser.interactionLevel = activeUser.interactionLevel;
 
         ProfileManagerScript.activeUser.hasUnlockedAchievement = activeUser.hasUnlockedAchievement;

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 [System.Serializable]
 
 public class UserData
@@ -25,6 +26,7 @@ public class UserData
 
     // AQUARIUM ANIMALS
     public bool[] isInteractable = new bool[10];
+    public string[] lastInteractionTime = new string[10];
     public int[] interactionLevel = new int[10];
 
     // AQUARIUM DATA

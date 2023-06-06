@@ -13,6 +13,13 @@ public class AnimalButtonScript : MonoBehaviour, IPointerClickHandler, IPointerE
     SpriteRenderer spriteRenderer;
     public Color hoverColor;
 
+    GameObject affectionPanel;
+
+    void Awake()
+    {
+        affectionPanel = GameObject.Find("AffectionPanel");
+    }
+
     void Start()
     {
         aquariumDialogueManagerScript = GameObject.Find("DialogueManager").GetComponent<AquariumDialogueManagerScript>();
@@ -39,20 +46,24 @@ public class AnimalButtonScript : MonoBehaviour, IPointerClickHandler, IPointerE
         if (interactionButtonsManagerScript.animalInteractionMode == 1) // interact
         {
             Debug.Log("CALC: " + (animalInteractScript.lastInteractionTime.AddDays(1) - DateTime.Today));
-            if ((animalInteractScript.lastInteractionTime.AddDays(1) - DateTime.Today) > TimeSpan.Zero)
+            if ((animalInteractScript.lastInteractionTime.AddDays(1) - DateTime.Today) > TimeSpan.Zero) // already interacted
             {
                 aquariumDialogueManagerScript.AlreadyInteractedDialogue(gameObject);
+                Debug.Log("ALREADY INTERACTED");
             }
-            else
+            else // interacting
             {
                 aquariumDialogueManagerScript.InteractDialogue(gameObject);
                 animalInteractScript.lastInteractionTime = DateTime.Now;
-                animalInteractScript.interactedToday = true;
+                animalInteractScript.animalAffection++;
+                Debug.Log("INTERACTING");
             }
+            affectionPanel.SetActive(true);
+            animalInteractScript.UpdateAffectionBar();
         }
         else if (interactionButtonsManagerScript.animalInteractionMode == 2) // talk
         {
-            aquariumDialogueManagerScript.ImportDialogueData(animalDialogueScript.animalName, gameObject.GetComponent<SpriteRenderer>().sprite, animalDialogueScript.animalDialogue);
+            aquariumDialogueManagerScript.ImportDialogueData(animalDialogueScript.animalName, gameObject.GetComponent<SpriteRenderer>().sprite, animalDialogueScript.animalDialogue[UnityEngine.Random.Range(0, animalInteractScript.animalAffection)]);
         }
     }
 }

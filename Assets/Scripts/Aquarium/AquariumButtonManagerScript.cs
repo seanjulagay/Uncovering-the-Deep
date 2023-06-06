@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class AquariumButtonManagerScript : MonoBehaviour
 {
+    AnimalUnlockManagerScript animalUnlockManagerScript;
+
     Button almanacCloseButton;
     Button achievementsCloseButton;
     GameObject almanacPanel;
@@ -14,6 +16,8 @@ public class AquariumButtonManagerScript : MonoBehaviour
 
     void Start()
     {
+        animalUnlockManagerScript = GameObject.Find("AnimalUnlockManager").GetComponent<AnimalUnlockManagerScript>();
+
         almanacCloseButton = GameObject.Find("AlmanacCloseButton").GetComponent<Button>();
         almanacCloseButton.onClick.AddListener(CloseAlmanac);
         almanacPanel = GameObject.Find("AlmanacPanel");
@@ -36,7 +40,9 @@ public class AquariumButtonManagerScript : MonoBehaviour
         achievementsPanel.SetActive(false);
     }
 
-    public void backToMainMenu(){
+    public void backToMainMenu()
+    {
+        animalUnlockManagerScript.SaveInteractionStatus();
         SceneManager.LoadScene("MainMenu");
     }
 }
