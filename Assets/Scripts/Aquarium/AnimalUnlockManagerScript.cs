@@ -80,7 +80,7 @@ public class AnimalUnlockManagerScript : MonoBehaviour
         }
         else if (SceneDataHandler.activeUser.currentZone == 2)
         {
-            SetAnimalActiveLevel(3);
+            SetAnimalActiveLevel(4);
         }
     }
 
