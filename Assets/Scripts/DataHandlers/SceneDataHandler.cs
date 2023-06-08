@@ -11,6 +11,8 @@ public class SceneDataHandler : MonoBehaviour
 
     public static bool transferTempData = false;
 
+    public static bool showMapFlag = false;
+
     void Start()
     {
         if (SceneManager.GetActiveScene().name == "MainMenu")

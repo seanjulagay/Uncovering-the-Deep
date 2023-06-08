@@ -52,7 +52,8 @@ public class ButtonManagerScript : MonoBehaviour
 
     public void ButtonMap()
     {
-        // Load Map Scene Here
+        SceneDataHandler.showMapFlag = true;
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void ButtonNextLevel()

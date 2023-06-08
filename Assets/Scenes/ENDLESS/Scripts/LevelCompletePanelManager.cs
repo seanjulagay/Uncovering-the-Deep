@@ -55,7 +55,8 @@ public class LevelCompletePanelManager : MonoBehaviour
 
     void MapButton()
     {
-
+        SceneDataHandler.showMapFlag = true;
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void ShowLevelCompletePanel()

@@ -76,7 +76,8 @@ public class PausePanelManager : MonoBehaviour
 
     public void MapButton()
     {
-
+        SceneDataHandler.showMapFlag = true;
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void RetryButton()

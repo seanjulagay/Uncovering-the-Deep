@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PauseManagerScript : MonoBehaviour
 {
+    SceneLoader sceneLoader;
+
     public Button pauseLevelButton;
     public Button resumeLevelButton;
     public Button backToMainMenuButton;
@@ -16,8 +18,14 @@ public class PauseManagerScript : MonoBehaviour
 
     public GameObject pausePanel;
     public GameObject gameManagerScript;
-    
+
     bool hideflag = false;
+
+    void Awake()
+    {
+        sceneLoader = FindObjectOfType<SceneLoader>();
+    }
+
     void Start()
     {
         pausePanel = GameObject.Find("PausePanel");
@@ -33,10 +41,16 @@ public class PauseManagerScript : MonoBehaviour
 
         retryLevelButton = GameObject.Find("PausePanelRetryButton").GetComponent<Button>();
         retryLevelButton.onClick.AddListener(retryLevel);
-        
-        mapSelectButton = GameObject.Find("LevelCompleteMapButton").GetComponent<Button>();
-        mapSelectButton.onClick.AddListener(levelSelect);
 
+        mapSelectButton = GameObject.Find("PausePanelMapButton").GetComponent<Button>();
+        mapSelectButton.onClick.AddListener(ShowMap);
+
+    }
+
+    public void ShowMap()
+    {
+        SceneDataHandler.showMapFlag = true;
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void pauseGame()
@@ -56,28 +70,31 @@ public class PauseManagerScript : MonoBehaviour
         Debug.Log("hgfhdfghdfgh");
     }
 
-    public void backToMainMenu(){
+    public void backToMainMenu()
+    {
         SceneManager.LoadScene("MainMenu");
         //SceneDataHandler.transferTempDataFlag = true;
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Debug.Log("hgfhdfghdfgh");
     }
-    
-    public void retryLevel(){
+
+    public void retryLevel()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void levelSelect(){
-        SceneManager.LoadScene("MainMenu");
-        MenuManagerScript.OpenZone();
-    }
+    // public void levelSelect()
+    // {
+    //     SceneManager.LoadScene("MainMenu");
+    //     MenuManagerScript.OpenZone();
+    // }
 
     void Update()
     {
-         if (hideflag == false)
+        if (hideflag == false)
         {
             pausePanel.SetActive(false);
-           // descAreaRealLifeImage.SetActive(false);
+            // descAreaRealLifeImage.SetActive(false);
             hideflag = true;
         }
     }
