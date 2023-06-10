@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class EndlessModeHelpPanelManagerScript : MonoBehaviour
 {
+    EndlessGameManager endlessGameManager;
+
     public List<Sprite> tutorialSprites = new List<Sprite>();
     public List<string> tutorialHeader = new List<string>();
     public List<string> tutorialBody = new List<string>();
@@ -27,6 +29,8 @@ public class EndlessModeHelpPanelManagerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        endlessGameManager = GameObject.Find("EndlessGameManager").GetComponent<EndlessGameManager>();
+
         tutorialImage = GameObject.Find("TutorialImagePicture").GetComponent<Image>();
         tutorialHeaderText = GameObject.Find("TutorialTitleText").GetComponent<TMP_Text>();
         tutorialBodyText = GameObject.Find("TutorialBodyText").GetComponent<TMP_Text>();
@@ -36,37 +40,40 @@ public class EndlessModeHelpPanelManagerScript : MonoBehaviour
         buttonEndlessModeHelpButton = GameObject.Find("EndlessModeHelpButton").GetComponent<Button>();
 
         buttonCloseTutorial = GameObject.Find("TutorialCloseButton").GetComponent<Button>();
-        
+
         EndlessTutorialPanel = GameObject.Find("TutorialPanelEmpty");
 
         //updatePanel();
         addButtonListeners();
     }
 
-    void addButtonListeners(){
+    void addButtonListeners()
+    {
         buttonCloseTutorial.onClick.AddListener(closePanel);
         buttonEndlessModeHelpButton.onClick.AddListener(openHelpOverlay);
     }
 
-    void openHelpOverlay(){
+    void openHelpOverlay()
+    {
         Debug.Log("Tutorial Panel is triggering");
-        Time.timeScale = 0f;
+        endlessGameManager.isGameActive = false;
         EndlessTutorialPanel.SetActive(true);
     }
 
-     void closePanel(){
+    void closePanel()
+    {
         // EndlessModeTutorialPanel.SetActive(false);
-        Time.timeScale = 1f;
+        endlessGameManager.isGameActive = true;
         EndlessTutorialPanel.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-         if (hideflag == false)
+        if (hideflag == false)
         {
             EndlessTutorialPanel.SetActive(false);
-           // descAreaRealLifeImage.SetActive(false);
+            // descAreaRealLifeImage.SetActive(false);
             hideflag = true;
         }
     }

@@ -60,9 +60,9 @@ public class UIManagerScript : MonoBehaviour
 
         timeSpentText = GameObject.Find("TimeSpentText").GetComponent<TMP_Text>();
 
-        slidingNotificationAnimationScript = GameObject.Find("AchievementUnlocked").GetComponent<SlidingNotificationAnimationScript>();
+        // slidingNotificationAnimationScript = GameObject.Find("AchievementUnlocked").GetComponent<SlidingNotificationAnimationScript>();
 
-        notificationManager = GameObject.Find("AchievementUnlocked").GetComponent<NotificationManager>();
+        // notificationManager = GameObject.Find("AchievementUnlocked").GetComponent<NotificationManager>();
     }
 
     void Update()
@@ -160,7 +160,7 @@ public class UIManagerScript : MonoBehaviour
         //slidingNotificationAnimationScript.playNotificationAnimation();
     }
 
-    
+
 
 
 }

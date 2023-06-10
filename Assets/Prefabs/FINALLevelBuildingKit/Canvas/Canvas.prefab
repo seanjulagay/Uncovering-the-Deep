@@ -5486,6 +5486,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4649996045690138747}
     m_Modifications:
+    - target: {fileID: 4542065867246839370, guid: 305b7948dc5f37f45906acb457fbf9b0, type: 3}
+      propertyPath: m_Name
+      value: TrophyDesc
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542065867246839371, guid: 305b7948dc5f37f45906acb457fbf9b0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 887.271
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542065867246839371, guid: 305b7948dc5f37f45906acb457fbf9b0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 29.3007
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542065867246839371, guid: 305b7948dc5f37f45906acb457fbf9b0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 7.72392
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542065867246839371, guid: 305b7948dc5f37f45906acb457fbf9b0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -12.3959
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542065867246839372, guid: 305b7948dc5f37f45906acb457fbf9b0, type: 3}
+      propertyPath: m_fontSize
+      value: 22.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542065867257967013, guid: 305b7948dc5f37f45906acb457fbf9b0, type: 3}
+      propertyPath: m_Name
+      value: TrophyName
+      objectReference: {fileID: 0}
     - target: {fileID: 4542065867454377904, guid: 305b7948dc5f37f45906acb457fbf9b0, type: 3}
       propertyPath: m_Name
       value: AchievementUnlocked
@@ -5590,9 +5618,25 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4542065867454377908, guid: 305b7948dc5f37f45906acb457fbf9b0, type: 3}
+      propertyPath: m_UpdateMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4542065867454377909, guid: 305b7948dc5f37f45906acb457fbf9b0, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542065867634220945, guid: 305b7948dc5f37f45906acb457fbf9b0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9b653ae91dd6fcd4b821b0460c52137d, type: 3}
+    - target: {fileID: 4542065867634220945, guid: 305b7948dc5f37f45906acb457fbf9b0, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4542065867634220975, guid: 305b7948dc5f37f45906acb457fbf9b0, type: 3}
+      propertyPath: m_Name
+      value: TrophySprite
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 305b7948dc5f37f45906acb457fbf9b0, type: 3}
@@ -5633,10 +5677,9 @@ MonoBehaviour:
   userScore: 0
   timeSpent: 0
   bestTimeSpent: 0
-  slideDistance: 100
-  slideDuration: 1
-  retractDelay: 2
-  retractDuration: 1
+  animateNotificationBar: {fileID: 0}
+  AchievementUnlocked: {fileID: 0}
+  slidingNotificationAnimationScript: {fileID: 0}
   timeGoals: 00000000000000000000000000000000
 --- !u!224 &5825606210696724461 stripped
 RectTransform:

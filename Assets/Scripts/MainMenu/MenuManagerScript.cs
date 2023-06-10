@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class MenuManagerScript : MonoBehaviour
 {
+    MusicManager musicManager;
+
     public GameObject mainButtonGroup;
     public GameObject gamemodeButtonGroup;
     public GameObject menuProfileCardGroup;
@@ -36,9 +38,16 @@ public class MenuManagerScript : MonoBehaviour
 
     public void Start()
     {
+        musicManager = GameObject.Find("MusicManager").GetComponent<MusicManager>();
+
         Time.timeScale = 1;
         UpdateCurrentProfileCard();
         UpdateSettingsOverlay();
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 
     public void OpenLeaderboard()
@@ -178,6 +187,9 @@ public class MenuManagerScript : MonoBehaviour
             musicOffButton.GetComponent<Image>().sprite = activatedOffButton;
             musicOnButton.GetComponent<Image>().sprite = deactivatedOnButton;
         }
+
+        SceneDataHandler.MenuTransferData();
+        musicManager.ToggleMusic();
     }
 
     public void ToggleSounds()
@@ -197,6 +209,8 @@ public class MenuManagerScript : MonoBehaviour
             soundsOffButton.GetComponent<Image>().sprite = activatedOffButton;
             soundsOnButton.GetComponent<Image>().sprite = deactivatedOnButton;
         }
+
+        SceneDataHandler.MenuTransferData();
     }
 
     // =========== HELP OVERLAY =========== //
@@ -212,7 +226,10 @@ public class MenuManagerScript : MonoBehaviour
         //     helpOverlay.SetActive(true);
         //     helpManager.GetComponent<HelpManagerScript>().InitializeHelpPanel();
         // }
+        Debug.Log("HELP OVERLAY");
         helpOverlay.SetActive(true);
+        // helpOverlay.GetComponent<TutorialPanelScript>().index = 0;
+        // helpOverlay.GetComponent<TutorialPanelScript>().updatePanel();
     }
 
     public void CloseHelpOverlay()

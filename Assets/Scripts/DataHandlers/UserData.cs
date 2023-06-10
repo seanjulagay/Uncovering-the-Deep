@@ -31,6 +31,7 @@ public class UserData
 
     // AQUARIUM DATA
     public bool[] hasUnlockedAchievement = new bool[5];
+    public string[] achievementUnlockDate = new string[5];
     public bool[] hasUnlockedAlmanacAnimal = new bool[12];
     public bool[] hasUnlockedAlmanacTrash = new bool[9];
 

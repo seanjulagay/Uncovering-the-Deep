@@ -16916,11 +16916,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5825606210696724456, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5825606210696724457, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5825606210696724457, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
       propertyPath: m_PlayAutomatically
@@ -16928,11 +16928,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5825606210696724460, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
       propertyPath: m_Name
-      value: NotificationPanel
+      value: AchievementUnlocked
       objectReference: {fileID: 0}
     - target: {fileID: 5825606210696724460, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5825606210696724461, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
       propertyPath: m_RootOrder
@@ -19228,8 +19228,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 79672be1916517946a3b3ee92405d0f6, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.65
   m_Pitch: 1
   Loop: 1
   Mute: 0

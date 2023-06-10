@@ -21,6 +21,87 @@ public class SoundsManagerScript : MonoBehaviour
         // gameoverSound = GameObject.Find("GameoverSound").GetComponent<AudioSource>();
     }
 
+    public void SoundButonClick()
+    {
+        Debug.Log("SoundButtonClick");
+        if (SceneDataHandler.activeUser.soundOn == true)
+        {
+            buttonClickSound.Play();
+        }
+    }
+
+    public void SoundSwimming()
+    {
+        Debug.Log("SoundSwimming");
+        if (SceneDataHandler.activeUser.soundOn == true)
+        {
+            if (swimmingSound.isPlaying == false)
+            {
+                swimmingSound.Play();
+            }
+        }
+    }
+
+    public void SoundBubble()
+    {
+        Debug.Log("SoundBubble");
+        if (SceneDataHandler.activeUser.soundOn == true)
+        {
+            if (bubbleSound.isPlaying == false)
+            {
+                bubbleSound.Play();
+            }
+        }
+    }
+
+    public void SoundOxygenWarning()
+    {
+        Debug.Log("SoundOxygenWarning");
+        if (SceneDataHandler.activeUser.soundOn == true)
+        {
+            if (oxygenWarningSound.isPlaying == false)
+            {
+                oxygenWarningSound.Play();
+            }
+        }
+    }
+
+    public void SoundTrash()
+    {
+        Debug.Log("SoundTrash");
+        if (SceneDataHandler.activeUser.soundOn == true)
+        {
+            trashSound.Play();
+        }
+    }
+
+    public void SoundFreeingAnimal()
+    {
+        Debug.Log("SoundFreeingAnimal");
+        if (SceneDataHandler.activeUser.soundOn == true)
+        {
+            freeingAnimalSound.Play();
+        }
+    }
+
+    public void SoundVictory()
+    {
+        Debug.Log("SoundVictory");
+        if (SceneDataHandler.activeUser.soundOn == true)
+        {
+            victorySound.Play();
+        }
+    }
+
+    public void SoundGameOver()
+    {
+        Debug.Log("SoundGameOver");
+        if (SceneDataHandler.activeUser.soundOn == true)
+        {
+            gameoverSound.Play();
+        }
+    }
+
     public void PlaySound(string sound)
     {
         if (SceneDataHandler.activeUser.soundOn == true)

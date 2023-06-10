@@ -108,18 +108,21 @@ public class CreateEditProfileManagerScript : MonoBehaviour
         ProfileManagerScript.userData[modifyingProfileIndex].iconID = selectedIconID;
         if (type == "create")
         {
+            Debug.Log("CREATED PROFILE");
             ProfileManagerScript.userData[modifyingProfileIndex].userExists = true;
             ProfileManagerScript.userData[modifyingProfileIndex].username = nicknameTextCreate.GetComponent<TMP_InputField>().text;
-            ProfileManagerScript.activeUser = ProfileManagerScript.userData[modifyingProfileIndex];
             ProfileManagerScript.StoreActiveUserID();
         }
         else
         {
+            Debug.Log("EDITEDPROFILE");
             ProfileManagerScript.userData[modifyingProfileIndex].username = nicknameTextEdit.GetComponent<TMP_InputField>().text;
         }
-        ProfileManagerScript.SerializeJson();
+        ProfileManagerScript.activeUser = ProfileManagerScript.userData[modifyingProfileIndex];
         menuManagerScript.UpdateCurrentProfileCard();
+        selectProfileManagerScript.SetActiveUser(modifyingProfileIndex);
         selectProfileManagerScript.UpdateProfileUI();
+        ProfileManagerScript.SerializeJson();
         CloseCreateEditProfileOverlay(type);
     }
 

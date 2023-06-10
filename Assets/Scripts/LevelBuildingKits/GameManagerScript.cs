@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class GameManagerScript : MonoBehaviour
 {
+    NotificationsManager notificationsManager;
+
     UIManagerScript uiManagerScript;
     CheckpointManagerScript checkpointManagerScript;
     SoundsManagerScript soundsManagerScript;
@@ -57,13 +59,16 @@ public class GameManagerScript : MonoBehaviour
 
     void Start()
     {
+        soundsManagerScript = GameObject.Find("SoundsManager").GetComponent<SoundsManagerScript>();
         UnpackData();
         ComputeZoneLevel();
+
+        notificationsManager = GameObject.Find("NotificationsManager").GetComponent<NotificationsManager>();
 
         uiManagerScript = GameObject.Find("UIManager").GetComponent<UIManagerScript>();
         checkpointManagerScript = GameObject.Find("CheckpointManager").GetComponent<CheckpointManagerScript>();
 
-        slidingNotificationAnimationScript = GameObject.Find("AchievementUnlocked").GetComponent<SlidingNotificationAnimationScript>();
+        // slidingNotificationAnimationScript = GameObject.Find("AchievementUnlocked").GetComponent<SlidingNotificationAnimationScript>();
 
         // soundsManagerScript = GameObject.Find("SoundsManager").
         // GetComponent<SoundsManagerScript>();
@@ -163,7 +168,7 @@ public class GameManagerScript : MonoBehaviour
         SceneDataHandler.FinishedLevel(zoneVal, levelVal);
 
         //notification slider
-        notificationAnimationScript.playNotificationAnimation();
+        // notificationAnimationScript.playNotificationAnimation();
     }
 
     public void CompareBests()
@@ -184,6 +189,9 @@ public class GameManagerScript : MonoBehaviour
             SceneDataHandler.activeUser.levelBestTime[rawLevelValue] = bestTimeSpent;
             Debug.Log("New record: " + SceneDataHandler.activeUser.levelBestTime[rawLevelValue]);
         }
+
+        soundsManagerScript.SoundVictory();
+        notificationsManager.OceanTamerAchievement();
         // notificationAnimationScript.StartAnimation();
         //slidingNotificationAnimationScript.playNotificationAnimation();
     }

@@ -4646,6 +4646,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 57309250}
     m_Modifications:
+    - target: {fileID: 981234390187532804, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 981234390187532806, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -5677,6 +5681,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5825606210358747642, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -14.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5825606210358747643, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5825606210434692624, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_fontStyle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5825606210434692631, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 7.6
+      objectReference: {fileID: 0}
     - target: {fileID: 5825606210696724456, guid: 60ae6769fc991c44f84cd1802c09953d, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -6226,6 +6246,30 @@ PrefabInstance:
       propertyPath: achievement
       value: 
       objectReference: {fileID: 1098780033}
+    - target: {fileID: 8668135653093012261, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+      propertyPath: achievementName.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8668135653093012261, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+      propertyPath: achievementName.Array.data[0]
+      value: Explorer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8668135653093012261, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+      propertyPath: achievementName.Array.data[1]
+      value: Socializer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8668135653093012261, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+      propertyPath: achievementName.Array.data[2]
+      value: Deep Diver
+      objectReference: {fileID: 0}
+    - target: {fileID: 8668135653093012261, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+      propertyPath: achievementName.Array.data[3]
+      value: Ocean Tamer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8668135653093012261, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
+      propertyPath: achievementName.Array.data[4]
+      value: Ocean's Stewardess
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20d557cc9c5662c43b7b0f4cbe8aa6fa, type: 3}
 --- !u!114 &431614701 stripped
@@ -12752,8 +12796,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 79672be1916517946a3b3ee92405d0f6, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  m_PlayOnAwake: 0
+  m_Volume: 0.65
   m_Pitch: 1
   Loop: 1
   Mute: 0

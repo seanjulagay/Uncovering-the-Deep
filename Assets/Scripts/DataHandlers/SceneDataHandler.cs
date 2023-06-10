@@ -17,6 +17,7 @@ public class SceneDataHandler : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "MainMenu")
         {
+            Debug.Log("TRANFERRING MENU DATA");
             MenuTransferData();
         }
     }
@@ -121,10 +122,11 @@ public class SceneDataHandler : MonoBehaviour
             {
                 if (activeUser.currentZone == 2)
                 {
-                    if (activeUser.currentLevel == 0)
-                    {
-                        activeUser.currentLevel = 1;
-                    }
+                    // if (activeUser.currentLevel == 0)
+                    // {
+                    //     activeUser.currentLevel = 1;
+                    // }
+                    activeUser.currentLevel++;
                 }
             }
         }

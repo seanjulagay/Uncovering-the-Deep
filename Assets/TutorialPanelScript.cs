@@ -41,40 +41,45 @@ public class TutorialPanelScript : MonoBehaviour
         addButtonListeners();
     }
 
-    void updatePanel(){
+    public void updatePanel()
+    {
         tutorialImage.sprite = tutorialSprites[index];
         tutorialHeaderText.text = tutorialHeader[index];
         tutorialBodyText.text = "<br>" + tutorialBody[index];
-        tutorialCounterText.text = (index+1) + "/" + tutorialSprites.Count;
+        tutorialCounterText.text = (index + 1) + "/" + tutorialSprites.Count;
     }
 
-    void nextPanel(){
-        if (index<(tutorialSprites.Count-1)){
+    void nextPanel()
+    {
+        if (index < (tutorialSprites.Count - 1))
+        {
             index++;
             updatePanel();
         }
     }
 
-    void prevPanel(){
-        if (index>0){
+    void prevPanel()
+    {
+        if (index > 0)
+        {
             index--;
             updatePanel();
         }
     }
 
-    void addButtonListeners(){
+    void addButtonListeners()
+    {
         buttonNextTutorial.onClick.AddListener(nextPanel);
         buttonPrevTutorial.onClick.AddListener(prevPanel);
-        buttonCloseTutorial.onClick.AddListener(closePanel);
     }
 
-    void closePanel(){
-        TutorialPanel.SetActive(false);
+    void closePanel()
+    {
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

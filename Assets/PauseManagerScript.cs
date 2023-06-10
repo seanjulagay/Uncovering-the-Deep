@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PauseManagerScript : MonoBehaviour
 {
+    SoundsManagerScript soundsManagerScript;
+
     SceneLoader sceneLoader;
 
     public Button pauseLevelButton;
@@ -28,6 +30,8 @@ public class PauseManagerScript : MonoBehaviour
 
     void Start()
     {
+        soundsManagerScript = GameObject.Find("SoundsManager").GetComponent<SoundsManagerScript>();
+
         pausePanel = GameObject.Find("PausePanel");
 
         pauseLevelButton = GameObject.Find("PauseButton").GetComponent<Button>();
@@ -49,6 +53,7 @@ public class PauseManagerScript : MonoBehaviour
 
     public void ShowMap()
     {
+        soundsManagerScript.SoundButonClick();
         SceneDataHandler.showMapFlag = true;
         SceneManager.LoadScene("MainMenu");
     }
@@ -56,12 +61,14 @@ public class PauseManagerScript : MonoBehaviour
     public void pauseGame()
     {
         //achievementsPanel.SetActive(false);
+        soundsManagerScript.SoundButonClick();
         Time.timeScale = 0;
         pausePanel.SetActive(true);
     }
 
     public void resumeGame()
     {
+        soundsManagerScript.SoundButonClick();
         //achievementsPanel.SetActive(false);
         Time.timeScale = 1;
         // GameObject pausePanel = GameObject.Find("PausePanel");
@@ -72,6 +79,7 @@ public class PauseManagerScript : MonoBehaviour
 
     public void backToMainMenu()
     {
+        soundsManagerScript.SoundButonClick();
         SceneManager.LoadScene("MainMenu");
         //SceneDataHandler.transferTempDataFlag = true;
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
@@ -80,6 +88,7 @@ public class PauseManagerScript : MonoBehaviour
 
     public void retryLevel()
     {
+        soundsManagerScript.SoundButonClick();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

@@ -66,7 +66,7 @@ public class PlayerControllerScript : MonoBehaviour
             {
                 if (moveX != 0 || moveY != 0)
                 {
-                    soundsManagerScript.PlaySound("swimming");
+                    soundsManagerScript.SoundSwimming();
                     if (moveX > 0) // PLAYER GOES RIGHT
                     {
                         uiArrowKeysScript.ActivateArrow("right");
@@ -152,6 +152,7 @@ public class PlayerControllerScript : MonoBehaviour
                 }
                 else
                 {
+                    soundsManagerScript.swimmingSound.Stop();
                     uiArrowKeysScript.DeactivateArrow("left");
                     uiArrowKeysScript.DeactivateArrow("up");
                     uiArrowKeysScript.DeactivateArrow("right");

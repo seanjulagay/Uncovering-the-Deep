@@ -5,6 +5,7 @@ using System;
 
 public class PlayerPropertiesScript : MonoBehaviour
 {
+    SoundsManagerScript soundsManagerScript;
     public UIManagerScript uiManagerScript;
     public GameObject uiOxygenBar;
 
@@ -18,6 +19,8 @@ public class PlayerPropertiesScript : MonoBehaviour
 
     void Start()
     {
+        soundsManagerScript = GameObject.Find("SoundsManager").GetComponent<SoundsManagerScript>();
+
         try
         {
             uiManagerScript = GameObject.Find("UIManager").GetComponent<UIManagerScript>();
@@ -51,6 +54,15 @@ public class PlayerPropertiesScript : MonoBehaviour
         else if (oxygenCount <= 0f)
         {
             uiManagerScript.DisplayGameOverPanel();
+        }
+
+        if (oxygenCount <= 30)
+        {
+            soundsManagerScript.SoundOxygenWarning();
+        }
+        else
+        {
+            soundsManagerScript.oxygenWarningSound.Stop();
         }
 
         try

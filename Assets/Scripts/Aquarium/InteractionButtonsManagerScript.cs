@@ -6,6 +6,8 @@ using TMPro;
 
 public class InteractionButtonsManagerScript : MonoBehaviour
 {
+    AchievementsManager achievementsManager;
+
     Button achievementsButton;
     Button interactButton;
     Button talkButton;
@@ -24,6 +26,7 @@ public class InteractionButtonsManagerScript : MonoBehaviour
 
     void Start()
     {
+        achievementsManager = GameObject.Find("AchievementsManager").GetComponent<AchievementsManager>();
         achievementsButton = GameObject.Find("AchievementsButton").GetComponent<Button>();
         interactButton = GameObject.Find("InteractButton").GetComponent<Button>();
         talkButton = GameObject.Find("TalkButton").GetComponent<Button>();
@@ -85,6 +88,7 @@ public class InteractionButtonsManagerScript : MonoBehaviour
         Debug.Log("ACHIEVEMENTS");
         affectionPanel.SetActive(false);
         achievementsPanel.SetActive(true);
+        achievementsManager.InitializeAchievementVisibility();
         animalInteractionMode = 0;
         aquariumDialogueManagerScript.HideDialoguePanel();
     }

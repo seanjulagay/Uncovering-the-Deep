@@ -7,6 +7,5 @@ public class ExitButton : MonoBehaviour
    public void ExitTransition()
     {
         Application.Quit();
-        
     }
 }

@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PausePanelManager : MonoBehaviour
 {
+    SoundsManagerScript soundsManagerScript;
+
     EndlessGameManager endlessGameManager;
 
     Button pauseButton;
@@ -20,6 +22,8 @@ public class PausePanelManager : MonoBehaviour
 
     void Start()
     {
+        soundsManagerScript = GameObject.Find("SoundsManager").GetComponent<SoundsManagerScript>();
+
         endlessGameManager = GameObject.Find("EndlessGameManager").GetComponent<EndlessGameManager>();
 
         pauseButton = GameObject.Find("PauseButton").GetComponent<Button>();
@@ -53,6 +57,7 @@ public class PausePanelManager : MonoBehaviour
 
     public void PauseButton()
     {
+        soundsManagerScript.SoundButonClick();
         if (endlessGameManager.isGameActive == true)
         {
             endlessGameManager.PauseHandler();
@@ -62,6 +67,7 @@ public class PausePanelManager : MonoBehaviour
 
     public void ResumeButton()
     {
+        soundsManagerScript.SoundButonClick();
         if (endlessGameManager.isGameActive == false)
         {
             endlessGameManager.PauseHandler();
@@ -71,17 +77,20 @@ public class PausePanelManager : MonoBehaviour
 
     public void HomeButton()
     {
+        soundsManagerScript.SoundButonClick();
         SceneManager.LoadScene("MainMenu");
     }
 
     public void MapButton()
     {
+        soundsManagerScript.SoundButonClick();
         SceneDataHandler.showMapFlag = true;
         SceneManager.LoadScene("MainMenu");
     }
 
     public void RetryButton()
     {
+        soundsManagerScript.SoundButonClick();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         endlessGameManager.isGameActive = true;
     }

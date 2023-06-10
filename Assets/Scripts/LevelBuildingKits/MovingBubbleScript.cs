@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MovingBubbleScript : MonoBehaviour
 {
+    SoundsManagerScript soundsManagerScript;
+
     public GameObject bubbleObj;
     public GameObject startPoint;
     public GameObject endPoint;
@@ -16,6 +18,8 @@ public class MovingBubbleScript : MonoBehaviour
 
     void Start()
     {
+        soundsManagerScript = GameObject.Find("SoundsManager").GetComponent<SoundsManagerScript>();
+
         bubbleObj.SetActive(false);
         StartCoroutine(SpawnBubble());
     }

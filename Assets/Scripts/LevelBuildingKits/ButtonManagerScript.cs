@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class ButtonManagerScript : MonoBehaviour
 {
+    SoundsManagerScript soundsManagerScript;
+
     GameManagerScript gameManagerScript;
 
     Button levelCompeleteRetryButton;
@@ -19,10 +22,19 @@ public class ButtonManagerScript : MonoBehaviour
 
     void Start()
     {
+        soundsManagerScript = GameObject.Find("SoundsManager").GetComponent<SoundsManagerScript>();
+
         gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
 
         levelCompeleteRetryButton = GameObject.Find("LevelCompleteRetryButton").GetComponent<Button>();
-        levelCompleteNextButton = GameObject.Find("LevelCompleteNextButton").GetComponent<Button>();
+        try
+        {
+            levelCompleteNextButton = GameObject.Find("LevelCompleteNextButton").GetComponent<Button>();
+        }
+        catch (Exception e)
+        {
+            Debug.Log("LEVELCOMPLETENEXTBUTTON " + e);
+        }
         levelCompleteHomeButton = GameObject.Find("LevelCompleteHomeButton").GetComponent<Button>();
         levelCompleteMapButton = GameObject.Find("LevelCompleteMapButton").GetComponent<Button>();
 
@@ -31,7 +43,14 @@ public class ButtonManagerScript : MonoBehaviour
         gameOverMapButton = GameObject.Find("GameOverMapButton").GetComponent<Button>();
 
         levelCompeleteRetryButton.onClick.AddListener(ButtonRetryLevel);
-        levelCompleteNextButton.onClick.AddListener(ButtonNextLevel);
+        try
+        {
+            levelCompleteNextButton.onClick.AddListener(ButtonNextLevel);
+        }
+        catch (Exception e)
+        {
+            Debug.Log("LEVELCOMPLETENEXTBUTTON " + e);
+        }
         levelCompleteHomeButton.onClick.AddListener(ButtonMainMenu);
         levelCompleteMapButton.onClick.AddListener(ButtonMap);
 
@@ -42,22 +61,26 @@ public class ButtonManagerScript : MonoBehaviour
 
     public void ButtonRetryLevel()
     {
+        soundsManagerScript.SoundButonClick();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void ButtonMainMenu()
     {
+        soundsManagerScript.SoundButonClick();
         SceneManager.LoadScene("MainMenu");
     }
 
     public void ButtonMap()
     {
+        soundsManagerScript.SoundButonClick();
         SceneDataHandler.showMapFlag = true;
         SceneManager.LoadScene("MainMenu");
     }
 
     public void ButtonNextLevel()
     {
+        soundsManagerScript.SoundButonClick();
         switch (gameManagerScript.rawLevelValue)
         {
             case 0:

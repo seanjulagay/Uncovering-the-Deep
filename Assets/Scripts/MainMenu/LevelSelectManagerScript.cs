@@ -106,6 +106,8 @@ public class LevelSelectManagerScript : MonoBehaviour
             for (int i = 0; i < numberOfLevels; i++)
             {
                 // Debug.Log("User selected finished zone");
+                int index = i;
+                levelIconButton[index].GetComponent<Button>().onClick.AddListener(() => { LoadLevel(index); });
                 levelIconButton[i].GetComponent<Image>().sprite = levelIconSprite[i];
                 levelIconButton[i].transform.Find("LevelStars").GetComponent<Image>().sprite = starIconSprite[ProfileManagerScript.activeUser.levelStars[(numberOfLevels * selectedZone) + i]];
             }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CheckpointPadScript : MonoBehaviour
 {
+    SoundsManagerScript soundsManagerScript;
     DialoguePanelManagerScript dialoguePanelManagerScript;
     GameObject nextCheckpointBarrier;
     UIManagerScript uiManagerScript;
@@ -20,6 +21,7 @@ public class CheckpointPadScript : MonoBehaviour
 
     void Start()
     {
+        soundsManagerScript = GameObject.Find("SoundsManager").GetComponent<SoundsManagerScript>();
         dialoguePanelManagerScript = GameObject.Find("DialoguePanelManager").GetComponent<DialoguePanelManagerScript>();
         nextCheckpointBarrier = gameObject.transform.parent.Find("CheckpointBarrier").gameObject;
         uiManagerScript = GameObject.Find("UIManager").GetComponent<UIManagerScript>();
@@ -57,6 +59,7 @@ public class CheckpointPadScript : MonoBehaviour
         {
             if (AllTrashObjsCleared() == true && objInstantiated == false)
             {
+                soundsManagerScript.SoundTrash();
                 objInstantiated = true;
                 checkpointManagerScript.CheckpointPassed();
                 // checkpointManagerScript.SpawnTrashbag(gameObject.transform.position);
