@@ -80,8 +80,33 @@ public class EntryBoxScript : MonoBehaviour
             descAreaTextAdd1.text = "<b>Danger Trait:</b> " + trashDangerTrait;
             descAreaTextAdd2.text = "";
         }
-        else
+        else // animal
         {
+            // if (isUnlocked == false)
+            // {
+            //     Debug.Log("NOT UNLOCKED");
+            //     descAreaInGameImage.color = Color.black;
+            //     descAreaRealLifeImage.color = Color.black;
+            // }
+            // else
+            // {
+            //     Debug.Log("UNLOCKED");
+            //     descAreaInGameImage.color = Color.white;
+            //     descAreaRealLifeImage.color = Color.white;
+            // }
+
+            if (isUnlocked == false)
+            {
+                almanacManagerEntriesScript.unlocked = false;
+                descAreaInGameImage.color = Color.black;
+                descAreaRealLifeImage.color = Color.black;
+            }
+            else
+            {
+                almanacManagerEntriesScript.unlocked = true;
+                descAreaInGameImage.color = Color.white;
+                descAreaRealLifeImage.color = Color.white;
+            }
             descAreaTextAdd1.text = "<br><b>Depth Zone:</b> " + animalDepthZone;
             descAreaTextAdd2.text = "<br><b>Fun Fact:</b> " + animalFunFact;
         }

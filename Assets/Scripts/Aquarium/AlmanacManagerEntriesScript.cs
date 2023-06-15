@@ -23,6 +23,8 @@ public class AlmanacManagerEntriesScript : MonoBehaviour
 
     bool hideflag = false;
 
+    public bool unlocked = false;
+
     public int sideButtonCategory = 0; // 0 = trash, 1 = animals
 
     void Start()
@@ -78,6 +80,15 @@ public class AlmanacManagerEntriesScript : MonoBehaviour
         descAreaRealLifeImage.SetActive(false);
         descAreaInGameImage.SetActive(true);
         descAreaRLImage.color = Color.clear;
+
+        if (unlocked == false)
+        {
+            descAreaIGImage.color = Color.black;
+        }
+        else
+        {
+            descAreaIGImage.color = Color.white;
+        }
     }
 
     public void SwitchRealLifeImage()
@@ -85,6 +96,15 @@ public class AlmanacManagerEntriesScript : MonoBehaviour
         descAreaRealLifeImage.SetActive(true);
         descAreaInGameImage.SetActive(false);
         descAreaRLImage.color = Color.white;
+
+        if (unlocked == false)
+        {
+            descAreaRLImage.color = Color.black;
+        }
+        else
+        {
+            descAreaIGImage.color = Color.white;
+        }
     }
 
     // Toggle trashToggle, animalsToggle;

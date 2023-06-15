@@ -5,6 +5,8 @@ using TMPro;
 
 public class DialogueTriggerScript : MonoBehaviour
 {
+    public int creatureID = -1;
+
     public bool isPartOfAnimalsMetCount = false;
     public bool onlyShowOnce = false;
     public bool automaticRepeat = false;
@@ -79,10 +81,23 @@ public class DialogueTriggerScript : MonoBehaviour
         }
     }
 
+    void SetDatabaseUnlocked()
+    {
+        if (creatureID != -1)
+        {
+            if (SceneDataHandler.activeUser.hasUnlockedAlmanacAnimal[creatureID] == false)
+            {
+                SceneDataHandler.activeUser.hasUnlockedAlmanacAnimal[creatureID] = true;
+                Debug.Log("UNLOCKED NEW ANIMAL IN ALMANAC");
+            }
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.name == "PlayerTrigger")
         {
+            SetDatabaseUnlocked();
             if (gameObject.name == "QuizAnimal")
             {
                 if (objectivesManagerScript.animalsMetCurrent < objectivesManagerScript.animalsMetMax)
