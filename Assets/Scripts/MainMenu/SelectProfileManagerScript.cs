@@ -56,7 +56,7 @@ public class SelectProfileManagerScript : MonoBehaviour
                 cardObj[i].transform.Find("FilledResearcherIcon").GetComponent<Image>().sprite = icon[ProfileManagerScript.userData[i].iconID];
                 cardObj[i].GetComponent<RectTransform>().anchoredPosition = profilePositions[i];
                 cardObj[i].transform.Find("EditResearcherButton").GetComponent<Button>().onClick.AddListener(delegate { EditProfile(local_i); });
-                cardObj[i].transform.Find("DeleteResearcherButton").GetComponent<Button>().onClick.AddListener(delegate { DeleteProfile(local_i); });
+                cardObj[i].transform.Find("DeleteResearcherButton").GetComponent<Button>().onClick.AddListener(delegate { DeleteProfilePrompt(local_i); });
                 cardObj[i].GetComponent<Button>().onClick.AddListener(delegate { SetActiveUser(local_i); });
             }
             else
@@ -103,31 +103,54 @@ public class SelectProfileManagerScript : MonoBehaviour
         createEditProfileManager.GetComponent<CreateEditProfileManagerScript>().InitiateEditProfile(index);
     }
 
-    public void DeleteProfile(int index)
+    public void DeleteProfilePrompt(int index)
     {
-        Debug.Log("Deleting profile...");
-
-        if (ProfileManagerScript.userData[1].userExists == false) // TODO: Make UI panels for the first two conditions
+        if (index == ProfileManagerScript.activeUser.userID)
         {
-            Debug.Log("Can't delete lone profile!");
-        }
-        else if (index == ProfileManagerScript.activeUser.userID)
-        {
-            Debug.Log("Can't delete active user!");
+            menuManagerScript.OpenActiveProfileOverlay();
         }
         else
         {
-            for (int i = index; i < 5; i++) // Shift profiles downward in array
-            {
-                ProfileManagerScript.userData[i] = ProfileManagerScript.userData[i + 1];
-                ProfileManagerScript.userData[i].userID--;
-            }
-
-            ProfileManagerScript.userData[5] = new UserData();
-            ProfileManagerScript.userData[5].userID = 5;
-
-            UpdateProfileUI();
-            ProfileManagerScript.SerializeJson();
+            menuManagerScript.profileBeingDeleted = index;
+            menuManagerScript.OpenDeleteProfileOverlay();
         }
+    }
+
+    public void DeleteProfile(int index)
+    {
+        for (int i = index; i < 5; i++) // Shift profiles downward in array
+        {
+            ProfileManagerScript.userData[i] = ProfileManagerScript.userData[i + 1];
+            ProfileManagerScript.userData[i].userID--;
+        }
+
+        ProfileManagerScript.userData[5] = new UserData();
+        ProfileManagerScript.userData[5].userID = 5;
+
+        UpdateProfileUI();
+        ProfileManagerScript.SerializeJson();
+
+        // if (ProfileManagerScript.userData[1].userExists == false) // TODO: Make UI panels for the first two conditions
+        // {
+        //     Debug.Log("Can't delete lone profile!");
+        // }
+        // else if (index == ProfileManagerScript.activeUser.userID)
+        // {
+        //     Debug.Log("Can't delete active user!");
+        // }
+        // else
+        // {
+        //     for (int i = index; i < 5; i++) // Shift profiles downward in array
+        //     {
+        //         ProfileManagerScript.userData[i] = ProfileManagerScript.userData[i + 1];
+        //         ProfileManagerScript.userData[i].userID--;
+        //     }
+
+        //     ProfileManagerScript.userData[5] = new UserData();
+        //     ProfileManagerScript.userData[5].userID = 5;
+
+        //     UpdateProfileUI();
+        //     ProfileManagerScript.SerializeJson();
+        // }
     }
 }

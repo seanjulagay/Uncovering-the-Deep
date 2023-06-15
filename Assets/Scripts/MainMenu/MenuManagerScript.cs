@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuManagerScript : MonoBehaviour
 {
+    public SelectProfileManagerScript selectProfileManagerScript;
     MusicManager musicManager;
 
     public GameObject mainButtonGroup;
@@ -18,6 +19,9 @@ public class MenuManagerScript : MonoBehaviour
     public GameObject selectZoneOverlay;
     public GameObject selectLevelOverlay;
     public GameObject leaderboardOverlay;
+    public GameObject exitPromptOverlay;
+    public GameObject deleteProfileOverlay;
+    public GameObject activeProfileOverlay;
 
     public GameObject helpManager;
     public GameObject levelSelectManager;
@@ -36,6 +40,8 @@ public class MenuManagerScript : MonoBehaviour
     public Sprite deactivatedOnButton;
     public Sprite deactivatedOffButton;
 
+    public int profileBeingDeleted = 0;
+
     public void Start()
     {
         musicManager = GameObject.Find("MusicManager").GetComponent<MusicManager>();
@@ -43,6 +49,48 @@ public class MenuManagerScript : MonoBehaviour
         Time.timeScale = 1;
         UpdateCurrentProfileCard();
         UpdateSettingsOverlay();
+    }
+
+    // ACTIVE PROFILE WARNING MESSAGE //
+
+    public void OpenActiveProfileOverlay()
+    {
+        activeProfileOverlay.SetActive(true);
+    }
+
+    public void CloseActiveProfileOverlay()
+    {
+        activeProfileOverlay.SetActive(false);
+    }
+
+    // DELETE PROFILE WARNING MESSAGES //
+
+    public void OpenDeleteProfileOverlay()
+    {
+        deleteProfileOverlay.SetActive(true);
+    }
+
+    public void CloseDeleteProfileOverlay()
+    {
+        deleteProfileOverlay.SetActive(false);
+    }
+
+    public void ConfirmDeleteProfile()
+    {
+        selectProfileManagerScript.DeleteProfile(profileBeingDeleted);
+        deleteProfileOverlay.SetActive(false);
+    }
+
+    // EXIT PROMPT //
+
+    public void OpenExitPrompt()
+    {
+        exitPromptOverlay.SetActive(true);
+    }
+
+    public void CloseExitPrompt()
+    {
+        exitPromptOverlay.SetActive(false);
     }
 
     public void ExitGame()
