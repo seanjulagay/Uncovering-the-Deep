@@ -10,6 +10,11 @@ public class UIManagerScript : MonoBehaviour
     GameManagerScript gameManagerScript;
     SoundsManagerScript soundsManagerScript;
 
+    GameObject timeGoalsPanel;
+    GameObject timeGoalsText3;
+    GameObject timeGoalsText2;
+    GameObject timeGoalsText1;
+
     GameObject levelCompletePanel;
     Image levelCompleteStars;
     public Sprite levelCompleteStars0;
@@ -45,6 +50,9 @@ public class UIManagerScript : MonoBehaviour
 
     public NotificationManager notificationManager;
 
+    public bool timeGoalsExist = true;
+    public bool timeGoalsInitialized = false;
+
     void Start()
     {
         gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
@@ -67,8 +75,60 @@ public class UIManagerScript : MonoBehaviour
 
     void Update()
     {
+        if (timeGoalsInitialized == false)
+        {
+            InitializeTimeGoalsText();
+            timeGoalsInitialized = true;
+        }
+
         TimeSpentTextHandler();
         PanelFlags();
+    }
+
+    void InitializeTimeGoalsText()
+    {
+        try
+        {
+            timeGoalsPanel = GameObject.Find("TimeGoalsPanel");
+
+            Debug.Log("LEVEL VAL: " + gameManagerScript.levelVal);
+
+            if (gameManagerScript.levelVal != 0)
+            { // Level type is NOT restoration mode
+                Debug.Log("DISABLING TIME GOALS PANEL");
+                timeGoalsPanel.SetActive(false);
+            }
+
+            timeGoalsText3 = GameObject.Find("TimeGoalsText3");
+            timeGoalsText2 = GameObject.Find("TimeGoalsText2");
+            timeGoalsText1 = GameObject.Find("TimeGoalsText1");
+
+            if (timeGoalsExist == true)
+            {
+                timeGoalsText3.GetComponent<TMP_Text>().text = gameManagerScript.timeGoals[3].ToString();
+                timeGoalsText2.GetComponent<TMP_Text>().text = gameManagerScript.timeGoals[2].ToString();
+                timeGoalsText1.GetComponent<TMP_Text>().text = gameManagerScript.timeGoals[1].ToString();
+
+                timeGoalsText3.GetComponent<TMP_Text>().text = IntToMins(gameManagerScript.timeGoals[3]) + ":" + IntToSecs(gameManagerScript.timeGoals[3]);
+                timeGoalsText2.GetComponent<TMP_Text>().text = IntToMins(gameManagerScript.timeGoals[2]) + ":" + IntToSecs(gameManagerScript.timeGoals[2]);
+                timeGoalsText1.GetComponent<TMP_Text>().text = IntToMins(gameManagerScript.timeGoals[1]) + ":" + IntToSecs(gameManagerScript.timeGoals[1]);
+            }
+        }
+        catch (Exception e)
+        {
+            timeGoalsExist = false;
+            Debug.Log("Exception in initializing time goals: " + e);
+        }
+    }
+
+    string IntToMins(int val)
+    {
+        return TimeSpan.FromSeconds(val).Minutes.ToString("00");
+    }
+
+    string IntToSecs(int val)
+    {
+        return TimeSpan.FromSeconds(val).Seconds.ToString("00");
     }
 
     void PanelFlags()

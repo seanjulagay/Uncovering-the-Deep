@@ -10286,7 +10286,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1040690873}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f248c0b6ab2dd7346a9658a0037c2f8e, type: 3}
@@ -19190,6 +19190,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3952020302501135289, guid: 43f8e3584c9987b4b964e2e2ad9e5540, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6205645719415832405, guid: 43f8e3584c9987b4b964e2e2ad9e5540, type: 3}
       propertyPath: m_Name
       value: SoundsManager

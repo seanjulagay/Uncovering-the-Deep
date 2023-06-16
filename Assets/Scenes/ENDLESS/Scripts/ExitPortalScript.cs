@@ -9,6 +9,7 @@ public class ExitPortalScript : MonoBehaviour
     GameObject centerCell;
     List<GameObject> centerCellSpawnPoints = new List<GameObject>();
 
+    SoundsManagerScript soundsManagerScript;
     RoomTemplates roomTemplates;
 
     void Start()
@@ -17,6 +18,7 @@ public class ExitPortalScript : MonoBehaviour
         player = GameObject.Find("Player");
         centerCell = GameObject.Find("C");
         roomTemplates = GameObject.Find("RoomTemplates").GetComponent<RoomTemplates>();
+        soundsManagerScript = GameObject.Find("SoundsManager").GetComponent<SoundsManagerScript>();
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -25,6 +27,7 @@ public class ExitPortalScript : MonoBehaviour
         {
             Debug.Log("DETECTED PLAYER");
             player.transform.position = entryPortal.transform.position;
+            soundsManagerScript.SoundWhirlpool();
             RegenerateWalls();
         }
     }

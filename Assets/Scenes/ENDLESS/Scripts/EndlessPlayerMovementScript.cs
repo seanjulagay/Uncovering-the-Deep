@@ -8,6 +8,7 @@ public class EndlessPlayerMovementScript : MonoBehaviour
 {
     PlayerSpriteManagerScript playerSpriteManagerScript;
     UIArrowKeysScript uiArrowKeysScript;
+    SoundsManagerScript soundsManagerScript;
 
     public float moveUpSpd = 2f;
     public float moveDownSpd = 1f;
@@ -27,6 +28,7 @@ public class EndlessPlayerMovementScript : MonoBehaviour
         uiArrowKeysScript = GameObject.Find("ArrowKeys").GetComponent<UIArrowKeysScript>();
         rb = gameObject.GetComponent<Rigidbody2D>();
         playerSprite = GameObject.Find("Player").GetComponent<Image>();
+        soundsManagerScript = GameObject.Find("SoundsManager").GetComponent<SoundsManagerScript>();
     }
 
     void Update()
@@ -54,6 +56,7 @@ public class EndlessPlayerMovementScript : MonoBehaviour
             {
                 if (moveX != 0 || moveY != 0)
                 {
+                    soundsManagerScript.SoundEngine();
                     if (moveX > 0) // PLAYER GOES RIGHT
                     {
                         uiArrowKeysScript.ActivateArrow("right");
@@ -121,6 +124,7 @@ public class EndlessPlayerMovementScript : MonoBehaviour
                 }
                 else
                 {
+                    soundsManagerScript.engineSound.Stop();
                     uiArrowKeysScript.DeactivateArrow("left");
                     uiArrowKeysScript.DeactivateArrow("up");
                     uiArrowKeysScript.DeactivateArrow("right");

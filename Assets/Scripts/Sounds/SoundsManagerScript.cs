@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class SoundsManagerScript : MonoBehaviour
 {
-    public AudioSource buttonClickSound, swimmingSound, gameoverSound, bubbleSound, oxygenWarningSound, victorySound, trashSound, freeingAnimalSound;
+    public AudioSource buttonClickSound, swimmingSound, gameoverSound, bubbleSound, oxygenWarningSound, victorySound, trashSound, freeingAnimalSound, engineSound, whirlpoolSound;
 
     void Start()
     {
@@ -21,12 +22,41 @@ public class SoundsManagerScript : MonoBehaviour
         // gameoverSound = GameObject.Find("GameoverSound").GetComponent<AudioSource>();
     }
 
+    public void SoundWhirlpool()
+    {
+        try
+        {
+            Debug.Log("SoundWhirlpool");
+            if (SceneDataHandler.activeUser.soundOn == true)
+            {
+                whirlpoolSound.Play();
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.Log("No whirlpool sound detected");
+        }
+    }
+
     public void SoundButonClick()
     {
         Debug.Log("SoundButtonClick");
         if (SceneDataHandler.activeUser.soundOn == true)
         {
             buttonClickSound.Play();
+        }
+    }
+
+    public void SoundEngine()
+    {
+        Debug.Log("EngineSound");
+        if (SceneDataHandler.activeUser.soundOn == true && Time.timeScale == 1)
+        {
+            if (engineSound.isPlaying == false)
+            {
+                Debug.Log("PLAYING ENGINE SOUND");
+                engineSound.Play();
+            }
         }
     }
 
