@@ -7,6 +7,7 @@ using TMPro;
 public class EntryBoxScript : MonoBehaviour
 {
     AlmanacManagerEntriesScript almanacManagerEntriesScript;
+    AchievementsManager achievementsManager;
 
     [Tooltip("0 = ALMANAC, 1 = ACHIEVEMENTS")]
     public int type = 0;
@@ -35,6 +36,7 @@ public class EntryBoxScript : MonoBehaviour
     void Start()
     {
         almanacManagerEntriesScript = GameObject.Find("AlmanacManager").GetComponent<AlmanacManagerEntriesScript>();
+        achievementsManager = GameObject.Find("AchievementsManager").GetComponent<AchievementsManager>();
 
         entryName = transform.Find("EntryText").GetComponent<TMP_Text>().text;
         entrySprite = transform.Find("EntryButton").Find("Image").GetComponent<Image>().sprite;
@@ -62,8 +64,29 @@ public class EntryBoxScript : MonoBehaviour
     public void UpdateAchievementsArea()
     {
         achievementsAreaImage.sprite = entrySprite;
-        achievementsAreaTextHeader.text = entryName;
-        achievementsAreaTextDesc.text = entryDescription;
+        for (int i = 0; i < achievementsManager.achievements.Count; i++)
+        {
+            if (gameObject == achievementsManager.achievements[i])
+            {
+                if (SceneDataHandler.activeUser.hasUnlockedAchievement[i] == false)
+                {
+                    achievementsAreaImage.color = Color.black;
+                    achievementsAreaTextHeader.text = "???";
+                    achievementsAreaTextDesc.text = "???";
+                }
+                else
+                {
+                    achievementsAreaImage.color = Color.white;
+                    achievementsAreaTextHeader.text = entryName;
+                    achievementsAreaTextDesc.text = entryDescription;
+                }
+            }
+        }
+
+        // if (gameObject == achievementsManager.)
+        //     achievementsAreaImage.sprite = entrySprite;
+        // achievementsAreaTextHeader.text = entryName;
+        // achievementsAreaTextDesc.text = entryDescription;
         // achievementsAreaTextAdd1.text = 
     }
 

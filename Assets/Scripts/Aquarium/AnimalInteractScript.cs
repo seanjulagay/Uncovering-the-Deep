@@ -8,7 +8,7 @@ public class AnimalInteractScript : MonoBehaviour
     UIProgressBarScript uiProgressBarScript;
 
     public int animalAffection = 0;
-    public int maxAffection = 5;
+    public int maxAffection = 3;
     public DateTime lastInteractionTime;
 
     void Awake()
@@ -18,7 +18,7 @@ public class AnimalInteractScript : MonoBehaviour
 
     public void UpdateAffectionBar()
     {
-        uiProgressBarScript.maximum = 5;
+        uiProgressBarScript.maximum = 3;
         uiProgressBarScript.current = animalAffection;
     }
 }

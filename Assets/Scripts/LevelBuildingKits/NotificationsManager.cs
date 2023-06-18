@@ -31,7 +31,14 @@ public class NotificationsManager : MonoBehaviour
 
     void Start()
     {
-        gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
+        try
+        {
+            gameManagerScript = GameObject.Find("GameManager").GetComponent<GameManagerScript>();
+        }
+        catch (Exception e)
+        {
+            Debug.Log("No GameManagerScript detected");
+        }
         soundsManagerScript = GameObject.Find("SoundsManager").GetComponent<SoundsManagerScript>();
 
         // try
@@ -151,6 +158,7 @@ public class NotificationsManager : MonoBehaviour
                     {
                         if (SceneDataHandler.activeUser.interactionLevel[i] != 3)
                         {
+                            Debug.Log("Max affection not yet reached for animal " + i);
                             return;
                         }
                     }

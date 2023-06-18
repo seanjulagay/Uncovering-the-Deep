@@ -6,6 +6,8 @@ using UnityEngine.EventSystems;
 
 public class AnimalButtonScript : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
+    AnimalUnlockManagerScript animalUnlockManagerScript;
+    NotificationsManager notificationsManager;
     AquariumDialogueManagerScript aquariumDialogueManagerScript;
     AnimalDialogueScript animalDialogueScript;
     InteractionButtonsManagerScript interactionButtonsManagerScript;
@@ -22,6 +24,8 @@ public class AnimalButtonScript : MonoBehaviour, IPointerClickHandler, IPointerE
 
     void Start()
     {
+        animalUnlockManagerScript = GameObject.Find("AnimalUnlockManager").GetComponent<AnimalUnlockManagerScript>();
+        notificationsManager = GameObject.Find("NotificationsManager").GetComponent<NotificationsManager>();
         aquariumDialogueManagerScript = GameObject.Find("DialogueManager").GetComponent<AquariumDialogueManagerScript>();
         animalDialogueScript = gameObject.GetComponent<AnimalDialogueScript>();
         interactionButtonsManagerScript = GameObject.Find("InteractionButtonsManager").GetComponent<InteractionButtonsManagerScript>();
@@ -60,6 +64,8 @@ public class AnimalButtonScript : MonoBehaviour, IPointerClickHandler, IPointerE
             }
             affectionPanel.SetActive(true);
             animalInteractScript.UpdateAffectionBar();
+            animalUnlockManagerScript.SaveInteractionStatus();
+            notificationsManager.OceansStewardessAchievement();
         }
         else if (interactionButtonsManagerScript.animalInteractionMode == 2) // talk
         {
