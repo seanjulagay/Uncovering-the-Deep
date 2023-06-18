@@ -26570,33 +26570,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2140046701}
     m_Modifications:
+    - target: {fileID: 981234390187532804, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 981234390187532806, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 981234390187532807, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000019073486
+      value: 55.6
       objectReference: {fileID: 0}
     - target: {fileID: 981234390187532807, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.9583836
+      value: -18.7
       objectReference: {fileID: 0}
     - target: {fileID: 981234390228540129, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 981234390228540142, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.553801
+      objectReference: {fileID: 0}
+    - target: {fileID: 981234390228540142, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 44.21363
+      value: 145.19043
       objectReference: {fileID: 0}
     - target: {fileID: 981234390228540142, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.094513
+      value: 71
       objectReference: {fileID: 0}
     - target: {fileID: 981234390228540142, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 33.804
+      value: 34.419
       objectReference: {fileID: 0}
     - target: {fileID: 981234390228540143, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
       propertyPath: m_Color.a
@@ -26839,7 +26847,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 10b0cb1637d4f604997935ba46a9b503, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.077
+  m_Volume: 0.65
   m_Pitch: 1
   Loop: 1
   Mute: 0

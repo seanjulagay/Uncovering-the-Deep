@@ -20,6 +20,7 @@ public class AlmanacManagerEntriesScript : MonoBehaviour
 
     Image descAreaIGImage;
     Image descAreaRLImage;
+    Sprite blankImage;
 
     bool hideflag = false;
 
@@ -29,6 +30,8 @@ public class AlmanacManagerEntriesScript : MonoBehaviour
 
     void Start()
     {
+        blankImage = GameObject.Find("DescAreaRLImage").GetComponent<Image>().sprite;
+
         sideTrashToggle = GameObject.Find("SideTrashToggle").GetComponent<Button>();
         sideAnimalsToggle = GameObject.Find("SideAnimalsToggle").GetComponent<Button>();
 
@@ -63,13 +66,19 @@ public class AlmanacManagerEntriesScript : MonoBehaviour
 
     public void SwitchTrashCategory()
     {
+        descAreaIGImage.sprite = blankImage;
+        descAreaRLImage.sprite = blankImage;
         animalEntriesAreaGroup.SetActive(false);
         trashEntriesAreaGroup.SetActive(true);
         sideButtonCategory = 0;
+        descAreaIGImage.color = Color.white;
+        descAreaRLImage.color = Color.white;
     }
 
     public void SwitchAnimalsCategory()
     {
+        descAreaIGImage.sprite = blankImage;
+        descAreaRLImage.sprite = blankImage;
         animalEntriesAreaGroup.SetActive(true);
         trashEntriesAreaGroup.SetActive(false);
         sideButtonCategory = 1;
@@ -81,13 +90,21 @@ public class AlmanacManagerEntriesScript : MonoBehaviour
         descAreaInGameImage.SetActive(true);
         descAreaRLImage.color = Color.clear;
 
-        if (unlocked == false)
+        if (sideButtonCategory == 0)
         {
-            descAreaIGImage.color = Color.black;
+            descAreaIGImage.color = Color.white;
+            // descAreaRLImage.color = Color.white;
         }
         else
         {
-            descAreaIGImage.color = Color.white;
+            if (unlocked == false)
+            {
+                descAreaIGImage.color = Color.black;
+            }
+            else
+            {
+                descAreaIGImage.color = Color.white;
+            }
         }
     }
 
@@ -97,14 +114,23 @@ public class AlmanacManagerEntriesScript : MonoBehaviour
         descAreaInGameImage.SetActive(false);
         descAreaRLImage.color = Color.white;
 
-        if (unlocked == false)
+        if (sideButtonCategory == 0)
         {
-            descAreaRLImage.color = Color.black;
+            descAreaIGImage.color = Color.white;
+            // descAreaRLImage.color = Color.white;
         }
         else
         {
-            descAreaIGImage.color = Color.white;
+            if (unlocked == false)
+            {
+                descAreaRLImage.color = Color.black;
+            }
+            else
+            {
+                descAreaRLImage.color = Color.white;
+            }
         }
+
     }
 
     // Toggle trashToggle, animalsToggle;

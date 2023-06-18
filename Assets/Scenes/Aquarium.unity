@@ -6070,6 +6070,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3298639766062862347, guid: 73e28e43871dd764da257f8642976a93, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3298639766062862347, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 64ef69a0b80554649894f48e0b7b4265, type: 3}
@@ -6083,7 +6087,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3298639766062862355, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.13135341
+      value: 0.1313534
       objectReference: {fileID: 0}
     - target: {fileID: 3298639766062862355, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: m_LocalScale.z
@@ -9690,7 +9694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.data[0]
-      value: "Thank you Olive\u2026.being stuck down there is not fun at all!/Nice
+      value: "Thank you Olive\u2026 being stuck down there is not fun at all!/Nice
         Aquarium you got here, mind if I stay for a while?"
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
@@ -13289,7 +13293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.data[3]
-      value: 'I '
+      value: You're a kind soul, Olive. Thank you for giving us all a second chance.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73e28e43871dd764da257f8642976a93, type: 3}
@@ -20341,7 +20345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7010054502778168136, guid: 73e28e43871dd764da257f8642976a93, type: 3}
       propertyPath: animalDialogue.Array.data[2]
-      value: ".this aquarium of yours sure is nice\u2026.I think I might stay a little
+      value: "This aquarium of yours sure is nice\u2026.I think I might stay a little
         bit longer\u2026/A lot of animals still need your help Olive, better get
         going!"
       objectReference: {fileID: 0}
