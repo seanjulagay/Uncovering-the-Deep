@@ -13,8 +13,8 @@ public class CheckpointBarrierTriggerScript : MonoBehaviour
 
     string oliveDialogue;
     bool redirectPlayer = false;
-    float redirectorForceX = 0.5f;
-    float redirectorForceY = 0.25f;
+    float redirectorForceX = 0.6f;
+    float redirectorForceY = 0.6f;
 
     void Start()
     {
@@ -71,19 +71,23 @@ public class CheckpointBarrierTriggerScript : MonoBehaviour
             if (directionX < 0) // redirector is at left of player
             {
                 playerRb.AddForce(transform.right * -redirectorForceX, 0);
+                Debug.Log("LEFT");
             }
             else if (directionX > 0) // redirector is at right of player
             {
                 playerRb.AddForce(transform.right * redirectorForceX, 0);
+                Debug.Log("RIGHT");
             }
 
             if (directionY < 0) // redirector is at bottom of player
             {
                 playerRb.AddForce(transform.up * -redirectorForceY, 0);
+                Debug.Log("BOTTOM");
             }
             else if (directionY > 0) // redirector is at top of player
             {
                 playerRb.AddForce(transform.up * redirectorForceY, 0);
+                Debug.Log("UP");
             }
         }
     }
