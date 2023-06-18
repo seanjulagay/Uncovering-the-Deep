@@ -7216,7 +7216,7 @@ MonoBehaviour:
   automaticRepeat: 0
   dialogueText:
   - I'm sorry to slow you down. Please help me look for my daughter. She's somewhere
-    down here and I can't find him.
+    down here and I can't find her.
   - No worries! I'll help.
   - Thank you very much.
   dialogueActors:
@@ -8081,6 +8081,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 82781839}
     m_Modifications:
+    - target: {fileID: 7038825546141629385, guid: 98deddfefd3a46c499388ee1e7138154, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7038825546141629390, guid: 98deddfefd3a46c499388ee1e7138154, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -23533,7 +23537,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: fd7bbd18c5d5617449c0f775c39045b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -24831,7 +24835,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 32990a1326a6bd74bb54079e324819de, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
@@ -25958,7 +25962,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: b7245a17e456bb74a9ec0b5c26eae3f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -25978,7 +25982,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1914109607}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: -2.67, z: 0}
+  m_LocalPosition: {x: -0.01, y: -0.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

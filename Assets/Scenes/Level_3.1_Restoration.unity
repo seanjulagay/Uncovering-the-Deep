@@ -6157,6 +6157,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2140046701}
     m_Modifications:
+    - target: {fileID: 981234390187532804, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 981234390187532806, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -6580,6 +6584,10 @@ PrefabInstance:
     - target: {fileID: 3776048224816699264, guid: f91bcf2507320c5469c36832a252bec4, type: 3}
       propertyPath: m_Name
       value: OxygenBubble_3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776048224816699264, guid: f91bcf2507320c5469c36832a252bec4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3776048224816699266, guid: f91bcf2507320c5469c36832a252bec4, type: 3}
       propertyPath: m_Sprite
@@ -8607,6 +8615,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1208883118}
     m_Modifications:
+    - target: {fileID: 981234390187532804, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 981234390187532806, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -17227,7 +17239,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 531fd03d5a9006a44af63e07a8b8af2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -22946,7 +22958,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1250413385
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25508,6 +25520,10 @@ PrefabInstance:
     - target: {fileID: 1481620372341298838, guid: d0594ec918c77994b96654fa3aa70870, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1481620372341298839, guid: d0594ec918c77994b96654fa3aa70870, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0594ec918c77994b96654fa3aa70870, type: 3}
@@ -30224,6 +30240,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1961157153}
     m_Modifications:
+    - target: {fileID: 981234390187532804, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 981234390187532806, guid: 8737c38ea22e7e64889cafab30384da3, type: 3}
       propertyPath: m_Layer
       value: 3
@@ -32852,6 +32872,10 @@ PrefabInstance:
     - target: {fileID: 3776048224816699264, guid: f91bcf2507320c5469c36832a252bec4, type: 3}
       propertyPath: m_Name
       value: OxygenBubble_3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3776048224816699264, guid: f91bcf2507320c5469c36832a252bec4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3776048224816699266, guid: f91bcf2507320c5469c36832a252bec4, type: 3}
       propertyPath: m_Sprite
@@ -39058,6 +39082,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 531fd03d5a9006a44af63e07a8b8af2b, type: 3}
+    - target: {fileID: 1481620370565478172, guid: d0594ec918c77994b96654fa3aa70870, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 1481620370655816797, guid: d0594ec918c77994b96654fa3aa70870, type: 3}
       propertyPath: m_IsActive
       value: 0
