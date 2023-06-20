@@ -8,6 +8,8 @@ using TMPro;
 
 public class AlmanacManagerEntriesScript : MonoBehaviour
 {
+    TMP_Text almanacInstructions;
+
     Button sideTrashToggle;
     Button sideAnimalsToggle;
     GameObject animalEntriesAreaGroup;
@@ -30,6 +32,8 @@ public class AlmanacManagerEntriesScript : MonoBehaviour
 
     void Start()
     {
+        almanacInstructions = GameObject.Find("AlmanacInstructions").GetComponent<TMP_Text>();
+
         blankImage = GameObject.Find("DescAreaRLImage").GetComponent<Image>().sprite;
 
         sideTrashToggle = GameObject.Find("SideTrashToggle").GetComponent<Button>();
@@ -66,6 +70,7 @@ public class AlmanacManagerEntriesScript : MonoBehaviour
 
     public void SwitchTrashCategory()
     {
+        almanacInstructions.text = "Select trash to view more information!";
         descAreaIGImage.sprite = blankImage;
         descAreaRLImage.sprite = blankImage;
         animalEntriesAreaGroup.SetActive(false);
@@ -77,6 +82,7 @@ public class AlmanacManagerEntriesScript : MonoBehaviour
 
     public void SwitchAnimalsCategory()
     {
+        almanacInstructions.text = "Select an animal to read about them!";
         descAreaIGImage.sprite = blankImage;
         descAreaRLImage.sprite = blankImage;
         animalEntriesAreaGroup.SetActive(true);

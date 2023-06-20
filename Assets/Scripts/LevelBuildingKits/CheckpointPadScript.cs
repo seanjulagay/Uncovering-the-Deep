@@ -19,8 +19,46 @@ public class CheckpointPadScript : MonoBehaviour
     public bool objInstantiated = false; // flag to prevent double instantiation
     float interactionCooldown = 3f;
 
+    public int collectedObjs;
+    public int totalObjs;
+    List<GameObject> trashObjs = new List<GameObject>();
+
+    void CountCollectedObjs()
+    {
+        // foreach (Transform child in gameObject.transform.parent)
+        // {
+        //     if (child.tag == "TrashObj" && child.gameObject.activeSelf == false)
+        //     {
+        //         collectedObjs++;
+        //     }
+        // }
+
+        foreach (GameObject obj in trashObjs)
+        {
+            if (obj.tag == "TrashObj" && obj.activeSelf == false)
+            {
+                collectedObjs++;
+                trashObjs.Remove(obj);
+                break;
+            }
+        }
+    }
+
+    void CountTotalObjs()
+    {
+        foreach (Transform child in gameObject.transform.parent)
+        {
+            if (child.tag == "TrashObj")
+            {
+                totalObjs++;
+                trashObjs.Add(child.gameObject);
+            }
+        }
+    }
+
     void Start()
     {
+        CountTotalObjs();
         soundsManagerScript = GameObject.Find("SoundsManager").GetComponent<SoundsManagerScript>();
         dialoguePanelManagerScript = GameObject.Find("DialoguePanelManager").GetComponent<DialoguePanelManagerScript>();
         nextCheckpointBarrier = gameObject.transform.parent.Find("CheckpointBarrier").gameObject;
@@ -83,6 +121,7 @@ public class CheckpointPadScript : MonoBehaviour
     {
         InteractionCooldownTimer();
         InteractionButtonListener();
+        CountCollectedObjs();
     }
 
     void InteractionCooldownTimer()

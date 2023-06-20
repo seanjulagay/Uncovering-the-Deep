@@ -4225,7 +4225,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueText.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueActors.Array.size
@@ -4244,6 +4244,10 @@ PrefabInstance:
       value: Time to collect the trashbags and return to the startpoint.
       objectReference: {fileID: 0}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
+      propertyPath: dialogueText.Array.data[2]
+      value: I should return to the submarine with all the trashbags in a stack.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueActors.Array.data[0]
       value: Olive
       objectReference: {fileID: 0}
@@ -4253,7 +4257,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: 8cc51cfa568ec6147a054b2b223aed73, type: 3}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: assignedDialogueSpeaker.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8513481938394719688, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: m_Size.x

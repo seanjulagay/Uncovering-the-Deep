@@ -27,7 +27,10 @@ public class RoomSpawner : MonoBehaviour
 
     public void BeginSpawn()
     {
-        Invoke("Spawn", UnityEngine.Random.Range(0.1f, 0.2f));
+        float rand = UnityEngine.Random.Range(0.05f, 0.1000001f);
+        Invoke("Spawn", rand);
+        Debug.Log("Loaded cell in " + rand + " secs");
+        // Invoke("Spawn", 0.01f);
     }
 
     public void Spawn()

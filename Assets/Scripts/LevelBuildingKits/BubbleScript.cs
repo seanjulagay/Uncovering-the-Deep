@@ -18,18 +18,19 @@ public class BubbleScript : MonoBehaviour
         if (other.gameObject.name == "PlayerTrigger")
         {
             soundsManagerScript.SoundBubble();
-            playerPropertiesScript.oxygenCount += 20f;
-            if (other.gameObject.tag == "Player")
+            // playerPropertiesScript.oxygenCount += 20f;
+
+            if (playerPropertiesScript.oxygenCount <= 79f)
             {
-                if (playerPropertiesScript.oxygenCount <= 99f)
-                {
-                    playerPropertiesScript.oxygenCount += 20f;
-                    if (playerPropertiesScript.oxygenCount >= 100f)
-                    {
-                        playerPropertiesScript.oxygenCount = 99f;
-                    }
-                }
+                playerPropertiesScript.oxygenCount += 20f;
+                Debug.Log("BUBBLE COND1");
             }
+            else
+            {
+                playerPropertiesScript.oxygenCount = 100f;
+                Debug.Log("BUBBLE COND2");
+            }
+
             gameObject.SetActive(false);
         }
     }

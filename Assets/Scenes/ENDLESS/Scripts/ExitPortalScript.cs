@@ -40,6 +40,12 @@ public class ExitPortalScript : MonoBehaviour
             Debug.Log("Destroyed");
         }
 
+        foreach (GameObject disposable in GameObject.FindGameObjectsWithTag("EndlessClosedWall"))
+        {
+            Destroy(disposable);
+            Debug.Log("Destroyed closed");
+        }
+
         foreach (GameObject trash in GameObject.FindGameObjectsWithTag("EndlessTrash"))
         {
             Destroy(trash);
@@ -61,7 +67,7 @@ public class ExitPortalScript : MonoBehaviour
             spawnPoint.GetComponent<RoomSpawner>().BeginSpawn();
         }
 
-        roomTemplates.waitTime = 1.5f;
+        roomTemplates.waitTime = 1f;
         roomTemplates.spawnedExit = false;
         Destroy(this.gameObject);
     }

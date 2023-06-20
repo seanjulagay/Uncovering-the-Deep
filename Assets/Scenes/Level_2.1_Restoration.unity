@@ -584,6 +584,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2056811491}
     m_Modifications:
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
+      propertyPath: onlyShowOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueText.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -6621,7 +6625,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
       propertyPath: dialogueText.Array.data[0]
-      value: Watch out for the Angler Fish, he is blocking the way.
+      value: Watch out for the Angler Fish, they're blocking the way.
       objectReference: {fileID: 0}
     - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
       propertyPath: dialogueText.Array.data[1]
@@ -7216,11 +7220,11 @@ MonoBehaviour:
   automaticRepeat: 0
   dialogueText:
   - I'm sorry to slow you down. Please help me look for my daughter. She's somewhere
-    down here and I can't find him.
+    down here and I can't find her.
   - No worries! I'll help.
   - Thank you very much.
   dialogueActors:
-  - Mrs. Anglerfish
+  - Anxious Angler
   - Olive
   assignedDialogueSpeaker: 000000000100000000000000
   dialogueSprites:
@@ -13896,7 +13900,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3446145155861965252, guid: e5c0b3a7b1fe681419e6f1874649ab0d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -57
+      value: -51.054054
       objectReference: {fileID: 0}
     - target: {fileID: 3446145155861965252, guid: e5c0b3a7b1fe681419e6f1874649ab0d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18182,11 +18186,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 807751094832512397, guid: e96a1e21c494eca4ea81a27756cdc34c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 12.552921
+      value: 10.049621
       objectReference: {fileID: 0}
     - target: {fileID: 807751094832512397, guid: e96a1e21c494eca4ea81a27756cdc34c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.2367377
+      value: 11.898448
       objectReference: {fileID: 0}
     - target: {fileID: 807751094832512397, guid: e96a1e21c494eca4ea81a27756cdc34c, type: 3}
       propertyPath: m_LocalScale.z
@@ -18194,11 +18198,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 807751094832512397, guid: e96a1e21c494eca4ea81a27756cdc34c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4207
+      value: 0.192
       objectReference: {fileID: 0}
     - target: {fileID: 807751094832512397, guid: e96a1e21c494eca4ea81a27756cdc34c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.907
+      value: 1.9239
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e96a1e21c494eca4ea81a27756cdc34c, type: 3}
@@ -21223,6 +21227,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2056811491}
     m_Modifications:
+    - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
+      propertyPath: onlyShowOnce
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueText.Array.size
       value: 2

@@ -14346,6 +14346,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1236319014}
     m_Modifications:
     - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
+      propertyPath: onlyShowOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414406110830595580, guid: 63b2344bdffa93744a5a58cfd383243c, type: 3}
       propertyPath: dialogueText.Array.size
       value: 2
       objectReference: {fileID: 0}

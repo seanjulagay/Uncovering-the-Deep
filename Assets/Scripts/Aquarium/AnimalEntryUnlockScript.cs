@@ -55,7 +55,7 @@ public class AnimalEntryUnlockScript : MonoBehaviour
     {
         for (int i = 0; i < animalEntries.Count; i++)
         {
-            animalEntries[i].transform.Find("EntryText").GetComponent<TMP_Text>().text = "???"; // NAME
+            animalEntries[i].transform.Find("EntryText").GetComponent<TMP_Text>().text = "LOCKED"; // NAME
             animalEntries[i].transform.Find("EntryButton").GetChild(0).GetComponent<Image>().color = Color.black;
             animalEntries[i].transform.GetComponent<EntryBoxScript>().entryDescription = "???";
             animalEntries[i].transform.GetComponent<EntryBoxScript>().animalDepthZone = "???";

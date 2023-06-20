@@ -45,10 +45,17 @@ public class RoomTemplates : MonoBehaviour
         {
             for (int i = 0; i < rooms.Count; i++)
             {
-                if (i == rooms.Count - 1)
+                if (i == rooms.Count - 1 && (rooms[i].tag != "EndlessClosedWall"))
                 {
                     Instantiate(exitPortalPf, rooms[i].transform.position, Quaternion.identity);
                     spawnedExit = true;
+                    Debug.Log("CREATED EXIT PORTAL IN PROPER CELL");
+                }
+                else if (i == rooms.Count - 1 && (rooms[i].tag == "EndlessClosedWall"))
+                {
+                    Instantiate(exitPortalPf, rooms[i - 1].transform.position, Quaternion.identity);
+                    spawnedExit = true;
+                    Debug.Log("CREATED EXIT PORTAL IN DIFFERENT CELL");
                 }
             }
         }

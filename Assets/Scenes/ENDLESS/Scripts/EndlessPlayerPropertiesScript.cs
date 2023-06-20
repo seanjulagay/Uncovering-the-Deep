@@ -42,13 +42,16 @@ public class EndlessPlayerPropertiesScript : MonoBehaviour
             timer = timerVal;
             oxygenDecreaseMultiplier++;
         }
-        if (oxygenCount > 0f)
+        if (Time.timeScale == 1)
         {
-            oxygenCount -= Time.deltaTime + (oxygenDecreaseMultiplier * .001f);
-        }
-        else if (oxygenCount <= 0f)
-        {
-            endlessGameManager.GameOver();
+            if (oxygenCount > 0f)
+            {
+                oxygenCount -= Time.deltaTime + (oxygenDecreaseMultiplier * .001f);
+            }
+            else if (oxygenCount <= 0f)
+            {
+                endlessGameManager.GameOver();
+            }
         }
 
         uiOxygenBar.GetComponent<UIProgressBarScript>().current = (int)oxygenCount;
