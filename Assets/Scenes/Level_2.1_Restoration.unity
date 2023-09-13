@@ -3264,6 +3264,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8022387311123223332, guid: 4b44f3616ccd2044490049ec6ee7f6c5, type: 3}
+      propertyPath: autoDisplay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022387311123223332, guid: 4b44f3616ccd2044490049ec6ee7f6c5, type: 3}
       propertyPath: dialogueText.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -6620,6 +6624,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
+      propertyPath: autoDisplay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
       propertyPath: dialogueText.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -7215,8 +7223,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creatureID: -1
+  autoDisplay: 1
   isPartOfAnimalsMetCount: 0
-  onlyShowOnce: 0
+  onlyShowOnce: 1
   automaticRepeat: 0
   dialogueText:
   - I'm sorry to slow you down. Please help me look for my daughter. She's somewhere
@@ -14491,6 +14500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creatureID: -1
+  autoDisplay: 1
   isPartOfAnimalsMetCount: 0
   onlyShowOnce: 0
   automaticRepeat: 0
@@ -15459,6 +15469,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5932117973235038999, guid: 4b44f3616ccd2044490049ec6ee7f6c5, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022387311123223332, guid: 4b44f3616ccd2044490049ec6ee7f6c5, type: 3}
+      propertyPath: autoDisplay
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8022387311123223332, guid: 4b44f3616ccd2044490049ec6ee7f6c5, type: 3}
@@ -17186,6 +17200,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5932117973235038999, guid: 4b44f3616ccd2044490049ec6ee7f6c5, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022387311123223332, guid: 4b44f3616ccd2044490049ec6ee7f6c5, type: 3}
+      propertyPath: autoDisplay
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8022387311123223332, guid: 4b44f3616ccd2044490049ec6ee7f6c5, type: 3}
@@ -20842,6 +20860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creatureID: -1
+  autoDisplay: 1
   isPartOfAnimalsMetCount: 0
   onlyShowOnce: 0
   automaticRepeat: 0

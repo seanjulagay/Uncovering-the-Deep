@@ -1645,6 +1645,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8022387311123223332, guid: 4b44f3616ccd2044490049ec6ee7f6c5, type: 3}
+      propertyPath: autoDisplay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022387311123223332, guid: 4b44f3616ccd2044490049ec6ee7f6c5, type: 3}
       propertyPath: dialogueActors.Array.data[0]
       value: Bill
       objectReference: {fileID: 0}
@@ -26769,6 +26773,10 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4381622900940875308, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4381622900940875310, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -26776,6 +26784,10 @@ PrefabInstance:
     - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
       propertyPath: creatureID
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
+      propertyPath: autoDisplay
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
       propertyPath: dialogueText.Array.size

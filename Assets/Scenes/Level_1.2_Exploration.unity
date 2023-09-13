@@ -8615,6 +8615,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoryAnimal (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4381622899871395854, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 20.702227
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381622899871395854, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 17.699999
+      objectReference: {fileID: 0}
     - target: {fileID: 4381622900940875305, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
       propertyPath: m_LocalScale.x
       value: 24.228884
@@ -8658,6 +8666,10 @@ PrefabInstance:
     - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
       propertyPath: creatureID
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
+      propertyPath: autoDisplay
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
       propertyPath: dialogueText.Array.size
@@ -10251,6 +10263,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
+      propertyPath: autoDisplay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
       propertyPath: dialogueText.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -11565,6 +11581,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoryAnimal
       objectReference: {fileID: 0}
+    - target: {fileID: 4381622899871395854, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 9.57
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381622899871395854, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 7.08
+      objectReference: {fileID: 0}
     - target: {fileID: 4381622900940875305, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
       propertyPath: m_LocalScale.x
       value: 15.10159
@@ -11599,6 +11623,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
       propertyPath: creatureID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
+      propertyPath: autoDisplay
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
@@ -11939,6 +11967,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
       propertyPath: creatureID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
+      propertyPath: autoDisplay
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
@@ -15946,6 +15978,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: StoryAnimal (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4381622899871395854, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 21.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381622899871395854, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 10.254131
+      objectReference: {fileID: 0}
     - target: {fileID: 4381622900940875305, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
       propertyPath: m_LocalScale.x
       value: 22.23945
@@ -15977,6 +16017,10 @@ PrefabInstance:
     - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
       propertyPath: creatureID
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
+      propertyPath: autoDisplay
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4381622901189872640, guid: d15928ead7af6a04c9ce8393af27ba0e, type: 3}
       propertyPath: dialogueText.Array.size
@@ -18249,6 +18293,18 @@ PrefabInstance:
     - target: {fileID: 6664695963510937874, guid: 5184579862c076c42a72341672e3f80f, type: 3}
       propertyPath: m_Name
       value: QuizAnimalParent
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218998085977496633, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: autoDisplay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218998085977496633, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: isQuizAnimal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218998085977496633, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: automaticRepeat
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5184579862c076c42a72341672e3f80f, type: 3}

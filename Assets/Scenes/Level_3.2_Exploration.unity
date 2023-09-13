@@ -21895,6 +21895,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: QuizAnimal
       objectReference: {fileID: 0}
+    - target: {fileID: 9218998085977496633, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: autoDisplay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218998085977496633, guid: 5184579862c076c42a72341672e3f80f, type: 3}
+      propertyPath: isQuizAnimal
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5184579862c076c42a72341672e3f80f, type: 3}
 --- !u!4 &1577162678 stripped
